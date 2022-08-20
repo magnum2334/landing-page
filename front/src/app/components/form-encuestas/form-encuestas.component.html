@@ -1,0 +1,56 @@
+<app-landing-page></app-landing-page>
+<div  @fade class="container ">
+  <div class="row d-flex justify-content-center">
+    <div class="col-6  m-5">
+        <div class="card border-primary">
+          <div class="card-header">
+          encuesta
+          </div>
+          <div class="card-body">
+            <form [formGroup]="encuestaFormGroup">
+              <!-- Name input -->
+              <div class="form-outline mb-4">
+                <input type="text" id="form4Example1" formControlName="name" class="form-control" />
+                <label class="form-label" for="form4Example1">Nombre</label>
+              </div>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <input type="number"  formControlName="document" class="form-control" />
+                <label class="form-label" for="form4Example2">Documento </label>
+              </div>
+              <!-- Message input -->
+              <div class="form-outline mb-4">
+                <input class="form-control" formControlName="estrato"/>
+                <label class="form-label" for="form4Example3">estrato</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input class="form-control" formControlName="firma"/>
+                <label class="form-label" for="form4Example3">firma</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                <mat-form-field
+
+                appearance="fill">
+                  <mat-label>Select an option</mat-label>
+                  <mat-select formControlName="id_user">
+                    <mat-option *ngFor="let user of list_users" [value]="user.id" >{{user.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="form-outline mb-4">
+
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" (click)="submit()" class="btn btn-primary btn-block mb-4">Send</button>
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+

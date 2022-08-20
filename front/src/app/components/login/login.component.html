@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="div d-flex justify-content-center align-items-center">
+      <div fxLayautAling="center center" fxFlexFill>
+        <mat-card fxFlex="25" class="shadow-lg border rounded">
+          <mat-card-title>Login</mat-card-title>
+          <form class="form" fxLayoutAlign="stretch" fxLayout="column" [formGroup]="form" (ngSubmit)="submit()">
+            <div>
+              <p>
+                <mat-form-field>
+                  <input  type="text" matInput placeholder="Username" formControlName="username">
+                </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field>
+                  <input type="password" matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+              </p>
+              <div class="row " >
+                <button color="primary"  type="submit" mat-raised-button>Login</button>
+              </div>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
