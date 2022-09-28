@@ -1,56 +1,51 @@
-<app-landing-page></app-landing-page>
-<div  @fade class="container ">
-  <div class="row d-flex justify-content-center">
-    <div class="col-6  m-5">
-        <div class="card border-primary">
-          <div class="card-header">
-          encuesta
-          </div>
-          <div class="card-body">
-            <form [formGroup]="encuestaFormGroup">
-              <!-- Name input -->
-              <div class="form-outline mb-4">
-                <input type="text" id="form4Example1" formControlName="name" class="form-control" />
-                <label class="form-label" for="form4Example1">Nombre</label>
-              </div>
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="number"  formControlName="document" class="form-control" />
-                <label class="form-label" for="form4Example2">Documento </label>
-              </div>
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <input class="form-control" formControlName="estrato"/>
-                <label class="form-label" for="form4Example3">estrato</label>
-              </div>
-              <div class="form-outline mb-4">
-                <input class="form-control" formControlName="firma"/>
-                <label class="form-label" for="form4Example3">firma</label>
-              </div>
+<div class="container">
+  <div class="row">
+  <div class="col-12 mt-2">
+    <button (click)="openDialog()" mat-fab  aria-label="Example icon button with a heart icon">
+      <mat-icon>email</mat-icon>
+    </button>
+  </div>
+  <div class="col-12">
+    <div class="text-center fs-3"> contribuidores de la campaña <mat-icon style="position: relative; top:4px">people_outline</mat-icon></div>
+  </div>
+    <div class="col-12 my-2">
+      <div class="mat-elevation-z8">
+        <div class="mx-2">
+          <mat-form-field class="w-100 my-2" appearance="standard">
 
-              <div class="form-outline mb-4">
-                <mat-form-field
-
-                appearance="fill">
-                  <mat-label>Select an option</mat-label>
-                  <mat-select formControlName="id_user">
-                    <mat-option *ngFor="let user of list_users" [value]="user.id" >{{user.name}}</mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </div>
-              <div class="form-outline mb-4">
-
-              </div>
-
-              <!-- Submit button -->
-              <button type="submit" (click)="submit()" class="btn btn-primary btn-block mb-4">Send</button>
-            </form>
-          </div>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Buscar..." search>
+            <mat-label style="position: relative ;bottom:0.3em;"> <b > Búsqueda </b> <mat-icon style="position: relative; top:5px; font-size: 18px;">search</mat-icon></mat-label>
+          </mat-form-field>
         </div>
+        <table mat-table matSortDirection="desc" [dataSource]="dataSource" matSort class="mat-elevation-z8  ">
+          <ng-container matColumnDef="nombres">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef> Nombres. </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombres}} </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="apellidos">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef> Apellidos </th>
+            <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="email">
+            <th mat-sort-header mat-header-cell *matHeaderCellDef> Correos </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          <tr *matNoDataRow>
+            <td class="mat-cell" colspan="4">
+              no existe el dato...
+            </td>
+          </tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons>
+        </mat-paginator>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-

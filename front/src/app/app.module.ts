@@ -1,41 +1,64 @@
+import { ModalEmailComponent } from './components/modal-email/modal-email.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormEncuestasComponent } from './components/form-encuestas/form-encuestas.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
 import { LoginComponent } from './components/login/login.component';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PageErrorComponent } from './page-error/page-error.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { NavsiderAdminComponent } from './admin/navsider-admin/navsider-admin.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { PresentacionComponent } from './landing-page/presentacion/presentacion.component';
+import { ContentPageComponent } from './landing-page/content-page/content-page.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     FormEncuestasComponent,
     LoginComponent,
     LandingPageComponent,
     PageErrorComponent,
-
+    NavsiderAdminComponent,
+    ModalEmailComponent,
+    PresentacionComponent,
+    ContentPageComponent
 
   ],
   imports: [
+
+    MatTableModule,
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MatSliderModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatSelectModule,
@@ -46,11 +69,50 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatGridListModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatDialogModule,
+    MatProgressBarModule, MatTabsModule,
+    MatToolbarModule,
+    BackButtonDisableModule.forRoot({
+      preserveScrollPosition: true
+    })
 
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: []
+  exports: [MatTableModule,
+    BrowserModule,
+    AppRoutingModule,
+    NoopAnimationsModule,
+    MatSliderModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatSelectModule,
+    AngularSignaturePadModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule,
+    MatPaginatorModule,
+    MatSortModule, MatTabsModule,
+    MatDialogModule,]
 })
 export class AppModule { }

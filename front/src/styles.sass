@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+.custom-style
+  background-color:brown
+  color:white
+.font
+ font-size: 12px
+ color: white
+.mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button
+    color: white
+table
+  width: 100%
+.mat-paginator-range-actions
+    display: flex
+    align-items: center
+    color: black
+.mat-paginator-icon
+
+    width: 28px
+    fill: currentColor
+.mat-icon-button
+    color: #6c757d
+.mat-icon-no-color
+  color:back
+:host
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+
+$layout-breakpoint-small: 960px
+
+@media (min-width: $layout-breakpoint-small)
+  .font-navbar
+    font-weight: bold
+    font-size: 24px
+    font-family:  'Roboto', sans-serif
+
+

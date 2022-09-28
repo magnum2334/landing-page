@@ -1,18 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Subject } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ContactUsService } from './service/contact-us.service';
+import { debounceTime, Subject } from 'rxjs';
+import { ContactUsService } from '../service/contact-us.service';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.sass']
+  selector: 'app-content-page',
+  templateUrl: './content-page.component.html',
+  styleUrls: ['./content-page.component.sass']
 })
-export class LandingPageComponent implements OnInit {
+export class ContentPageComponent implements OnInit {
   awaitSubmitEmail$ = new Subject<Event>();
- @Input() deviceXs!: boolean;
 
   form: FormGroup = new FormGroup({
     nombres: new FormControl('', [Validators.required,]),
@@ -26,7 +24,6 @@ export class LandingPageComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
-    // localStorage.clear()
     this.onChangesClick()
   }
   onChangesClick() {
@@ -48,9 +45,9 @@ export class LandingPageComponent implements OnInit {
       )
     });
   }
-
   submit(event: Event) {
     this.awaitSubmitEmail$.next(event);
     this.loading = true;
   }
+
 }

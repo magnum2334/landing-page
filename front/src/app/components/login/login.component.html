@@ -1,23 +1,46 @@
+<div class="container my-5 ">
+  <div class="row">
+    <div class="col-12  my-lg-2  ">
+
+    </div>
+  </div>
+</div>
+
+
 <div class="container mt-5">
   <div class="row">
-    <div class="div d-flex justify-content-center align-items-center">
+    <div class="col d-flex justify-content-center align-items-center">
       <div fxLayautAling="center center" fxFlexFill>
         <mat-card fxFlex="25" class="shadow-lg border rounded">
-          <mat-card-title>Login</mat-card-title>
+          <mat-card-title> <i  style="font-size:3em ;" class="pr-5 fa fa-user-circle-o" aria-hidden="true"></i></mat-card-title>
+          <mat-card-title class="py-2">INGRESAR </mat-card-title>
+
           <form class="form" fxLayoutAlign="stretch" fxLayout="column" [formGroup]="form" (ngSubmit)="submit()">
             <div>
               <p>
                 <mat-form-field>
-                  <input  type="text" matInput placeholder="Username" formControlName="username">
+                  <mat-label>Email</mat-label>
+                  <input  type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+                  <mat-icon matSuffix>email</mat-icon>
+                  <mat-error *ngIf="email.hasError('required')">
+                    Email es <strong>requerido</strong>
+                  </mat-error>
                 </mat-form-field>
               </p>
               <p>
                 <mat-form-field>
-                  <input type="password" matInput placeholder="Password" formControlName="password">
+                  <mat-label>Contraseña</mat-label>
+                  <input type="password" matInput placeholder="Contraseña" formControlName="password">
+                  <mat-icon matSuffix>password</mat-icon>
                 </mat-form-field>
               </p>
-              <div class="row " >
-                <button color="primary"  type="submit" mat-raised-button>Login</button>
+              <div class="row" >
+                <button color="accent" *ngIf="form.value.password && form.value.email " style="color:white  ;" type="submit" mat-raised-button>CONFIRMAR  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+              </div>
+              <div class=" text-center py-5 ">
+                <div>
+                  <a style="color: black;" href=""> ¿olvidaste tu contraseña?</a>
+                </div>
               </div>
             </div>
           </form>

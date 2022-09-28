@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [],
   imports: [
@@ -13,8 +14,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatFormFieldModule,
     MatInputModule,
     MatGridListModule,
-    MatToolbarModule
-
+    MatToolbarModule,
+    MatIconModule
   ]
 })
 export class LoginModule { }
