@@ -35,7 +35,7 @@ export class NavsiderAdminComponent  implements OnInit {
 
   ngOnInit(): void {
 
-  console.log()
+
 
     this.loginService.me(this.token?.replace(/['"]+/g, '')).subscribe((response) =>{
      if (!response) {
@@ -46,6 +46,9 @@ export class NavsiderAdminComponent  implements OnInit {
   onClick(){
     this.router.navigate(['/admin/form']);
   }
+  refresh(){
+    this.router.navigate(['admin']);
+ }
   cerrar(){
     this.loginService.logout(this.token?.replace(/['"]+/g, '')).subscribe((response) =>{
          if (response) {

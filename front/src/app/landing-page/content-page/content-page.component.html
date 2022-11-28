@@ -1,42 +1,46 @@
 <p>
-  <mat-grid-list cols="1" rowHeight="500px" >
-    <mat-grid-tile [colspan]="1"  [style.background]="'lightgreen'">
+  <mat-grid-list cols="1" rowHeight="500px">
+    <mat-grid-tile [colspan]="1" [style.background]="'lightgreen'">
       <div>
-      <h1 style="font-family:  sans-serif; font-weight: 700;" class="text-center fs-3">Sé parte del cambio </h1>
-        <form [formGroup]="form" >
+        <h1 style="font-family:  sans-serif; font-weight: 700;" class="text-center fs-3">Sé parte del cambio </h1>
+        <form [formGroup]="form">
           <div class="justify-content-center">
-            <mat-form-field  class="m-3"appearance="fill">
+            <mat-form-field class="m-3" appearance="fill">
               <mat-label>Nombres</mat-label>
               <mat-icon matSuffix>person</mat-icon>
-              <input  formControlName="nombres" matInput>
+              <input formControlName="nombres" matInput>
             </mat-form-field>
-            <mat-form-field   class="m-3"appearance="fill">
+            <mat-form-field class="m-3" appearance="fill">
               <mat-label>Apellidos</mat-label>
               <mat-icon matSuffix>person</mat-icon>
-              <input   formControlName="apellidos"matInput>
+              <input formControlName="apellidos" matInput>
             </mat-form-field><br>
-            <mat-form-field class="m-3"appearance="fill">
+            <mat-form-field class="m-3" appearance="fill">
               <mat-label>Email</mat-label>
               <mat-icon matSuffix>email</mat-icon>
-              <input  formControlName="email" matInput>
+              <input formControlName="email" matInput>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Celular</mat-label>
               <span matPrefix style="font-size:15px ;">+57 &nbsp;</span>
               <input maxlength="10" #numero type="tel" matInput formControlName="celular" placeholder="305-437-5375">
               <mat-icon matSuffix>phone</mat-icon>
-              <mat-hint >{{numero.value.length}} / 10</mat-hint>
+              <mat-hint>{{numero.value.length}} / 10</mat-hint>
             </mat-form-field><br>
           </div>
-         <div style="margin-left: 2.5em;">
-          <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
-         </div>
+          <div style="margin-left: 2.5em;">
+            <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
+          </div>
           <br>
-          <div   class="d-flex justify-content-center">
-            <button (click)="submit($event)" [disabled]="!form.valid" mat-stroked-button [style.width]="'250px'" [style.height]="'45px'" [style.background]="'white'" color="primary">
-             <span *ngIf="!loading" style="font-size:12 ;" [style.relative]="'relative'" [style.bottm]="'15px'">Únete  </span>
-  
-             </button>
+          <div class="d-flex justify-content-center">
+            <button (click)="submit($event)" [disabled]="!form.valid" mat-stroked-button [style.width]="'250px'"
+              [style.height]="'45px'" [style.background]="'white'" color="primary">
+              <span *ngIf="!loading" style="font-size:12 ;"> Únete
+              <mat-icon style="top: 6px;  position: relative;color: green;">check</mat-icon> </span>
+              <div *ngIf="loading" class="justify-content-center d-flex">
+                <mat-spinner diameter="25" strokeWidth="3" mode="indeterminate"></mat-spinner>
+              </div>
+            </button>
           </div>
         </form>
       </div>

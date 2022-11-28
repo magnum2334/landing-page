@@ -17,28 +17,8 @@ export interface Contact {
   correo: string;
 
 }
-const ELEMENT_DATA: Contact[] = [
-  {id: 1, nombres: 'Hydrogen', apellidos: 1.0079, correo: 'H'},
-  {id: 2, nombres: 'Helium', apellidos: 4.0026, correo: 'He'},
-  {id: 3, nombres: 'Lithium', apellidos: 6.941, correo: 'Li'},
-  {id: 4, nombres: 'Beryllium', apellidos: 9.0122, correo: 'Be'},
-  {id: 5, nombres: 'Boron', apellidos: 10.811, correo: 'B'},
-  {id: 6, nombres: 'Carbon', apellidos: 12.0107, correo: 'C'},
-  {id: 7, nombres: 'Nitrogen', apellidos: 14.0067, correo: 'N'},
-  {id: 8, nombres: 'Oxygen', apellidos: 15.9994, correo: 'O'},
-  {id: 9, nombres: 'Fluorine', apellidos: 18.9984, correo: 'F'},
-  {id: 10, nombres: 'Neon', apellidos: 20.1797, correo: 'Ne'},
-  {id: 11, nombres: 'Sodium', apellidos: 22.9897, correo: 'Na'},
-  {id: 12, nombres: 'Magnesium', apellidos: 24.305, correo: 'Mg'},
-  {id: 13, nombres: 'Aluminum', apellidos: 26.9815, correo: 'Al'},
-  {id: 14, nombres: 'Silicon', apellidos: 28.0855, correo: 'Si'},
-  {id: 15, nombres: 'Phosphorus', apellidos: 30.9738, correo: 'P'},
-  {id: 16, nombres: 'Sulfur', apellidos: 32.065, correo: 'S'},
-  {id: 17, nombres: 'Chlorine', apellidos: 35.453, correo: 'Cl'},
-  {id: 18, nombres: 'Argon', apellidos: 39.948, correo: 'Ar'},
-  {id: 19, nombres: 'Potassium', apellidos: 39.0983, correo: 'K'},
-  {id: 20, nombres: 'Calcium', apellidos: 40.078, correo: 'Ca'},
-];
+
+
 @Component({
   selector: 'app-form-encuestas',
   templateUrl: './form-encuestas.component.html',
@@ -62,11 +42,8 @@ export class FormEncuestasComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
   contacts: any;
+  isLoading = true;
 
-  ngAfterViewInit() {
-
-
-  }
   encuestaFormGroup: FormGroup = new FormGroup({
     name: new FormControl('', Validators.required),
     document: new FormControl('', Validators.required),
@@ -82,9 +59,8 @@ export class FormEncuestasComponent implements OnInit {
       this.dataSource = new MatTableDataSource(this.contacts);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      this.isLoading = false;
     })
-
-
   }
 
   users : any;
@@ -116,6 +92,7 @@ export class FormEncuestasComponent implements OnInit {
     this.dialog.open(ModalEmailComponent,{
       height: '400px',
       width: '600px',
+
     });
   }
 

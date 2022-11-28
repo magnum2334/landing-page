@@ -6,11 +6,13 @@
     <mat-toolbar style="color: #b0cde3;" class="shadow-lg" >
       <mat-icon >home</mat-icon><span class="px-1" style="font-family: 'IBM Plex Sans', sans-serif;">  Menu</span>
     </mat-toolbar>
-    <mat-nav-list  >
+    <mat-nav-list>
      <div >
       <p class="font-weight-light text-white"></p>
-      <a class="mat-list-item " mat-list-item href="#"  routerLinkActive="router-link-active" >Presentación</a>
-      <a class="mat-list-item " mat-list-item href="#" (click)="cerrar()" >cerrar</a>
+      <a class="mat-list-item " mat-list-item  (click)="refresh()" >envios de emails</a>
+      <a class="mat-list-item " mat-list-item [routerLink]="['/admin/presentacion']"  routerLinkActive="router-link-active" >Presentación</a>
+      <a class="mat-list-item " mat-list-item  (click)="cerrar()" >cerrar</a>
+
      </div>
     </mat-nav-list>
   </mat-sidenav>
@@ -26,7 +28,7 @@
       </button>
       <div class="d-flex justify-content-center align-items-center">
         <mat-icon>supervised_user_circle</mat-icon>
-        <span style="font-family: 'IBM Plex Sans', sans-serif;" class="px-1">Aministrador</span>
+        <span style="font-family: 'IBM Plex Sans', sans-serif;" class="px-1">Administrador</span>
 
        </div>
     </mat-toolbar>

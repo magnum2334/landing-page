@@ -16,7 +16,10 @@ export class ContactUsService {
   selectContacts(){
     return this.http.get(`${environment.baseUrl}selectContacts`);
   }
-  massiveEmails(){
-    return this.http.get(`${environment.baseUrl}massiveEmails`);
+  massiveEmails(data: any){
+    return this.http.post(`${environment.baseUrl}massiveEmails`, data);
+  }
+  smsconfirmation(){
+    return this.http.get(`${environment.baseUrl}smsconfirmation`);
   }
 }

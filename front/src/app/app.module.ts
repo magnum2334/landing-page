@@ -37,7 +37,12 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { PresentacionComponent } from './landing-page/presentacion/presentacion.component';
 import { ContentPageComponent } from './landing-page/content-page/content-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { PresentationAdminComponent } from './admin/navsider-admin/presentation-admin/presentation-admin.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { ModalAdminPresentationComponent } from './admin/navsider-admin/presentation-admin/modal-admin-presentation/modal-admin-presentation.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,11 +53,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     NavsiderAdminComponent,
     ModalEmailComponent,
     PresentacionComponent,
-    ContentPageComponent
+    ContentPageComponent,
+    PresentationAdminComponent,
+    ModalAdminPresentationComponent
+
 
   ],
   imports: [
-
+    MatDatepickerModule,
+    MatExpansionModule,
+    MatTooltipModule,
     MatTableModule,
     BrowserModule,
     AppRoutingModule,

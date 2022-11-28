@@ -8,15 +8,16 @@ import { PageErrorComponent } from './page-error/page-error.component';
 import { AdminGuard } from './admin/guard/admin.guard'
 import { ContentPageComponent } from './landing-page/content-page/content-page.component';
 import { PresentacionComponent } from './landing-page/presentacion/presentacion.component';
+import { PresentationAdminComponent } from './admin/navsider-admin/presentation-admin/presentation-admin.component';
 const routes: Routes = [
 
   {
     path: '',
     component: LandingPageComponent,
-    children:[ {
+    children: [{
       path: '',
-      redirectTo:'/inicio',
-      pathMatch:'full'
+      redirectTo: '/inicio',
+      pathMatch: 'full'
     },
 
     {
@@ -42,24 +43,29 @@ const routes: Routes = [
 
   {
     path: 'login',
-    component:LoginComponent
+    component: LoginComponent
   },
 
   {
     path: 'admin',
-    canActivate:[AdminGuard],
-    component:NavsiderAdminComponent,
-    children:[
+    canActivate: [AdminGuard],
+    component: NavsiderAdminComponent,
+    children: [
 
-    {
-      path: '',
-      component:FormEncuestasComponent
-    },
+      {
+        path: '',
+        component: FormEncuestasComponent
+      },
+      {
+        path: 'presentacion',
+        component: PresentationAdminComponent
+      },
+
     ]
   },
   {
     path: '**',
-    component:PageErrorComponent
+    component: PageErrorComponent
   },
 
 

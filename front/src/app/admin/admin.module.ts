@@ -10,6 +10,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { PresentationAdminComponent } from './navsider-admin/presentation-admin/presentation-admin.component';
+import { ModalAdminPresentationComponent } from './navsider-admin/presentation-admin/modal-admin-presentation/modal-admin-presentation.component';
 
 
 @NgModule({
@@ -17,6 +19,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 
 
+  
+    PresentationAdminComponent,
+          ModalAdminPresentationComponent
   ],
   imports: [
     CommonModule,

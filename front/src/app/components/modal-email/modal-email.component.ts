@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactUsService } from 'src/app/landing-page/service/contact-us.service';
 
 @Component({
@@ -8,13 +9,29 @@ import { ContactUsService } from 'src/app/landing-page/service/contact-us.servic
 })
 
 export class ModalEmailComponent implements OnInit {
+  contacts: any;
 
   constructor(private contactUsService:ContactUsService) { }
+  form: FormGroup = new FormGroup({
+    title: new FormControl('', [Validators.required,]),
+    content: new FormControl('', [Validators.required,]),
+  });
 
   ngOnInit(): void {
+    this.contactUsService.selectContacts().subscribe((res:any)=>{
+      let contacts = res['contacts']
+      this.contacts = contacts.map((contact:any) => contact.email)
+
+     })
   }
   onClick(){
-    this.contactUsService.massiveEmails().subscribe((res)=>{
+    let data ={
+      'contacts':JSON.stringify(this.contacts),
+      'title':this.form.value.title,
+      'content':this.form.value.content,
+    }
+    this.contactUsService.massiveEmails(data).subscribe((res)=>{
+
      console.log(res)
     })
   }

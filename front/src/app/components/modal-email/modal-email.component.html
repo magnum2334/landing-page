@@ -1,33 +1,35 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <mat-card class="example-card">
-        <mat-card-title class="text-center fs-4 border-bottom border ">Envió de emails masivo  <mat-icon style="position: relative; top:5px;" matSuffix>email</mat-icon></mat-card-title>
-        <mat-card-content>
-          <p>
-            <mat-form-field style="width: 100%; height: auto;"  appearance="fill">
-              <mat-label>Titulo</mat-label>
-              <input matInput >
+      <form [formGroup]="form">
+        <mat-card class="example-card">
+          <mat-card-title class="text-center fs-4 border-bottom border ">Envió de emails masivo  <mat-icon style="position: relative; top:5px;" matSuffix>email</mat-icon></mat-card-title>
+          <mat-card-content>
+            <p>
+              <mat-form-field style="width: 100%; height: auto;"  appearance="fill">
+                <mat-label>Titulo</mat-label>
+                <input formControlName="title" matInput >
 
-              <mat-hint>Hint</mat-hint>
-            </mat-form-field>
-          </p>
-          <p>
-            <mat-form-field style="width: 100%; height: auto;"  appearance="fill">
-              <mat-label>Mensaje</mat-label>
-              <textarea  matInput></textarea>
-            </mat-form-field>
-          </p>
-        </mat-card-content>
-        <mat-divider inset></mat-divider>
-        <mat-card-actions (click)="onClick()" class="d-flex justify-content-center width: 100%;" >
-          <button  mat-button  style="background: slategrey;width: 100%;" >ENVIAR</button>
+                <mat-hint>Hint</mat-hint>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field style="width: 100%; height: auto;"  appearance="fill">
+                <mat-label>Mensaje</mat-label>
+                <textarea formControlName="content"  matInput></textarea>
+              </mat-form-field>
+            </p>
+          </mat-card-content>
+          <mat-divider inset></mat-divider>
+          <mat-card-actions (click)="onClick()" class="d-flex justify-content-center width: 100%;" >
+            <button [disabled]="!form.valid" mat-button  style="background: slategrey;width: 100%;" >ENVIAR</button>
 
-        </mat-card-actions>
-        <mat-card-footer>
-          <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
-        </mat-card-footer>
-      </mat-card>
+          </mat-card-actions>
+          <mat-card-footer>
+            <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+          </mat-card-footer>
+        </mat-card>
+      </form>
     </div>
   </div>
 </div>

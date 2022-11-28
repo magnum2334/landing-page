@@ -6,8 +6,6 @@ import { PresentacionComponent } from './presentacion/presentacion.component';
 
 @NgModule({
   declarations: [
-
-  
     PresentacionComponent
   ],
   imports: [
