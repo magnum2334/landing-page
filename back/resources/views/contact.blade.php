@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>correos</title>
+    <title>ItsolutionStuff.com</title>
 </head>
-<body>
-    <h1>
-        el primero
-    </h1>
-    <p>
-        si funciono
-    </p>
+<body >
+    <h1>{{ $details['title'] }}</h1><br>
+    <p>{{ $details['contacts'] }}</p><br>
+    <p>{{ $details['content'] }}</p>
+    <p>sisas you</p>
 </body>
 </html>

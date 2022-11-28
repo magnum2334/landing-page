@@ -7,6 +7,8 @@ use App\Models\ContactUs;
 use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Twilio\Rest\Client;
+use Exception;
 class ContactUsController extends Controller
 {
     public function store(Request $request)
@@ -49,15 +51,52 @@ class ContactUsController extends Controller
         return response()->json(compact('contacts'),200);
 
     }
-    public function massiveEmails(){
+    public function massiveEmails(Request $request){
 
-        emailMassive::dispatch();
+        $details = [
+            'title' => $request->title,
+            'content' => $request->content,
+            'contacts' => $request->contacts
+        ];
+
+        emailMassive::dispatch($details);
 
 
         return response()->json([
             'status' => true,
-            'message'=> 'od'
+            'message'=> 'ok'
         ],200);
 
+    }
+    public function smsconfirmation(Request $request){
+
+
+        $receiverNumber = "+573054375375";
+        $message = "All About Laravel";
+
+        $sid = getenv("TWILIO_ACCOUNT_SID");
+        $token = getenv("TWILIO_AUTH_TOKEN");
+        $twilio = new Client($sid, $token);
+        try {
+            $message = $twilio->messages
+            ->create("+573054375375", // to
+                     [
+                         "body" => "This will be the body of the new message!",
+                         "from" => "+15017122661"
+                     ]
+            );
+            return response()->json([
+                'status' => true,
+                'message'=>$message->sid
+            ],200);
+
+        } catch (Exception $e) {
+
+            return response()->json([
+                'status' => false,
+                'message'=> ".".$e->getMessage()
+            ],400);
+
+        }
     }
 }

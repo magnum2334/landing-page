@@ -19,7 +19,7 @@ Route::controller(AuthController::class)->group(function () {
 Route::controller(ContactUsController::class)->group(function () {
     Route::post('save-contact', 'store');
     Route::get('selectContacts', 'selectContacts');
-    Route::get('massiveEmails', 'massiveEmails');
-
+    Route::post('massiveEmails', 'massiveEmails');
+    Route::post('smsconfirmation', 'smsconfirmation');
 });
 

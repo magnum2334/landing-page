@@ -10,19 +10,19 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-
+use App\Models\ContactUs;
 class emailMassive implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
+    public $details;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($details)
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -32,9 +32,13 @@ class emailMassive implements ShouldQueue
      */
     public function handle()
     {
+        $emails =  ContactUs::select('email')->get();
 
-        dispatch(function () {
-            Mail::to('taylor@example.com')->send(new ContactMail);
-        })->afterResponse();
+        $emails->map(function($email){
+            Mail::to('k.calle@utp.edu.co')->send(new ContactMail($this->details));
+        });
+
+        return "se envio el email";
+
     }
 }
