@@ -22,4 +22,8 @@ export class ContactUsService {
   smsconfirmation(){
     return this.http.get(`${environment.baseUrl}smsconfirmation`);
   }
+
+  twitter(){
+    return this.http.get(`${environment.baseUrl}apiTwitter`);
+  }
 }

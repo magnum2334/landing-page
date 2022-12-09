@@ -1,49 +1,115 @@
-<p>
-  <mat-grid-list cols="1" rowHeight="500px">
-    <mat-grid-tile [colspan]="1" [style.background]="'lightgreen'">
-      <div>
-        <h1 style="font-family:  sans-serif; font-weight: 700;" class="text-center fs-3">Sé parte del cambio </h1>
-        <form [formGroup]="form">
-          <div class="justify-content-center">
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Nombres</mat-label>
-              <mat-icon matSuffix>person</mat-icon>
-              <input formControlName="nombres" matInput>
-            </mat-form-field>
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Apellidos</mat-label>
-              <mat-icon matSuffix>person</mat-icon>
-              <input formControlName="apellidos" matInput>
-            </mat-form-field><br>
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Email</mat-label>
-              <mat-icon matSuffix>email</mat-icon>
-              <input formControlName="email" matInput>
-            </mat-form-field>
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Celular</mat-label>
-              <span matPrefix style="font-size:15px ;">+57 &nbsp;</span>
-              <input maxlength="10" #numero type="tel" matInput formControlName="celular" placeholder="305-437-5375">
-              <mat-icon matSuffix>phone</mat-icon>
-              <mat-hint>{{numero.value.length}} / 10</mat-hint>
-            </mat-form-field><br>
-          </div>
-          <div style="margin-left: 2.5em;">
-            <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
-          </div>
-          <br>
-          <div class="d-flex justify-content-center">
-            <button (click)="submit($event)" [disabled]="!form.valid" mat-stroked-button [style.width]="'250px'"
-              [style.height]="'45px'" [style.background]="'white'" color="primary">
-              <span *ngIf="!loading" style="font-size:12 ;"> Únete
-              <mat-icon style="top: 6px;  position: relative;color: green;">check</mat-icon> </span>
-              <div *ngIf="loading" class="justify-content-center d-flex">
-                <mat-spinner diameter="25" strokeWidth="3" mode="indeterminate"></mat-spinner>
+<div id="banner" style="margin:0; padding: 0;"></div>
+<div>
+  <img src="../../../assets/img/hr.PNG" style="width:99.9%;position :relative; bottom:8px;" alt="">
+</div>
+<section class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center pt-3"><strong style="color:#1922a3; font-family: Roboto Flex">Texto inspirador!</strong>
+      </h1>
+    </div>
+  </div>
+</section>
+<img src="../../../assets/img/hr.PNG" width="99.9%" height="auto" alt="">
+<div class="img-bibliobrafia">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <mat-stepper
+          linear
+          #stepper
+          animationDuration="2500">
+          <mat-step state="panorama" label="Facebook">
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
               </div>
-            </button>
-          </div>
-        </form>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-step>
+          <mat-step state="panorama" label="Facebook">
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/498536068909863"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/498536068909863"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-step>
+          <mat-step state="panorama" label="Facebook">
+            <div class="row">
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/458721346331457"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/458721346331457"
+                      width="300" height="250"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-step>
+
+          <ng-template matStepperIcon="panorama">
+            <mat-icon>panorama</mat-icon>
+          </ng-template>
+        </mat-stepper>
       </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</p>
+    </div>
+  </div>
+
+</div>

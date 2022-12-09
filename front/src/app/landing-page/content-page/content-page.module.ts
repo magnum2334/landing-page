@@ -8,7 +8,6 @@ import { ContentPageComponent } from './content-page.component';
   imports: [
     CommonModule,
     ContentPageModule
-    
   ]
 })
 export class ContentPageModule { }

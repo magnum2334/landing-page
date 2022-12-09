@@ -25,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { NavsiderAdminComponent } from './admin/navsider-admin/navsider-admin.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import {MatStepperModule} from '@angular/material/stepper';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
@@ -42,9 +43,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { ModalAdminPresentationComponent } from './admin/navsider-admin/presentation-admin/modal-admin-presentation/modal-admin-presentation.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ContactComponent } from './landing-page/contact/contact.component';
+import { PropuestaPrincipalComponent } from './landing-page/propuesta-principal/propuesta-principal.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
+    PropuestaPrincipalComponent,
     AppComponent,
     FormEncuestasComponent,
     LoginComponent,
@@ -55,9 +60,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     PresentacionComponent,
     ContentPageComponent,
     PresentationAdminComponent,
-    ModalAdminPresentationComponent
-
-
+    ModalAdminPresentationComponent,
+    ContactComponent
   ],
   imports: [
     MatDatepickerModule,
@@ -67,10 +71,12 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
+    MatStepperModule,
     MatSliderModule,
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
+    CommonModule,
     MatSelectModule,
     AngularSignaturePadModule,
     BrowserAnimationsModule,

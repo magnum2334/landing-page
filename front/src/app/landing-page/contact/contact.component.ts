@@ -1,50 +1,17 @@
-import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime, Subject } from 'rxjs';
 import { ContactUsService } from '../service/contact-us.service';
 
-
 @Component({
-  selector: 'app-content-page',
-  templateUrl: './content-page.component.html',
-  styleUrls: ['./content-page.component.sass'],
-  providers: [
-    {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: {displayDefaultIndicatorType: false},
-    }
-  ]
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.sass']
 })
-export class ContentPageComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
   awaitSubmitEmail$ = new Subject<Event>();
-  firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
-  });
-  secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
-  });
-
-
-  publications_facebook:any  = [{
-    link :'https://www.facebook.com/100086709365259/videos/840064510587321',
-    width:'300',
-    height:''
-  },
-  {
-    link :'https://www.facebook.com/100086709365259/videos/840064510587321',
-    width:300,
-    height:250
-  },
-  {
-    link :'https://www.facebook.com/100086709365259/videos/840064510587321',
-    width:300,
-    height:250
-  }
-
-]
 
   form: FormGroup = new FormGroup({
     nombres: new FormControl('', [Validators.required,]),
@@ -55,11 +22,11 @@ export class ContentPageComponent implements OnInit {
   });
   loading: Boolean = false
 
-  constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService,private _formBuilder: FormBuilder) { }
+  constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
-
     this.onChangesClick()
+
   }
   onChangesClick() {
     this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {

@@ -4,11 +4,20 @@ import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ContactUsService } from './service/contact-us.service';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.sass']
+  styleUrls: ['./landing-page.component.sass'],
+  animations:[
+    trigger('fade',[
+      transition('void => *',[
+        style({ opacity: 0}),
+        animate(2500)
+      ]),
+    ])
+    ]
 })
 export class LandingPageComponent implements OnInit {
   awaitSubmitEmail$ = new Subject<Event>();
@@ -26,7 +35,11 @@ export class LandingPageComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
+
     // localStorage.clear()
+    this.contactUsService.twitter().subscribe((res)=>{
+      console.log(res)
+    })
     this.onChangesClick()
   }
   onChangesClick() {

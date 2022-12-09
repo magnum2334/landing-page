@@ -9,6 +9,8 @@ import { AdminGuard } from './admin/guard/admin.guard'
 import { ContentPageComponent } from './landing-page/content-page/content-page.component';
 import { PresentacionComponent } from './landing-page/presentacion/presentacion.component';
 import { PresentationAdminComponent } from './admin/navsider-admin/presentation-admin/presentation-admin.component';
+import { ContactComponent } from './landing-page/contact/contact.component';
+
 const routes: Routes = [
 
   {
@@ -25,6 +27,10 @@ const routes: Routes = [
       component: ContentPageComponent
     },
     {
+      path: 'contacto',
+      component: ContactComponent
+    },
+    {
       path: 'form',
       component: FormEncuestasComponent
     },
@@ -32,11 +38,6 @@ const routes: Routes = [
       path: 'presentation',
       component: PresentacionComponent
     },
-
-
-
-
-
 
     ]
   },
