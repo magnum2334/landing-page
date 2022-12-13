@@ -46,6 +46,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ContactComponent } from './landing-page/contact/contact.component';
 import { PropuestaPrincipalComponent } from './landing-page/propuesta-principal/propuesta-principal.component';
 import { CommonModule } from '@angular/common';
+import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carouser-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { CommonModule } from '@angular/common';
     ContentPageComponent,
     PresentationAdminComponent,
     ModalAdminPresentationComponent,
-    ContactComponent
+    ContactComponent,
+    CarouserDynamicComponent
   ],
   imports: [
     MatDatepickerModule,

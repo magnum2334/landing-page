@@ -6,13 +6,15 @@ import { PresentacionComponent } from './presentacion/presentacion.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PropuestaPrincipalComponent } from './propuesta-principal/propuesta-principal.component';
+import { CarouserDynamicComponent } from './carouser-dynamic/carouser-dynamic.component';
 
 @NgModule({
   declarations: [
     PresentacionComponent,
     ContactComponent,
     NavbarComponent,
-    PropuestaPrincipalComponent
+    PropuestaPrincipalComponent,
+    CarouserDynamicComponent
   ],
   imports: [
     CommonModule,
