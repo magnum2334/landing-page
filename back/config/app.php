@@ -191,8 +191,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'aliases' => Facade::defaultAliases()->merge([
         'Twitter'   => Atymic\Twitter\Facade\Twitter::class,
     ])->toArray(),
 
+=======
+>>>>>>> ae1009ac5b6d25f7aae637930df20ff75dcadaff
 ];
