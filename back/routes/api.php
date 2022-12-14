@@ -20,6 +20,7 @@ Route::controller(ContactUsController::class)->group(function () {
     Route::post('save-contact', 'store');
     Route::get('selectContacts', 'selectContacts');
     Route::post('massiveEmails', 'massiveEmails');
+    Route::get('twitter', 'twitter');
     Route::post('smsconfirmation', 'smsconfirmation');
 });
 

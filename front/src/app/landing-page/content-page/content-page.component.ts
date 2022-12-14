@@ -1,3 +1,4 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -14,8 +15,17 @@ import { ContactUsService } from '../service/contact-us.service';
     {
       provide: STEPPER_GLOBAL_OPTIONS,
       useValue: {displayDefaultIndicatorType: false},
-    }
-  ]
+    },
+
+  ],
+  animations:[
+    trigger('fade',[
+      transition('void => *',[
+        style({ opacity: 0}),
+        animate(2500)
+      ]),
+    ])
+    ]
 })
 export class ContentPageComponent implements OnInit {
 
@@ -60,6 +70,9 @@ export class ContentPageComponent implements OnInit {
   ngOnInit(): void {
 
     this.onChangesClick()
+    this.contactUsService.twitter().subscribe((res:any)=>{
+      console.log(res)
+    })
   }
   onChangesClick() {
     this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {

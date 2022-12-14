@@ -7,7 +7,10 @@ use App\Models\ContactUs;
 use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Twilio\Rest\Client;
+
+use Atymic\Twitter\Twitter as TwitterContract;
+use Illuminate\Http\JsonResponse;
+use Twitter;
 use Exception;
 class ContactUsController extends Controller
 {
@@ -46,6 +49,11 @@ class ContactUsController extends Controller
 
 
     }
+    public function twitter(): JsonResponse
+{
+	return Twitter::getUserTimeline(['screen_name' => 'thujohn', 'count' => 20, 'response_format' => 'json']);
+}
+
     public function selectContacts(){
         $contacts = ContactUs::select('nombres', 'apellidos','email')->get();
         return response()->json(compact('contacts'),200);

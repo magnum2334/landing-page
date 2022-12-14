@@ -163,7 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Atymic\Twitter\ServiceProvider\LaravelServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -192,7 +192,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // ...
+        'Twitter'   => Atymic\Twitter\Facade\Twitter::class,
     ])->toArray(),
 
 ];
