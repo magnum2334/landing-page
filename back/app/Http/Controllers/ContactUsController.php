@@ -7,8 +7,7 @@ use App\Models\ContactUs;
 use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-use Twilio\Rest\Client;
-use Illuminate\Support\Facades\DB;
+//use Twilio\Rest\Client;
 use Exception;
 class ContactUsController extends Controller
 {
@@ -49,6 +48,11 @@ class ContactUsController extends Controller
 
 
     }
+    public function twitter(): JsonResponse
+{
+	return Twitter::getUserTimeline(['screen_name' => 'thujohn', 'count' => 20, 'response_format' => 'json']);
+}
+
     public function selectContacts(){
         $contacts = ContactUs::select('nombres', 'apellidos','email')->get();
         return response()->json(compact('contacts'),200);
@@ -79,7 +83,7 @@ class ContactUsController extends Controller
 
         $sid = getenv("TWILIO_ACCOUNT_SID");
         $token = getenv("TWILIO_AUTH_TOKEN");
-        $twilio = new Client($sid, $token);
+        //$twilio = new Client($sid, $token);
         try {
             $message = $twilio->messages
             ->create("+573054375375", // to

@@ -24,7 +24,7 @@ export class ContactUsService {
   }
 
   twitter(){
-    return this.http.get(`${environment.baseUrl}apiTwitter`);
+    return this.http.get(`${environment.baseUrl}twitter`);
   }
 
   sitios_votacion(){
