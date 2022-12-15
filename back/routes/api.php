@@ -21,5 +21,6 @@ Route::controller(ContactUsController::class)->group(function () {
     Route::get('selectContacts', 'selectContacts');
     Route::post('massiveEmails', 'massiveEmails');
     Route::post('smsconfirmation', 'smsconfirmation');
+    Route::get('sitios_votacion', 'sitios_votacion');
 });
 

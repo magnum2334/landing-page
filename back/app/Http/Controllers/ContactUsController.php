@@ -8,6 +8,7 @@ use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Twilio\Rest\Client;
+use Illuminate\Support\Facades\DB;
 use Exception;
 class ContactUsController extends Controller
 {
@@ -16,10 +17,12 @@ class ContactUsController extends Controller
 
         $rules = [
             'email' => 'required|string|email|max:255|unique:contact_us',
-          ];
+        ];
+
         $messages = array(
             'email.required|unique:contact_us' => 'email ya fue creado.',
         );
+
         $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()){
             return response($validator->messages(), 401);
@@ -98,5 +101,11 @@ class ContactUsController extends Controller
             ],400);
 
         }
+    }
+    public function sitios_votacion(){
+
+        $sitios_votacion = DB::table('sitios_votacion')->get();
+        return response()->json(compact('sitios_votacion'),200);
+
     }
 }
