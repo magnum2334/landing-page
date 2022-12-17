@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('apellidos');
             $table->string('email')->unique();
             $table->string('celular');
+            $table->json('sitio_votacion');
             $table->string('terminos');
             $table->timestamps();
         });

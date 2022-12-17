@@ -1,8 +1,9 @@
-<p>
-  <mat-grid-list cols="1" rowHeight="500px">
+<mat-grid-list cols="1" rowHeight="650px" class="divImage">
     <mat-grid-tile [colspan]="1">
       <div>
-        <h1 style="font-family:  sans-serif; font-weight: 700;" class="text-center fs-3">Sé parte del cambio </h1>
+        <br><br>
+        <h1 class="text-center fs-1">Se parte del cambio</h1>
+
         <form [formGroup]="form">
           <div class="justify-content-center">
             <mat-form-field class="m-3" appearance="fill">
@@ -20,18 +21,28 @@
               <mat-icon matSuffix>email</mat-icon>
               <input formControlName="email" matInput>
             </mat-form-field>
-            <mat-form-field class="example-full-width" appearance="fill">
+
+
+            <mat-form-field class="example-full-width m-3" appearance="fill">
               <mat-label>Celular</mat-label>
-              <span matPrefix style="font-size:15px ;">+57 &nbsp;</span>
               <input maxlength="10" #numero type="tel" matInput formControlName="celular" placeholder="305-437-5375">
               <mat-icon matSuffix>phone</mat-icon>
               <mat-hint>{{numero.value.length}} / 10</mat-hint>
             </mat-form-field><br>
-            <mat-form-field class="example-full-width" appearance="fill">
 
-            </mat-form-field><br>
+            <mat-form-field class="m-3" appearance="fill">
+              <mat-label>Sitio votación </mat-label>
+              <mat-select formControlName="sitio_votacion">
+                <mat-optgroup *ngFor="let sitio of sitios_votacion_data" [label]="sitio.sector">
+                  <mat-option (click)="sitiosChange(lugar)" *ngFor="let lugar of sitio.sitio" [value]="sitio">
+                    {{lugar.lugar}}
+                  </mat-option>
+                </mat-optgroup>
+              </mat-select>
+              <mat-icon matSuffix>domain</mat-icon>
+            </mat-form-field>
+
           </div>
-
 
           <div style="margin-left: 157px; margin-bottom: 18px;">
             <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
@@ -63,5 +74,4 @@
         </form>
       </div>
     </mat-grid-tile>
-  </mat-grid-list>
-</p>
+</mat-grid-list>

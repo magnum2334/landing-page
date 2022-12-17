@@ -190,12 +190,4 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
-<<<<<<< HEAD
-    'aliases' => Facade::defaultAliases()->merge([
-        'Twitter'   => Atymic\Twitter\Facade\Twitter::class,
-    ])->toArray(),
-
-=======
->>>>>>> ae1009ac5b6d25f7aae637930df20ff75dcadaff
 ];

@@ -12,6 +12,7 @@ class ContactUs extends Model
         'nombres',
         'apellidos',
         'email',
+        'sitio_votacion',
         'celular',
         'terminos'
     ];

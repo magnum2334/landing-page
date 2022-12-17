@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Models\ContactUs;
 use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 //use Twilio\Rest\Client;
 use Exception;
@@ -26,11 +27,13 @@ class ContactUsController extends Controller
         if($validator->fails()){
             return response($validator->messages(), 401);
         }
+
         try {
             $ContactUs = ContactUs::create([
                 'nombres' => $request->nombres,
                 'apellidos' => $request->apellidos,
                 'email' => $request->email,
+                'sitio_votacion' => json_encode($request->sitio_votacion),
                 'celular' => $request->celular,
                 'terminos' => $request->terminos,
             ]);
@@ -43,7 +46,7 @@ class ContactUsController extends Controller
             return response()->json([
                 'status' => false,
                 'message'=> 'Hubo un error inesperado.' . $th
-            ]);
+            ],400);
         }
 
 
