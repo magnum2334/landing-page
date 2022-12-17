@@ -27,10 +27,28 @@
               <mat-icon matSuffix>phone</mat-icon>
               <mat-hint>{{numero.value.length}} / 10</mat-hint>
             </mat-form-field><br>
+            <mat-form-field class="example-full-width" appearance="fill">
+
+            </mat-form-field><br>
           </div>
-          <div style="margin-left: 2.5em;">
+
+
+          <div style="margin-left: 157px; margin-bottom: 18px;">
             <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
           </div>
+
+          <div class="container" style="margin-left: 100px;">
+            <div class="row">
+              <div class="col-12">
+                <ngx-recaptcha2 #captchaElem
+                  [siteKey]="siteKey"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
+              </div>
+            </div>
+          </div>
+          <br>
+
           <br>
           <div class="d-flex justify-content-center">
             <button (click)="submit($event)" [disabled]="!form.valid" mat-stroked-button [style.width]="'250px'"

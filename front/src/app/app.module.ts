@@ -47,6 +47,7 @@ import { ContactComponent } from './landing-page/contact/contact.component';
 import { PropuestaPrincipalComponent } from './landing-page/propuesta-principal/propuesta-principal.component';
 import { CommonModule } from '@angular/common';
 import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carouser-dynamic.component';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carous
     NoopAnimationsModule,
     MatStepperModule,
     MatSliderModule,
+    NgxCaptchaModule,
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,

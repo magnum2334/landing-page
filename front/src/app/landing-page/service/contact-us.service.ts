@@ -40,6 +40,7 @@ export class ContactUsService {
       console.log(this.resTwitter)
 
   }
+<<<<<<< HEAD
   resInstagram: any
   async Instagram() {
     let myHeaders = new Headers();
@@ -60,6 +61,10 @@ export class ContactUsService {
       console.log("data images : ",imgs);
 
       return imgs
+  }
+
+  sitios_votacion(){
+    return this.http.get(`${environment.baseUrl}sitios_votacion`);
   }
 
 

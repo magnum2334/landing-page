@@ -22,5 +22,6 @@ Route::controller(ContactUsController::class)->group(function () {
     Route::post('massiveEmails', 'massiveEmails');
     Route::get('twitter', 'twitter');
     Route::post('smsconfirmation', 'smsconfirmation');
+    Route::get('sitios_votacion', 'sitios_votacion');
 });
 

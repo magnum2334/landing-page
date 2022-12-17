@@ -7,10 +7,7 @@ use App\Models\ContactUs;
 use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-
-use Atymic\Twitter\Twitter as TwitterContract;
-use Illuminate\Http\JsonResponse;
-use Twitter;
+//use Twilio\Rest\Client;
 use Exception;
 class ContactUsController extends Controller
 {
@@ -19,10 +16,12 @@ class ContactUsController extends Controller
 
         $rules = [
             'email' => 'required|string|email|max:255|unique:contact_us',
-          ];
+        ];
+
         $messages = array(
             'email.required|unique:contact_us' => 'email ya fue creado.',
         );
+
         $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()){
             return response($validator->messages(), 401);
@@ -92,7 +91,7 @@ public function twitter(): JsonResponse
 
         $sid = getenv("TWILIO_ACCOUNT_SID");
         $token = getenv("TWILIO_AUTH_TOKEN");
-        $twilio = new Client($sid, $token);
+        //$twilio = new Client($sid, $token);
         try {
             $message = $twilio->messages
             ->create("+573054375375", // to
@@ -114,5 +113,11 @@ public function twitter(): JsonResponse
             ],400);
 
         }
+    }
+    public function sitios_votacion(){
+
+        $sitios_votacion = DB::table('sitios_votacion')->get();
+        return response()->json(compact('sitios_votacion'),200);
+
     }
 }
