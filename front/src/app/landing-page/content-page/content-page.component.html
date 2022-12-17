@@ -1,6 +1,6 @@
-<div >
+<div>
   <!-- Carousel wrapper -->
-  <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel" >
+  <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators" id="carousel">
       <li data-target="#myCarousel" data-mdb-slide-to="0" class="active"></li>
@@ -12,8 +12,7 @@
     <div class="carousel-inner">
       <!-- Single item -->
       <div class="carousel-item active">
-        <img src="../../../assets/img/juanPa/JuanP.jpg" height="540px" class="d-block w-100"
-          alt="Motorbike Smoke" />
+        <img src="../../../assets/img/juanPa/JuanP.jpg" height="540px" class="d-block w-100" alt="Motorbike Smoke" />
         <div class="carousel-caption d-none d-md-block">
 
         </div>
@@ -98,30 +97,23 @@
             </div>
           </div>
         </mat-step>
-        <mat-step state="panorama" label="Facebook">
+        <mat-step state="panorama" label="Instagram">
           <div class="row">
-            <div class="col-4">
+            <div class=" col-4" *ngFor="let item of fotosInstagram ">
               <div class="card">
-                <div class="card-body">
-                  <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/498536068909863"
-                    width="300" height="250"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/498536068909863"
-                    width="300" height="250"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
-                    width="300" height="250"></div>
-                </div>
+                <mat-card  style=" height: 500px; " class="example-card">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{item.username}}</mat-card-title>
+                    <mat-card-subtitle> Por Dosquebradas</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image  [src]="item.media_url"  width="300" height="300"  alt="JuanP" >
+                  <mat-card-content >
+                    <p>
+                      {{item.caption}}
+                    </p>
+                  </mat-card-content>
+                </mat-card>
               </div>
             </div>
           </div>
@@ -154,7 +146,6 @@
             </div>
           </div>
         </mat-step>
-
         <ng-template matStepperIcon="panorama">
           <mat-icon>panorama</mat-icon>
         </ng-template>
@@ -164,3 +155,32 @@
 
 </div>
 
+<footer class=" bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022
+    <a class="text-white">SoyJuanPa </a>
+  </div>
+  <!-- Copyright -->
+</footer>

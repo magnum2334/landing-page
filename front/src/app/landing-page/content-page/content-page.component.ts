@@ -3,7 +3,7 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { debounceTime, Subject } from 'rxjs';
+import { async, debounceTime, filter, Subject } from 'rxjs';
 import { ContactUsService } from '../service/contact-us.service';
 
 
@@ -64,15 +64,19 @@ export class ContentPageComponent implements OnInit {
     terminos: new FormControl('', Validators.required),
   });
   loading: Boolean = false
-
+  instagramList:any[]= []
   constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService,private _formBuilder: FormBuilder) { }
-
-  ngOnInit(): void {
+  twitterList:any
+  fotosInstagram: any
+  async ngOnInit() {
 
     this.onChangesClick()
-    this.contactUsService.twitter().subscribe((res:any)=>{
-      console.log(res)
-    })
+    this.fotosInstagram = await this.contactUsService.Instagram()   ;
+     this.contactUsService.twitter();
+    //  this.fotosInstagram = this.instagramList.filter(=> ['media_type'] == 'IMAGE')
+
+
+    // console.log(this.contactUsService.twitter())
   }
   onChangesClick() {
     this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {
