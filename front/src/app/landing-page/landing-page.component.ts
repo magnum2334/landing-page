@@ -37,9 +37,7 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
 
     // localStorage.clear()
-    this.contactUsService.twitter().subscribe((res)=>{
-      console.log(res)
-    })
+
     this.onChangesClick()
   }
   onChangesClick() {

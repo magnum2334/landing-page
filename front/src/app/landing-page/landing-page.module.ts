@@ -4,7 +4,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { PresentacionComponent } from './presentacion/presentacion.component';
 import { ContactComponent } from './contact/contact.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { PropuestaPrincipalComponent } from './propuesta-principal/propuesta-principal.component';
 import { CarouserDynamicComponent } from './carouser-dynamic/carouser-dynamic.component';
 
@@ -12,7 +11,6 @@ import { CarouserDynamicComponent } from './carouser-dynamic/carouser-dynamic.co
   declarations: [
     PresentacionComponent,
     ContactComponent,
-    NavbarComponent,
     PropuestaPrincipalComponent,
     CarouserDynamicComponent
   ],

@@ -51,9 +51,17 @@ class ContactUsController extends Controller
 
 
     }
-    public function twitter(): JsonResponse
+
+
+public function twitter(): JsonResponse
 {
-	return Twitter::getUserTimeline(['screen_name' => 'thujohn', 'count' => 20, 'response_format' => 'json']);
+    $userId = 14620824;
+	$params = [
+		'place.fields' => 'country,name',
+		TwitterContract::KEY_RESPONSE_FORMAT => TwitterContract::RESPONSE_FORMAT_JSON,
+	];
+
+	return JsonResponse::fromJsonString(Twitter::userTweets($userId, $params));
 }
 
     public function selectContacts(){
