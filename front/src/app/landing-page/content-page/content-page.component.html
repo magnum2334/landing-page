@@ -119,30 +119,23 @@
             </div>
           </div>
         </mat-step>
-        <mat-step state="panorama" label="Facebook">
+        <mat-step state="panorama" label="Twitter">
           <div class="row">
-            <div class="col-4">
+            <div class=" col-4" *ngFor="let item of fotosInstagram ">
               <div class="card">
-                <div class="card-body">
-                  <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/840064510587321"
-                    width="300" height="250"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/458721346331457"
-                    width="300" height="250"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <div class="card-body">
-                  <div class="fb-post" href="https://www.facebook.com/100086709365259/videos/458721346331457"
-                    width="300" height="250"></div>
-                </div>
+                <mat-card  style=" height: 500px; " class="example-card">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{item.username}}</mat-card-title>
+                    <mat-card-subtitle> Por Dosquebradas</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image  [src]="item.media_url"  width="300" height="300"  alt="JuanP" >
+                  <mat-card-content >
+                    <p>
+                      {{item.caption}}
+                    </p>
+                  </mat-card-content>
+                </mat-card>
               </div>
             </div>
           </div>

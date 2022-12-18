@@ -52,7 +52,7 @@ export class ContactUsService {
       mode: 'cors'
     };
 
-    await fetch("https://v1.nocodeapi.com/juanpateams/instagram/vjLLpECPdmfRFNnw", requestOptions)
+    await fetch("https://v1.nocodeapi.com/juanpateamsdevs/instagram/xdsFZvtXAqisftjc", requestOptions)
       .then(response => response.text())
       .then(result => this.resInstagram = result)
       .catch(error => console.log('error', error));
