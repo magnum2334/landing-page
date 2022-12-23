@@ -15,18 +15,18 @@ class ContactUsController extends Controller
     public function store(Request $request)
     {
 
-        $rules = [
-            'email' => 'required|string|email|max:255|unique:contact_us',
+        /* $rules = [
+            'documento' => 'required|unique:contact_us',
         ];
 
         $messages = array(
-            'email.required|unique:contact_us' => 'email ya fue creado.',
+            'documento.required|unique:contact_us' => 'documento ya registrado.',
         );
 
         $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()){
             return response($validator->messages(), 401);
-        }
+        } */
 
         try {
             $ContactUs = ContactUs::create([
@@ -35,6 +35,7 @@ class ContactUsController extends Controller
                 'email' => $request->email,
                 'sitio_votacion' => json_encode($request->sitio_votacion),
                 'celular' => $request->celular,
+                'documento' => $request->documento,
                 'terminos' => $request->terminos,
             ]);
 

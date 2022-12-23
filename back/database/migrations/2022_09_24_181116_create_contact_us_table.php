@@ -17,10 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('nombres');
             $table->string('apellidos');
-            $table->string('email')->unique();
-            $table->string('celular');
+            $table->string('email')->nullable();
+            $table->string('celular')->nullable();
             $table->json('sitio_votacion');
-            $table->string('terminos');
+            $table->string('terminos')->nullable();
+            $table->integer('documento')->unique();
             $table->timestamps();
         });
     }

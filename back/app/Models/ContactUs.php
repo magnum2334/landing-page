@@ -14,6 +14,7 @@ class ContactUs extends Model
         'email',
         'sitio_votacion',
         'celular',
+        'documento',
         'terminos'
     ];
 }
