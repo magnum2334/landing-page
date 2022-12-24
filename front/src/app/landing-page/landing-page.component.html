@@ -10,12 +10,12 @@
     </div>
   </div>
 </nav> -->
-<nav style="" @fade class="navbar navbar-expand-lg  bg-light " aria-label="Tenth navbar example">
+<!-- <nav style="" @fade class="navbar navbar-expand-lg  bg-light " aria-label="Tenth navbar example">
   <div class="container-fluid">
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="../../assets/img/juanpablo.png" class=" mx-lg-5" height="auto"  width="115px" alt="">
+    <img id="logo" src="../../assets/img/juanpablo.png" class=" mx-lg-5" height="auto"  width="115px" alt="">
     <div class="navbar-collapse justify-content-center collapse" id="navbarsExample08" >
       <ul class="navbar-nav">
         <li class="nav-item  px-3 px-lg-4">
@@ -39,7 +39,43 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
+
+<div class="FABMenu">
+  <input type="checkbox" checked/>
+  <div class="hamburger">
+    <div class="dots">
+      <span class="first"></span>
+      <span class="second"></span>
+      <span class="third"></span>
+    </div>
+  </div>
+  <div class="action_items_bar">
+    <div class="action_items">
+      <span class="first_item" matTooltipClass="tooltip" matTooltip="Home" [routerLink]="['/inicio']" routerLinkActive="router-link-active">
+        <i class="material-icons">
+        home
+        </i>
+
+      </span>
+      <span class="second_item" matTooltipClass="tooltip" matTooltip="Contactanos" [routerLink]="['/contacto']" routerLinkActive="router-link-active">
+        <i class="material-icons">
+        diversity_3
+        </i>
+      </span>
+      <span class="third_item" matTooltipClass="tooltip" matTooltip="Bibliografia" [routerLink]="['/presentation']" routerLinkActive="router-link-active">
+        <i class="material-icons">
+        contact_support
+        </i>
+      </span>
+      <span class="fourth_item" matTooltipClass="tooltip" matTooltip="Compartir">
+        <i class="material-icons">
+        share
+        </i>
+      </span>
+    </div>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
 

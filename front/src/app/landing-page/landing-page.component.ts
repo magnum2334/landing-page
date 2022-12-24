@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
@@ -9,7 +9,8 @@ import { animate, style, transition, trigger } from '@angular/animations';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.sass'],
+  styleUrls: ['./landing-page.component.css'],
+  encapsulation: ViewEncapsulation.None,
   animations:[
     trigger('fade',[
       transition('void => *',[

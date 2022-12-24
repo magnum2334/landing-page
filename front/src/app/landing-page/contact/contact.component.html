@@ -1,77 +1,91 @@
-<mat-grid-list cols="1" rowHeight="650px" class="divImage">
-    <mat-grid-tile [colspan]="1">
-      <div>
-        <br><br>
-        <h1 class="text-center fs-1">Se parte del cambio</h1>
-
-        <form [formGroup]="form">
-          <div class="justify-content-center">
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Nombres</mat-label>
-              <mat-icon matSuffix>person</mat-icon>
-              <input formControlName="nombres" matInput>
-            </mat-form-field>
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Apellidos</mat-label>
-              <mat-icon matSuffix>person</mat-icon>
-              <input formControlName="apellidos" matInput>
-            </mat-form-field><br>
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Email</mat-label>
-              <mat-icon matSuffix>email</mat-icon>
-              <input formControlName="email" matInput>
-            </mat-form-field>
-
-
-            <mat-form-field class="example-full-width m-3" appearance="fill">
-              <mat-label>Celular</mat-label>
-              <input maxlength="10" #numero type="tel" matInput formControlName="celular" placeholder="305-437-5375">
-              <mat-icon matSuffix>phone</mat-icon>
-              <mat-hint>{{numero.value.length}} / 10</mat-hint>
-            </mat-form-field><br>
-
-            <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Sitio votación </mat-label>
-              <mat-select formControlName="sitio_votacion">
-                <mat-optgroup *ngFor="let sitio of sitios_votacion_data" [label]="sitio.sector">
-                  <mat-option (click)="sitiosChange(lugar)" *ngFor="let lugar of sitio.sitio" [value]="sitio">
-                    {{lugar.lugar}}
-                  </mat-option>
-                </mat-optgroup>
-              </mat-select>
-              <mat-icon matSuffix>domain</mat-icon>
-            </mat-form-field>
-
-          </div>
-
-          <div style="margin-left: 157px; margin-bottom: 18px;">
-            <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
-          </div>
-
-          <div class="container" style="margin-left: 100px;">
-            <div class="row">
-              <div class="col-12">
-                <ngx-recaptcha2 #captchaElem
-                  [siteKey]="siteKey"
-                  formControlName="recaptcha">
-                </ngx-recaptcha2>
-              </div>
-            </div>
-          </div>
-          <br>
-
-          <br>
-          <div class="d-flex justify-content-center">
-            <button (click)="submit($event)" [disabled]="!form.valid" mat-stroked-button [style.width]="'250px'"
-              [style.height]="'45px'" [style.background]="'white'" color="primary">
-              <span *ngIf="!loading" style="font-size:12 ;"> Únete
-              <mat-icon style="top: 6px;  position: relative;color: green;">check</mat-icon> </span>
-              <div *ngIf="loading" class="justify-content-center d-flex">
-                <mat-spinner diameter="25" strokeWidth="3" mode="indeterminate"></mat-spinner>
-              </div>
-            </button>
-          </div>
-        </form>
+<mat-grid-list cols="1" rowHeight="657px" class="divImage">
+  <mat-grid-tile [colspan]="1">
+    <div class="row">
+      <div class="col-7">
+        <div id="contentImg">
+          <img class="img" src="../../../assets/img/juanPa/fondoContact.jpg" width="100%" height="100%" alt="">
+        </div>
       </div>
-    </mat-grid-tile>
+      <div class="col-5 text-center">
+        <br><br><br><br><br><br><br><br>
+        <img style="position:relative; top:25px; right: 70px; margin: 0; padding: 0" src="../../../assets/img/juanpablo.png" width="40%" height="15%" alt="">
+        <div class="card shadow-lg pl-0 pr-0 pb-4 pt-4 bg-white rounded-lg" style="position:relative; right: 70px;">
+          <form [formGroup]="form">
+              <div class="justify-content-center">
+                <mat-form-field class="m-3" appearance="fill">
+                  <mat-label>Nombres</mat-label>
+                  <mat-icon matSuffix>person</mat-icon>
+                  <input formControlName="nombres" matInput>
+                </mat-form-field>
+                <mat-form-field class="m-3" appearance="fill">
+                  <mat-label>Apellidos</mat-label>
+                  <mat-icon matSuffix>person</mat-icon>
+                  <input formControlName="apellidos" matInput>
+                </mat-form-field><br>
+
+                <mat-form-field class="m-3" appearance="fill">
+                  <mat-label>Email</mat-label>
+                  <mat-icon matSuffix>email</mat-icon>
+                  <input formControlName="email" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width m-3" appearance="fill">
+                  <mat-label>Celular</mat-label>
+                  <input maxlength="10" #numero type="tel" matInput formControlName="celular" placeholder="305-437-5375">
+                  <mat-icon matSuffix>phone</mat-icon>
+                  <mat-hint>{{numero.value.length}} / 10</mat-hint>
+                </mat-form-field><br>
+
+                <mat-form-field class="m-3" appearance="fill">
+                  <mat-label>Sitio votación </mat-label>
+                  <mat-select formControlName="sitio_votacion">
+                    <mat-optgroup *ngFor="let sitio of sitios_votacion_data" [label]="sitio.sector">
+                      <mat-option (click)="sitiosChange(lugar)" *ngFor="let lugar of sitio.sitio" [value]="sitio">
+                        {{lugar.lugar}}
+                      </mat-option>
+                    </mat-optgroup>
+                  </mat-select>
+                  <mat-icon matSuffix>domain</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field class="m-3" appearance="fill">
+                  <mat-label>Documento</mat-label>
+                  <mat-icon matSuffix>chrome_reader_mode</mat-icon>
+                  <input type="number" formControlName="documento" matInput>
+                </mat-form-field>
+              </div>
+
+              <div class="container" style="margin-left: 125px;">
+                <div class="row">
+                  <div class="col-12">
+                    <ngx-recaptcha2 #captchaElem
+                      [siteKey]="siteKey"
+                      formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div style="margin-left: 17px; margin-bottom: 18px;">
+                <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button (click)="submit($event)" mat-stroked-button [style.width]="'250px'"
+                  [style.height]="'45px'" [style.background]="'white'" color="primary">
+                  <span *ngIf="!loading" style="font-size:12 ;"> Únete
+                  <mat-icon style="top: 6px;  position: relative;color: green;">check</mat-icon> </span>
+                  <div *ngIf="loading" class="justify-content-center d-flex">
+                    <mat-spinner diameter="25" strokeWidth="3" mode="indeterminate"></mat-spinner>
+                  </div>
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-grid-tile>
 </mat-grid-list>
+<a class="float">
+  <br>
+  <i class="fa-solid fa-wand-magic-sparkles"></i>
+</a>

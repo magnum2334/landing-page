@@ -17,7 +17,7 @@ interface SitioVotacion {
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.sass']
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
 
@@ -56,8 +56,9 @@ export class ContactComponent implements OnInit {
     apellidos: new FormControl('', [Validators.required,]),
     recaptcha: new FormControl ('', [Validators.required,]),
     sitio_votacion: new FormControl ('', [Validators.required,]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    celular: new FormControl('', [Validators.required,Validators.minLength(10)]),
+    email: new FormControl('', [Validators.email]),
+    documento: new FormControl('', [Validators.required]),
+    celular: new FormControl('', [Validators.minLength(10)]),
     terminos: new FormControl('', Validators.required),
   });
 
@@ -76,6 +77,8 @@ export class ContactComponent implements OnInit {
     this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {
       this.loading = false;
 
+      console.log("form docum : ", this.form.value.documento);
+
       let data = {
         nombres:this.form.value.nombres,
         apellidos:this.form.value.apellidos,
@@ -86,10 +89,12 @@ export class ContactComponent implements OnInit {
         },
         email:this.form.value.email,
         celular: this.form.value.celular,
+        documento: this.form.value.documento,
         terminos:this.form.value.terminos,
       }
 
       if(this.form.value.recaptcha){
+        console.log(data['documento']);
         this.contactUsService.saveContact(data).subscribe((res:any)=>{
           if(res['status']){
             this._snackBar.open(`${res['ok']}✉`, "Cerrar", {
