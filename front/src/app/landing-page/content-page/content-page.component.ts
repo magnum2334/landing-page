@@ -10,7 +10,7 @@ import { ContactUsService } from '../service/contact-us.service';
 @Component({
   selector: 'app-content-page',
   templateUrl: './content-page.component.html',
-  styleUrls: ['./content-page.component.sass'],
+  styleUrls: ['./content-page.component.css'],
   providers: [
     {
       provide: STEPPER_GLOBAL_OPTIONS,

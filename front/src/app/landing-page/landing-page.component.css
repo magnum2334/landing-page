@@ -154,6 +154,18 @@ h1
   transform:rotate(45deg);
    transition: all .3s ease-in-out;
 }
+
+.iconWhatsapp{
+  color: #00bb2d;
+  font-size: 50px;
+}
+.a-iconWhatsapp{
+  position: fixed;
+  bottom: 30px;
+  right: 23px;
+  z-index: 99999;
+}
+
 .action_items_bar
 {
   position:absolute;
@@ -232,40 +244,6 @@ h1
   text-transform: uppercase;
   background-color: transparent;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /** Dimention Tablet md **/
 @media only screen and (max-width: 991px) and (min-width: 576px) {
