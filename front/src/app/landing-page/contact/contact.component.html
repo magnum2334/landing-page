@@ -1,14 +1,14 @@
 <mat-grid-list cols="1" rowHeight="657px" class="divImage">
   <mat-grid-tile [colspan]="1">
     <div class="row">
-      <div class="col-7">
+      <div id="colmn" class="col-7">
         <div id="contentImg">
           <img class="img" src="../../../assets/img/juanPa/fondoContact.jpg" width="100%" height="100%" alt="">
         </div>
       </div>
-      <div class="col-5 text-center">
+      <div id="colmn" class="col-5 text-center">
         <br><br><br><br><br><br><br><br>
-        <img style="position:relative; top:25px; right: 70px; margin: 0; padding: 0" src="../../../assets/img/juanpablo.png" width="40%" height="15%" alt="">
+        <img id="imglogo" style="position:relative; top:25px; right: 70px; margin: 0; padding: 0" src="../../../assets/img/juanpablo.png" width="40%" height="15%" alt="">
         <div class="card shadow-lg pl-0 pr-0 pb-4 pt-4 bg-white rounded-lg" style="position:relative; right: 70px;">
           <form [formGroup]="form">
               <div class="justify-content-center">
@@ -57,7 +57,7 @@
 
               <div class="container" style="margin-left: 125px;">
                 <div class="row">
-                  <div class="col-12">
+                  <div id="captcha" class="col-12">
                     <ngx-recaptcha2 #captchaElem
                       [siteKey]="siteKey"
                       formControlName="recaptcha">

@@ -21,3 +21,34 @@ mat-icon{
     background-position: 525px;
   }
 }
+
+@media screen and (max-width: 1092px){
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  #colmn{
+    position: relative;
+    right: 270px;
+  }
+
+  .card{
+    position: relative;
+    width: 560px;
+    bottom: 40px;
+    right: 950px;
+  }
+}
+
+@media screen and (max-width: 591px){
+
+  mat-grid-list{
+    height: 680px;
+    width: 592px;
+  }
+}
