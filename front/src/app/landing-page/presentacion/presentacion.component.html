@@ -1,26 +1,88 @@
-<div class="container">
-  <div class="row">
-  <div class="col-12">
-  </div>
-    <div class="col-12">
-      <mat-tab-group  mat-align-tabs="center">
-        <mat-tab class="nav-link" [routerLink]="['/presentation']" routerLinkActive="router-link-active"  label="bibliobrafia">
+<mat-tab-group  mat-align-tabs="center">
+  <mat-tab class="nav-link" [routerLink]="['/presentation']" routerLinkActive="router-link-active"  label="bibliobrafia">
 
-          <div class="d-flex justify-content-center my-2">
-            <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/B-lipaiZII8"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-          </div>
-        </mat-tab>
-
-        <mat-tab label="estudios">aqui van los estudios</mat-tab>
-        <mat-tab label="metas">Content 3</mat-tab>
-      </mat-tab-group>
-
+    <div class="d-flex justify-content-center my-2">
+      <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/B-lipaiZII8"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
     </div>
-  </div>
-</div>
+  </mat-tab>
+
+  <mat-tab label="estudios">aqui van los estudios</mat-tab>
+  <mat-tab label="metas">  <!-- Card -->
+    <article class="section" style="background: rgb(62,255,17);
+    background: radial-gradient(circle, rgba(62,255,17,1) 0%, rgba(82,115,255,1) 89%); border:none;">
+      <div class="contenido ">
+
+        <div class="box-container p-2 py-sm-2 p-md-5">
+
+          <div class="box">
+            <img src="image/icon-1.png" alt="">
+            <h3>HTML 5</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Minus, commodi?
+              Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Minus, commodi?
+            </p>
+
+            <a href="#" class="btn">read more</a>
+          </div>
+
+          <div class="box">
+            <img src="image/icon-2.png" alt="">
+            <h3>CSS 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+
+          <div class="box">
+            <img src="image/icon-3.png" alt="">
+            <h3>JavaScript</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+
+          <div class="box">
+            <img src="image/icon-4.png" alt="">
+            <h3>SASS</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+
+          <div class="box">
+            <img src="image/icon-5.png" alt="">
+            <h3>JQuery</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+
+          <div class="box">
+            <img src="image/icon-6.png" alt="">
+            <h3>React.js</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+          <div class="box">
+            <img src="image/icon-6.png" alt="">
+            <h3>React.js</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+          <div class="box">
+            <img src="image/icon-6.png" alt="">
+            <h3>React.js</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, commodi?</p>
+            <a href="#" class="btn">read more</a>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+  </mat-tab>
+</mat-tab-group>
