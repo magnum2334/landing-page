@@ -238,7 +238,7 @@ h1 span {
   padding-left: 0.5rem;
   top: 0.4rem;
   left: 270px;
-  animation: openclose 3s ease-in-out infinite;
+  animation: openclose 4s ease-out infinite;
 }
 
 .word1, .word2, .word3 {

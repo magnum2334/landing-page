@@ -49,6 +49,9 @@ mat-icon{
 
   mat-grid-list{
     height: 680px;
-    width: 592px;
+    width: 604px;
+    margin-top: 122px;
   }
+
+
 }
