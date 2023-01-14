@@ -49,6 +49,7 @@ import { CommonModule } from '@angular/common';
 import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carouser-dynamic.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
 
+
 @NgModule({
   declarations: [
     PropuestaPrincipalComponent,
