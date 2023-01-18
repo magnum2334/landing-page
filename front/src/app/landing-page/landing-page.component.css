@@ -375,7 +375,7 @@ oltip {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-30px;
+    top:-50px;
     left: 7%;
   }
 
@@ -383,7 +383,7 @@ oltip {
   {
     margin: 0%;
     position:absolute;
-    top:-30px;
+    top:-50px;
     left:0%;
     width:80px;
     height:80px;
@@ -396,7 +396,7 @@ oltip {
   .action_items_bar{
     margin: 0%;
     position:absolute;
-    top: -10%;
+    top: -20%;
     left:20%;
   }
 
