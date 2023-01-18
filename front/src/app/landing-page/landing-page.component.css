@@ -35,11 +35,9 @@ strong {
 
 h1
 {
-  font-family: 'Roboto';
+  font-family: 'Poppins', sans-serif;
   font-weight:100;
-  position:absolute;
-  top:35%;
-  left:48%;
+
 }
 .material-icons {
   font-family: 'Material Icons';
@@ -233,7 +231,8 @@ h1
   transition-delay:.45s;
 }
 
-.tooltip {
+.to
+oltip {
   position: relative;
   left: 35px;
   bottom: 20px;
@@ -243,7 +242,14 @@ h1
 }
 
 /** Dimention Tablet md **/
-@media only screen and (max-width: 696px) {
+@media only screen and (max-width: 995px) and (min-width: 575px){
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    width: 62%;
+  }
 
   .hamburger{
     margin: 0%;
@@ -277,20 +283,142 @@ h1
   {
     left:15%;
   }
-.second_item
+  .second_item
   {
-    left:30%;
+    left:32%;
   }
 
   .third_item
   {
     bottom: 2px;
-    left:47%;
+    left:49%;
   }
 
   .fourth_item
   {
-    left:60%;
+    left:64%;
+  }
+}
+
+@media only screen and (max-width: 575px) and (min-width: 370px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    bottom:87%;
+    left: 7%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    bottom: 30%;
+    left:0%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    bottom: 70%;
+    left:20%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
   }
 
 }
+
+@media only screen and (max-width: 370px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    bottom:87%;
+    left: 7%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top: 0%;
+    left:0%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    bottom: 70%;
+    left:20%;
+  }
+
+  .first_item
+  {
+    left:13%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:52%;
+  }
+
+  .fourth_item
+  {
+    left:69%;
+  }
+
+}
+
