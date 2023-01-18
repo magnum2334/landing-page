@@ -300,7 +300,7 @@ oltip {
   }
 }
 
-@media only screen and (max-width: 575px) and (min-width: 370px) {
+@media only screen and (max-width: 582px) and (min-width: 370px) {
 
   *{
     max-width: 100%;
@@ -314,7 +314,7 @@ oltip {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-70px;
+    top:-150px;
     left: 7%;
   }
 
@@ -322,7 +322,7 @@ oltip {
   {
     margin: 0%;
     position:absolute;
-    top:-70px;
+    top:-150px;
     left:0%;
     width:80px;
     height:80px;
@@ -335,7 +335,7 @@ oltip {
   .action_items_bar{
     margin: 0%;
     position:absolute;
-    top: -30%;
+    top: -70%;
     left:20%;
   }
 
