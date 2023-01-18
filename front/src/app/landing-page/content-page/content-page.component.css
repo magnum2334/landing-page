@@ -19,6 +19,10 @@
  bottom: 20px;
 }
 
+.text-responsive-facebook{
+  display: none;
+}
+
 #redes{
   color: hsl(234, 12%, 34%);
   font-size: 20px;
@@ -487,6 +491,14 @@ h1 span {
     max-width: 100%;
   }
 
+  .text-responsive-facebook{
+    color: rgb(0, 0, 0);
+    display: flex;
+    position: relative;
+    bottom:90px;
+    left: 20px;
+  }
+
 
   #img-carousel{
     height: 652px;
@@ -522,12 +534,20 @@ h1 span {
 }
 
 /* Dimention phone md */
-@media only screen and (max-width: 575px) and (min-width: 370px) {
+@media only screen and (max-width: 582px) and (min-width: 370px) {
 
   h1 span {
     right: 50px;
     bottom: 4.5px;
     font-size: 22px;
+  }
+
+  .text-responsive-facebook{
+    color: rgb(0, 0, 0);
+    display: flex;
+    position: relative;
+    bottom:90px;
+    left: 20px;
   }
 
   .word1 {
@@ -555,11 +575,8 @@ h1 span {
   }
 
   .displayN{
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    border:none;
+    left: 15px;
+    display:contents;
   }
 
   #txtInsp{
@@ -597,6 +614,14 @@ h1 span {
     font-size: 20px;
   }
 
+  .text-responsive-facebook{
+    color: rgb(0, 0, 0);
+    display: flex;
+    position: relative;
+    bottom:90px;
+    left: 8px;
+  }
+
   .word1 {
     font-size: 20px;
     margin-right: 133px;
@@ -624,7 +649,7 @@ h1 span {
     justify-content: center;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: contents;
     border:none;
   }
 
