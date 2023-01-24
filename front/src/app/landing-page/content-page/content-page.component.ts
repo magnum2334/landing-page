@@ -71,8 +71,8 @@ export class ContentPageComponent implements OnInit {
   async ngOnInit() {
 
     this.onChangesClick()
-    this.fotosInstagram = await this.contactUsService.Instagram()   ;
-     this.contactUsService.twitter();
+    //this.fotosInstagram = await this.contactUsService.Instagram()   ;
+    //this.contactUsService.twitter();
     //  this.fotosInstagram = this.instagramList.filter(=> ['media_type'] == 'IMAGE')
 
 

@@ -23,7 +23,7 @@ export class ContactUsService {
     return this.http.get(`${environment.baseUrl}smsconfirmation`);
   }
   resTwitter: any
- async twitter() {
+ /* async twitter() {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     var requestOptions: any = {
@@ -39,9 +39,9 @@ export class ContactUsService {
       .catch(error => console.log('error', error));
       console.log(this.resTwitter)
 
-  }
+  } */
 
-  resInstagram: any
+ /*  resInstagram: any
   async Instagram() {
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -61,7 +61,7 @@ export class ContactUsService {
       console.log("data images : ",imgs);
 
       return imgs
-  }
+  } */
 
   sitios_votacion(){
     return this.http.get(`${environment.baseUrl}sitios_votacion`);
