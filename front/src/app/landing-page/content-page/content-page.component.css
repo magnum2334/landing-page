@@ -455,6 +455,14 @@ h1 span {
     font-size: 22px;
   }
 
+  .accordion{
+    height:210px;
+  }
+
+  .accordion > div{
+    border-radius: 20px;
+  }
+
   .text-responsive-facebook{
     color: rgb(0, 0, 0);
     display: flex;
@@ -523,9 +531,6 @@ h1 span {
 /* Dimention phone sm */
 @media only screen and (max-width: 370px) {
 
-  .gallery{
-    display: none;
-  }
 
   h1 span {
     right: 20px;

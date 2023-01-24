@@ -231,8 +231,7 @@ h1
   transition-delay:.45s;
 }
 
-.to
-oltip {
+.tooltip {
   position: relative;
   left: 35px;
   bottom: 20px;
@@ -241,8 +240,8 @@ oltip {
   background-color: transparent;
 }
 
-/** Dimention Tablet md **/
-@media only screen and (max-width: 995px) and (min-width: 575px){
+/** Dimention Tablet lg **/
+@media only screen and (max-width: 1000px) and (min-width: 910px){
   *{
     max-width: 100%;
   }
@@ -254,16 +253,16 @@ oltip {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:7%;
-    left: 2%;
+    top:-180%;
+    left: 53%;
   }
 
   .FABMenu input
   {
     margin: 0%;
     position:absolute;
-    top: 0%;
-    left:0%;
+    top: -180%;
+    left:53%;
     width:80px;
     height:80px;
     z-index:20;
@@ -275,8 +274,48 @@ oltip {
   .action_items_bar{
     margin: 0%;
     position:absolute;
-    top: 10%;
-    left:10%;
+    top: -175%;
+    left:27%;
+  }
+
+}
+
+/** Dimention Tablet md **/
+@media only screen and (max-width: 910px) and (min-width: 800px){
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    width: 62%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-132%;
+    left: 22%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-136%;
+    left: 22%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -128%;
+    left: 24%;
   }
 
   .first_item
@@ -300,7 +339,67 @@ oltip {
   }
 }
 
-@media only screen and (max-width: 582px) and (min-width: 370px) {
+/** Dimention Tablet sm **/
+@media only screen and (max-width: 800px) and (min-width: 700px){
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    width: 62%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-92%;
+    left: 19%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top: -92%;
+    left:19%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -87%;
+    left:22%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
+  }
+}
+
+/** Dimention Phone lg **/
+@media only screen and (max-width: 700px) and (min-width: 600px) {
 
   *{
     max-width: 100%;
@@ -314,16 +413,16 @@ oltip {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-95px;
-    left: 7%;
+    top:-166px;
+    left: 20%;
   }
 
   .FABMenu input
   {
     margin: 0%;
     position:absolute;
-    top:-95px;
-    left:0%;
+    top:-166px;
+    left:20%;
     width:80px;
     height:80px;
     z-index:20;
@@ -335,8 +434,8 @@ oltip {
   .action_items_bar{
     margin: 0%;
     position:absolute;
-    top: -42%;
-    left:20%;
+    top: -78%;
+    left:24%;
   }
 
   .first_item
@@ -361,7 +460,315 @@ oltip {
 
 }
 
-@media only screen and (max-width: 370px) {
+/** Dimention Phone md lg **/
+@media only screen and (max-width: 600px) and (min-width: 500px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-10%;
+    left: 15%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-10%;
+    left:15%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -5%;
+    left: 20%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
+  }
+
+}
+
+/** Dimention Phone md lg **/
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-89%;
+    left: 6%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-89%;
+    left:6%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -84%;
+    left: 17%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
+  }
+
+}
+
+/** Dimention Phone md lg **/
+@media only screen and (max-width: 400px) and (min-width: 350px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-34%;
+    left: 6%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-34%;
+    left:6%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -30%;
+    left: 17%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
+  }
+
+}
+
+/* Iphone 12 pro*/
+@media only screen and (max-width: 360px) and (min-width: 360px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-50%;
+    left: 6%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-50%;
+    left:6%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -45%;
+    left: 17%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
+  }
+
+}
+
+@media only screen and (max-width: 393px) and (min-width: 390px) {
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-74%;
+    left: 6%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-74%;
+    left:6%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top: -70%;
+    left: 17%;
+  }
+
+  .first_item
+  {
+    left:15%;
+  }
+  .second_item
+  {
+    left:32%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:49%;
+  }
+
+  .fourth_item
+  {
+    left:64%;
+  }
+}
+
+/** Dimention Phone sm **/
+@media only screen and (max-width: 350px) {
 
   *{
     max-width: 100%;
