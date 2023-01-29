@@ -1,12 +1,52 @@
 #contentImg{
   position: relative;
-  right: 115px;
+  right: 122px;
+  top: 37px;
+}
+
+#colmn1{
+  margin-top: -261px;
+}
+
+#terminos{
+  margin-left: 17px;
+  margin-bottom: 18px;
+}
+
+.divrecaptresponsive{
+  display: none;
+}
+
+#colmn2{
+  margin-top: -1px;
+}
+
+#captcha{
+  position: relative;
+  left: 27px;
+}
+
+#imglogo{
+  position:relative;
+  top:45px;
+  left: 60px;
+  margin: -40px;
+  padding: 0;
+}
+
+.contenedorRecapt{
+  margin-left: 136px;
+}
+
+.card{
+  position: relative;
+  top: 70px;
+  left: 45px;
 }
 
 mat-icon{
   color: black;
 }
-
 
 @keyframes shine {
   0% {
@@ -22,7 +62,149 @@ mat-icon{
   }
 }
 
-@media screen and (max-width: 1092px){
+@media screen and (max-width: 1200px) and (min-width: 1133px) {
+
+  *{
+    max-width: 100%;
+    background: red;;
+  }
+
+  #colmn1{
+    display: none;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  .card{
+    max-width: 600px;
+    position: relative;
+    top: 60px;
+    left: 286px;
+  }
+
+  #form{
+    max-width: 100%;
+  }
+
+  #recaptchacol{
+    display: none;
+  }
+
+  #contenedorRecapt{
+    display: contents;
+  }
+
+}
+
+@media screen and (max-width:1133px) and (min-width:1025px){
+  *{
+    max-width: 100%;
+  }
+
+  #colmn1{
+    display: none;
+  }
+
+  .contenedorRecapt{
+    margin-left: 106px;
+  }
+
+  #recaptchahiden{
+    position: relative;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  .card{
+    max-width: 600px;
+    position: relative;
+    top: 60px;
+    left: 256px;
+  }
+
+  #form{
+    max-width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1025px) and (min-width: 950px){
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  .contenedorRecapt{
+    margin-left: 90px;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 221px;
+  }
+}
+
+@media screen and (max-width: 950px) and (min-width: 900px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  .contenedorRecapt{
+    margin-left: 90px;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 230px;
+  }
+
+}
+
+@media screen and (max-width: 900px) and (min-width: 850px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 95px;
+  }
 
   #imglogo{
     display: none;
@@ -32,26 +214,330 @@ mat-icon{
     display: none;
   }
 
-  #colmn{
-    position: relative;
-    right: 270px;
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 230px;
+  }
+
+}
+
+@media screen and (max-width: 850px) and (min-width: 750px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  .contenedorRecapt{
+    margin-left: 95px;
+  }
+
+  #contentImg{
+    display: none;
   }
 
   .card{
-    position: relative;
-    width: 560px;
-    bottom: 40px;
-    right: 950px;
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 151px;
+  }
+
+}
+
+@media screen and (max-width: 750px) and (min-width: 650px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 90px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 98px;
   }
 }
 
-@media screen and (max-width: 591px){
+@media screen and (max-width: 650px) and (min-width: 596px){
 
-  mat-grid-list{
-    height: 680px;
-    width: 604px;
-    margin-top: 122px;
+  *{
+    max-width: 100%;
   }
 
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 90px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 61px;
+  }
+}
+
+@media screen and (max-width: 596px) and (min-width: 560px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 90px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 41px;
+  }
+}
+
+@media screen and (max-width: 560px) and (min-width: 520px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 90px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 14px;
+  }
+}
+
+@media screen and (max-width: 520px) and (min-width: 440px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 50px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 28px;
+  }
+}
+
+@media screen and (max-width: 440px) and (min-width: 419px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 40px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 21px;
+  }
+}
+
+@media screen and (max-width: 419px) and (min-width: 397px){
+
+  *{
+    max-width: 100%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: 20px;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 21px;
+  }
+}
+
+@media screen and (max-width: 397px) and (min-width: 370px){
+
+  *{
+    max-width: 90%;
+  }
+
+  .contenedorRecapt{
+    margin-left: -19px;
+    max-width: 108%;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 21px;
+  }
+
+  #form{
+    position: relative;
+    left: 20px;
+  }
+
+  #terminos{
+    margin-left: 0px;
+  }
+
+}
+
+@media screen and (max-width: 370px) and (min-width: 225px){
+
+  *{
+    max-width: 90%;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: -10px;
+    max-width: 108%;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 21px;
+  }
+
+  #form{
+    position: relative;
+    left: 20px;
+  }
+
+  #terminos{
+    margin-left: -5px;
+  }
 
 }

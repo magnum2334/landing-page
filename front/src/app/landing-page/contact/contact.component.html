@@ -1,16 +1,14 @@
-<mat-grid-list cols="1" rowHeight="657px" class="divImage">
-  <mat-grid-tile [colspan]="1">
-    <div class="row">
-      <div id="colmn" class="col-7">
+<div id="contenedor" class="container">
+  <div class="row">
+      <div id="colmn1" class="col-6">
         <div id="contentImg">
-          <img class="img" src="../../../assets/img/juanPa/fondoContact.jpg" width="100%" height="100%" alt="">
+          <img class="img" src="../../../assets/img/juanPa/fondoContact.jpg" width="119%">
         </div>
       </div>
-      <div id="colmn" class="col-5 text-center">
-        <br><br><br><br><br><br><br><br>
-        <img id="imglogo" style="position:relative; top:25px; right: 70px; margin: 0; padding: 0" src="../../../assets/img/juanpablo.png" width="40%" height="15%" alt="">
-        <div class="card shadow-lg pl-0 pr-0 pb-4 pt-4 bg-white rounded-lg" style="position:relative; right: 70px;">
-          <form [formGroup]="form">
+      <div id="colmn2"  class="col-6 text-center">
+        <img id="imglogo" src="../../../assets/img/juanpablo.png" width="40%" height="25%">
+        <div class="card shadow-lg pl-0 pr-0 pb-4 pt-4 bg-white rounded-lg">
+          <form id="form" [formGroup]="form">
               <div class="justify-content-center">
                 <mat-form-field class="m-3" appearance="fill">
                   <mat-label>Nombres</mat-label>
@@ -55,18 +53,15 @@
                 </mat-form-field>
               </div>
 
-              <div class="container" style="margin-left: 125px;">
-                <div class="row">
-                  <div id="captcha" class="col-12">
-                    <ngx-recaptcha2 #captchaElem
-                      [siteKey]="siteKey"
-                      formControlName="recaptcha">
-                    </ngx-recaptcha2>
-                  </div>
-                </div>
+              <div class="contenedorRecapt">
+                <ngx-recaptcha2 class="g-recaptcha" #captchaElem
+                  [siteKey]="siteKey"
+                  formControlName="recaptcha">
+                </ngx-recaptcha2>
               </div>
+
               <br>
-              <div style="margin-left: 17px; margin-bottom: 18px;">
+              <div id="terminos">
                 <mat-checkbox formControlName="terminos" required>Terminos y condiciones</mat-checkbox>
               </div>
               <div class="d-flex justify-content-center">
@@ -82,6 +77,5 @@
           </form>
         </div>
       </div>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>
