@@ -599,7 +599,7 @@ span .material-icons:hover{
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-25%;
+    top:-45%;
     left: 6%;
   }
 
@@ -607,7 +607,7 @@ span .material-icons:hover{
   {
     margin: 0%;
     position:absolute;
-    top:-25%;
+    top:-45%;
     left:6%;
     width:80px;
     height:80px;
@@ -620,7 +620,7 @@ span .material-icons:hover{
   .action_items_bar{
     margin: 0%;
     position:absolute;
-    top:-20%;
+    top:-40%;
     left: 17%;
   }
 
