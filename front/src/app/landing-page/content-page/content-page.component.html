@@ -1,7 +1,7 @@
 <div class="conteiner">
   <div>
     <!-- Carousel wrapper -->
-    <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel">
+    <div id="carouselDarkVariant"  class="carousel slide carousel-fade carousel-dark" data-mdb-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators" id="carousel">
         <li data-target="#myCarousel" data-mdb-slide-to="0" class="active"></li>
@@ -108,26 +108,26 @@
     <div class="box box-down cyan">
       <h2>Honestidad</h2>
       <p>Honestidad y palabra, de que el cambio es ahora, valor fundamental para verdaderamente preguntarnos ¿Y a dosquebradas cuando le toca?</p>
-      <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+      <img src="../../../assets/icons/empathy.svg" width="55px" height="55px" alt="">
     </div>
 
     <div class="box red">
       <h2>Integridad</h2>
       <p>En nuestra campaña la integridad es fundamental, para ser moralmente correctos</p>
-      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+      <img src="../../../assets/icons/loyalty-svgrepo-com.svg"  width="55px" height="55px" alt="">
     </div>
 
     <div class="box box-down blue">
       <h2>Empatia</h2>
       <p>En esta campaña las personas son nuestro principal proyecto por eso necesitamos ponernos en el lugar de las personas que necesitan de nuestra ayuda</p>
-      <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+      <img src="../../../assets/icons/dignity-human.svg"  width="65px" height="65px" alt="">
     </div>
   </div>
   <div class="row2-container">
     <div class="box orange">
       <h2>Responsabilidad</h2>
       <p>El principal valor de esta campaña, el que impulsara a Dosquebradas a un mejor mañana</p>
-      <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
+      <img src="../../../assets/icons/speech.svg" width="65px" height="65px" alt="">
     </div>
   </div>
 
@@ -242,35 +242,6 @@
               </div>
             </div>
           </mat-step>
-          <mat-step state="instagram" label="Instagram">
-            <div class="row">
-              <div class=" col-4" *ngFor="let item of fotosInstagram ">
-                <div class="card">
-                  <mat-card  style=" height: 500px; " class="example-card">
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>{{item.username}}</mat-card-title>
-                      <mat-card-subtitle> Por Dosquebradas</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image  [src]="item.media_url"  width="300" height="300"  alt="JuanP" >
-                    <mat-card-content >
-                      <p>
-                        {{item.caption}}
-                      </p>
-                    </mat-card-content>
-                  </mat-card>
-                </div>
-              </div>
-            </div>
-          </mat-step>
-
-          <ng-template matStepperIcon="facebook">
-            <i class="fa-brands fa-facebook"></i>
-          </ng-template>
-          <ng-template matStepperIcon="instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </ng-template>
-
         </mat-stepper>
       </div>
     </div>

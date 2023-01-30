@@ -37,8 +37,6 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // localStorage.clear()
-
     this.onChangesClick()
   }
   onChangesClick() {

@@ -7,7 +7,6 @@ import { ContactUsService } from '../service/contact-us.service';
 
 interface Lugar {
   lugar: string
-  mesa: string
 }
 
 interface SitioVotacion {
@@ -23,27 +22,46 @@ export class ContactComponent implements OnInit {
 
   sitios_votacion_data: SitioVotacion[] = [
     {
-      sector: 'Sector A',
+      sector: 'Comuna 1',
       sitio: [
-        {lugar: 'Santa isabel', mesa: '# 1'},
-        {lugar: 'Guadalupe', mesa: '# 2'},
-        {lugar: 'Naranjito', mesa: '# 3'},
+        {lugar: 'Barrios Ótun'},
+        {lugar: 'El Balso'},
+        {lugar: 'Las Vegas'},
+        {lugar: 'La graciela'},
+        {lugar: 'La Esnada'},
+        {lugar: 'La Badea'},
+        {lugar: 'Inquilinos'},
+        {lugar: 'Minuto De Dios'},
+        {lugar: 'Villa Alexandra'},
+        {lugar: 'pedregales'},
+
+
       ],
     },
     {
-      sector: 'Sector B',
+      sector: 'Comuna 2',
       sitio: [
-        {lugar: 'Manuel elkin', mesa: '# 1'},
-        {lugar: 'Bosques de la acuarela', mesa: '# 2'},
-        {lugar: 'Los pinos', mesa: '# 3'},
+        {lugar: 'El Paraiso'},
+        {lugar: 'San Gregorio'},
+        {lugar: 'San Rafael'},
+        {lugar: 'Olaya Herrera'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
+        {lugar: 'San Rafael'},
       ],
     },
     {
-      sector: 'Sector C',
+      sector: 'Comuna 3',
       sitio: [
-        {lugar: 'Cristo rey', mesa: '# 1'},
-        {lugar: 'Normal superior', mesa: '# 2'},
-        {lugar: 'Comfamiliar', mesa: '# 3'},
+        {lugar: 'Cristo rey' },
+        {lugar: 'Normal superior' },
+        {lugar: 'Comfamiliar' },
       ],
     },
   ]

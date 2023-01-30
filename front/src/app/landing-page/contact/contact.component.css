@@ -33,7 +33,9 @@
   margin: -40px;
   padding: 0;
 }
-
+#imglogo2{
+  display: none;
+}
 .contenedorRecapt{
   margin-left: 136px;
 }
