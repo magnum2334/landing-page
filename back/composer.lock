@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d26d3389c92b45d0ab998ec5b48a2f51",
+    "content-hash": "005440f92253b049c5ba6e7554df3b08",
     "packages": [
         {
             "name": "atymic/twitter",
@@ -7186,16 +7186,16 @@
         },
         {
             "name": "twilio/sdk",
-            "version": "6.44.1",
+            "version": "6.44.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:twilio/twilio-php.git",
-                "reference": "0739f62e6280d9a20925d2f30a71bfd2bcac48f5"
+                "reference": "deec3203857387213825e2634c4eb4b56880877a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/0739f62e6280d9a20925d2f30a71bfd2bcac48f5",
-                "reference": "0739f62e6280d9a20925d2f30a71bfd2bcac48f5",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/deec3203857387213825e2634c4eb4b56880877a",
+                "reference": "deec3203857387213825e2634c4eb4b56880877a",
                 "shasum": ""
             },
             "require": {
@@ -7231,7 +7231,7 @@
                 "sms",
                 "twilio"
             ],
-            "time": "2023-01-11T14:02:06+00:00"
+            "time": "2023-01-25T19:34:30+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
