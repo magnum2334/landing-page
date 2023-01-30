@@ -238,16 +238,17 @@ img {
 
 @media (max-width: 450px) {
   .box {
-      height: 200px;
+      height: 241px;
   }
 }
 
 @media (max-width: 950px) and (min-width: 450px) {
   .box {
       text-align: center;
-      height: 180px;
+      height: 241px;
   }
 }
+
 
 .cyan {
   border-top: 3px solid #e84f3e;
