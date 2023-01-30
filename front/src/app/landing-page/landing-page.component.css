@@ -828,7 +828,7 @@ span .material-icons:hover{
 
 }
 
-@media only screen and (max-width: 415px) and (min-width: 398px) {
+@media only screen and (max-width: 415px) and (min-width: 394px) {
 
   *{
     max-width: 100%;
@@ -889,9 +889,8 @@ span .material-icons:hover{
 
 }
 
-
 /** Dimention Phone md lg **/
-@media only screen and (max-width: 398px) and (min-width: 355px) {
+@media only screen and (max-width: 394px) and (min-width: 355px) {
 
   *{
     max-width: 100%;
