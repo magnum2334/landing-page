@@ -8,25 +8,13 @@ use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-//use Twilio\Rest\Client;
+use Twilio\Rest\Client;
 use Exception;
+
 class ContactUsController extends Controller
 {
     public function store(Request $request)
     {
-
-        /* $rules = [
-            'documento' => 'required|unique:contact_us',
-        ];
-
-        $messages = array(
-            'documento.required|unique:contact_us' => 'documento ya registrado.',
-        );
-
-        $validator = Validator::make($request->all(), $rules, $messages);
-        if($validator->fails()){
-            return response($validator->messages(), 401);
-        } */
 
         try {
             $ContactUs = ContactUs::create([
@@ -53,18 +41,6 @@ class ContactUsController extends Controller
 
     }
 
-
-public function twitter(): JsonResponse
-{
-    $userId = 14620824;
-	$params = [
-		'place.fields' => 'country,name',
-		TwitterContract::KEY_RESPONSE_FORMAT => TwitterContract::RESPONSE_FORMAT_JSON,
-	];
-
-	return JsonResponse::fromJsonString(Twitter::userTweets($userId, $params));
-}
-
     public function selectContacts(){
         $contacts = ContactUs::select('nombres', 'apellidos','email')->get();
         return response()->json(compact('contacts'),200);
@@ -89,34 +65,15 @@ public function twitter(): JsonResponse
     }
     public function smsconfirmation(Request $request){
 
+       $client = new Client( 'ACf58acbf9ae7f291138fed9090510fef2', '89637daed927ed52d44182759d48f61d' );
 
-        $receiverNumber = "+573054375375";
-        $message = "All About Laravel";
-
-        $sid = getenv("TWILIO_ACCOUNT_SID");
-        $token = getenv("TWILIO_AUTH_TOKEN");
-        //$twilio = new Client($sid, $token);
-        try {
-            $message = $twilio->messages
-            ->create("+573054375375", // to
-                     [
-                         "body" => "This will be the body of the new message!",
-                         "from" => "+15017122661"
-                     ]
-            );
-            return response()->json([
-                'status' => true,
-                'message'=>$message->sid
-            ],200);
-
-        } catch (Exception $e) {
-
-            return response()->json([
-                'status' => false,
-                'message'=> ".".$e->getMessage()
-            ],400);
-
-        }
+        $client->messages->create(
+            '+573054375375',
+            [
+                'from' => '+16088893380',
+                'body' => $request->message,
+            ]
+        );
     }
     public function sitios_votacion(){
 
