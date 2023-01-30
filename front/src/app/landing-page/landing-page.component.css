@@ -949,5 +949,10 @@ span .material-icons:hover{
     left:65%;
   }
 
+  span .material-icons:hover{
+    color: #ffff;
+    transform: scale(1);
+  }
+
 }
 
