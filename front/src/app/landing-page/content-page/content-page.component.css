@@ -238,14 +238,14 @@ img {
 
 @media (max-width: 450px) {
   .box {
-      height: 241px;
+      height: 255px;
   }
 }
 
 @media (max-width: 950px) and (min-width: 450px) {
   .box {
       text-align: center;
-      height: 241px;
+      height: 255px;
   }
 }
 
