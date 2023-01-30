@@ -884,7 +884,8 @@ span .material-icons:hover{
 
   .fourth_item
   {
-    display: none;
+    left: 62%;
+
   }
 
 }
@@ -956,7 +957,7 @@ span .material-icons:hover{
 
 }
 
-@media only screen and (max-width: 380px) and (min-width: 370px) {
+@media only screen and (max-width: 380px) and (min-width: 375px) {
 
   *{
     max-width: 100%;
@@ -970,7 +971,7 @@ span .material-icons:hover{
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-35%;
+    top:-45%;
     left: 6%;
   }
 
@@ -978,7 +979,7 @@ span .material-icons:hover{
   {
     margin: 0%;
     position:absolute;
-    top:-35%;
+    top:-45%;
     left:6%;
     width:80px;
     height:80px;
@@ -991,7 +992,7 @@ span .material-icons:hover{
   .action_items_bar{
     margin: 0%;
     position:absolute;
-    top:-30%;
+    top:-40%;
     left: 17%;
   }
 
@@ -1012,8 +1013,7 @@ span .material-icons:hover{
 
   .fourth_item
   {
-    display: none;
-    /* left:65%; */
+    left:65%;
   }
 
   span .material-icons:hover{
