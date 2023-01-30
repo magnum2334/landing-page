@@ -585,7 +585,7 @@ span .material-icons:hover{
 }
 
 /** Dimention Phone md lg **/
-@media only screen and (max-width: 400px) and (min-width: 390px) {
+@media only screen and (max-width: 400px) and (min-width: 355px) {
 
   *{
     max-width: 100%;
@@ -642,133 +642,6 @@ span .material-icons:hover{
   .fourth_item
   {
     left:64%;
-  }
-
-}
-
-
-
-
-/* Iphone 12 pro*/
-@media only screen and (max-width: 360px) and (min-width: 360px) {
-
-  *{
-    max-width: 100%;
-  }
-
-  .FABMenu{
-    top: 100px;
-    width: 80%;
-  }
-
-  .hamburger{
-    margin: 0%;
-    position: absolute;
-    top:-50%;
-    left: 6%;
-  }
-
-  .FABMenu input
-  {
-    margin: 0%;
-    position:absolute;
-    top:-50%;
-    left:6%;
-    width:80px;
-    height:80px;
-    z-index:20;
-    border-radius: 80px;
-    opacity:0;
-    cursor:pointer;
-  }
-
-  .action_items_bar{
-    margin: 0%;
-    position:absolute;
-    top: -45%;
-    left: 17%;
-  }
-
-  .first_item
-  {
-    left:15%;
-  }
-  .second_item
-  {
-    left:32%;
-  }
-
-  .third_item
-  {
-    bottom: 2px;
-    left:49%;
-  }
-
-  .fourth_item
-  {
-    left:64%;
-  }
-
-}
-
-/** Dimention Phone sm **/
-@media only screen and (max-width: 350px) {
-
-  *{
-    max-width: 100%;
-  }
-
-  .FABMenu{
-    top: 100px;
-    width: 80%;
-  }
-
-  .hamburger{
-    margin: 0%;
-    position: absolute;
-    top:-50px;
-    left: 7%;
-  }
-
-  .FABMenu input
-  {
-    margin: 0%;
-    position:absolute;
-    top:-50px;
-    left:0%;
-    width:80px;
-    height:80px;
-    z-index:20;
-    border-radius: 80px;
-    opacity:0;
-    cursor:pointer;
-  }
-
-  .action_items_bar{
-    margin: 0%;
-    position:absolute;
-    top: -20%;
-    left:20%;
-  }
-
-  .first_item
-  {
-    left:13%;
-  }
-  .second_item
-  {
-    left:32%;
-  }
-
-  .third_item
-  {
-    bottom: 2px;
-    left:52%;
-  }
-
-  .fourth_item
-  {
-    left:69%;
   }
 
 }
