@@ -1023,7 +1023,7 @@ span .material-icons:hover{
 
 }
 
-@media only screen and (max-width: 375px) and (min-width: 365px) {
+@media only screen and (max-width: 375px) and (min-width: 350px) {
 
   *{
     max-width: 100%;
