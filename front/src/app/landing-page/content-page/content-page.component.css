@@ -19,6 +19,34 @@
  bottom: 20px;
 }
 
+#hrsection2{
+  padding-top: 15px;
+  width:99.9%;
+  height:auto;
+}
+
+#hrsection3{
+  position:relative;
+  top:3px;
+  width:100.9%;
+  height:auto;
+}
+
+#hrsection4{
+  position:relative;
+  top:30px;
+  width:99.9%;
+  height:auto;
+}
+
+#hrsection{
+  height:auto;
+  width:99.9%;
+  position: relative;
+  bottom: 0.5px;
+  z-index: 999;
+}
+
 .text-responsive-facebook{
   display: none;
 }
@@ -428,7 +456,7 @@ h1 span {
     display: none;
   }
 
-  #hr-prop{
+  #hrsection2{
     display: none;
   }
 
@@ -460,6 +488,22 @@ h1 span {
     right: 50px;
     bottom: 4.5px;
     font-size: 22px;
+  }
+
+  #hrsection{
+    height: 4px;
+  }
+
+  #hrsection2{
+    height: 19px;
+  }
+
+  #hrsection3{
+    height: 4px;
+  }
+
+  #hrsection4{
+    height: 4px;
   }
 
   .accordion{
@@ -528,7 +572,7 @@ h1 span {
     display: none;
   }
 
-  #hr-propuestas{
+  #hrsection1{
     display: none;
   }
 
@@ -543,6 +587,22 @@ h1 span {
     right: 20px;
     bottom: 4.5px;
     font-size: 20px;
+  }
+
+  #hrsection{
+    height: 4px;
+  }
+
+  #hrsection2{
+    height: 19px;
+  }
+
+  #hrsection3{
+    height: 4px;
+  }
+
+  #hrsection4{
+    height: 4px;
   }
 
   .text-responsive-facebook{
@@ -605,7 +665,7 @@ h1 span {
     display: none;
   }
 
-  #hr-propuestas{
+  #hrsection1{
     display: none;
   }
 
