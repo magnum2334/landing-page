@@ -884,7 +884,7 @@ span .material-icons:hover{
 
   .fourth_item
   {
-    left:64%;
+    display: none;
   }
 
 }
