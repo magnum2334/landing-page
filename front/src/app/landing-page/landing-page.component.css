@@ -890,7 +890,7 @@ span .material-icons:hover{
 }
 
 /** Dimention Phone md lg **/
-@media only screen and (max-width: 385px) and (min-width: 355px) {
+@media only screen and (max-width: 385px) and (min-width: 380px) {
 
   *{
     max-width: 100%;
@@ -947,6 +947,73 @@ span .material-icons:hover{
   .fourth_item
   {
     left:65%;
+  }
+
+  span .material-icons:hover{
+    color: #ffff;
+    transform: scale(1);
+  }
+
+}
+
+@media only screen and (max-width: 380px) and (min-width: 370px) {
+
+  *{
+    max-width: 100%;
+  }
+
+  .FABMenu{
+    top: 100px;
+    width: 80%;
+  }
+
+  .hamburger{
+    margin: 0%;
+    position: absolute;
+    top:-35%;
+    left: 6%;
+  }
+
+  .FABMenu input
+  {
+    margin: 0%;
+    position:absolute;
+    top:-35%;
+    left:6%;
+    width:80px;
+    height:80px;
+    z-index:20;
+    border-radius: 80px;
+    opacity:0;
+    cursor:pointer;
+  }
+
+  .action_items_bar{
+    margin: 0%;
+    position:absolute;
+    top:-30%;
+    left: 17%;
+  }
+
+  .first_item
+  {
+    left:5%;
+  }
+  .second_item
+  {
+    left:27%;
+  }
+
+  .third_item
+  {
+    bottom: 2px;
+    left:47%;
+  }
+
+  .fourth_item
+  {
+    display: none;
+    /* left:65%; */
   }
 
   span .material-icons:hover{
