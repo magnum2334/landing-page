@@ -466,14 +466,14 @@ mat-icon{
   }
 }
 
-@media screen and (max-width: 397px) and (min-width: 370px){
+@media screen and (max-width: 397px) and (min-width: 390px){
 
   *{
     max-width: 90%;
   }
 
   .contenedorRecapt{
-    margin-left: -19px;
+    margin-left: -2px;
     max-width: 108%;
   }
 
@@ -488,8 +488,8 @@ mat-icon{
   .card{
     max-width: 85%;
     position: absolute;
-    top: 98px;
-    left: 21px;
+    top: 100px;
+    left: 29px;
   }
 
   #form{
@@ -503,7 +503,7 @@ mat-icon{
 
 }
 
-@media screen and (max-width: 370px) and (min-width: 225px){
+@media screen and (max-width: 390px) and (min-width: 225px){
 
   *{
     max-width: 90%;
