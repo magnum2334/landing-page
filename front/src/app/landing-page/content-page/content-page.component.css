@@ -19,6 +19,10 @@
  bottom: 20px;
 }
 
+#hiddengallery{
+  display: none;
+}
+
 #hrsection2{
   padding-top: 15px;
   width:99.9%;
@@ -490,6 +494,14 @@ h1 span {
     font-size: 22px;
   }
 
+  #gallerysection{
+    display: none;
+  }
+
+  #hiddengallery{
+    display: contents;
+  }
+
   #hrsection{
     height: 4px;
   }
@@ -587,6 +599,22 @@ h1 span {
     right: 20px;
     bottom: 4.5px;
     font-size: 20px;
+  }
+
+  #gallerysection{
+    display: none;
+  }
+
+  .accordion{
+    height: 208px;
+  }
+
+  .accordion > div{
+    border-radius: 17px;
+  }
+
+  #hiddengallery{
+    display: contents;
   }
 
   #hrsection{
