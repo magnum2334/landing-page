@@ -154,7 +154,7 @@ span .material-icons {
 .a-iconWhatsapp{
   position: fixed;
   bottom: 30px;
-  right: 23px;
+  right: 22px;
   z-index: 99999;
 }
 
@@ -1069,6 +1069,10 @@ span .material-icons {
   .fa-whatsapp {
     position: relative;
     right: 0.4em;
+  }
+
+  .a-iconWhatsapp{
+    right: 1px;
   }
 
 }
