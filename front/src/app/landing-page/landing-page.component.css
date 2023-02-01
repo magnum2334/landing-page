@@ -65,10 +65,7 @@ span .material-icons {
   font-feature-settings: 'liga';
 }
 
-span .material-icons:hover{
-  color: rgb(0, 162, 255);
-  transform: scale(1.3);
-}
+
 .FABMenu
 {
   position:absolute;
@@ -245,6 +242,10 @@ span .material-icons:hover{
   *{
     max-width: 100%;
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 
   .FABMenu{
     width: 62%;
@@ -276,6 +277,10 @@ span .material-icons:hover{
     position:absolute;
     top: -175%;
     left:27%;
+  }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
 }
@@ -337,6 +342,10 @@ span .material-icons:hover{
   {
     left:64%;
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 }
 
 /** Dimention Tablet sm **/
@@ -395,6 +404,10 @@ span .material-icons:hover{
   .fourth_item
   {
     left:64%;
+  }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 }
 
@@ -456,6 +469,10 @@ span .material-icons:hover{
   .fourth_item
   {
     left:64%;
+  }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
 }
@@ -519,6 +536,10 @@ span .material-icons:hover{
   {
     left:64%;
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 
 }
 
@@ -581,7 +602,10 @@ span .material-icons:hover{
   {
     left:64%;
   }
-
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 }
 
 @media only screen and (max-width: 550px) and (min-width: 500px) {
@@ -642,7 +666,10 @@ span .material-icons:hover{
   {
     left:64%;
   }
-
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 }
 
 @media only screen and (max-width: 500px) and (min-width: 450px) {
@@ -703,6 +730,10 @@ span .material-icons:hover{
   {
     left:64%;
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 
 }
 
@@ -759,7 +790,10 @@ span .material-icons:hover{
     bottom: 2px;
     left:49%;
   }
-
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
   .fourth_item
   {
     left:64%;
@@ -825,6 +859,10 @@ span .material-icons:hover{
   {
     left:64%;
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 
 }
 
@@ -886,6 +924,10 @@ span .material-icons:hover{
   {
     left: 62%;
 
+  }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
 }
@@ -954,6 +996,10 @@ span .material-icons:hover{
     color: #ffff;
     transform: scale(1);
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 
 }
 
@@ -1020,11 +1066,19 @@ span .material-icons:hover{
     color: #ffff;
     transform: scale(1);
   }
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
 
 }
 
 @media only screen and (max-width: 375px) and (min-width: 350px) {
 
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
   *{
     max-width: 100%;
   }
@@ -1221,3 +1275,66 @@ span .material-icons:hover{
 
 }
 
+.btn-whatsapp-pulse {
+	background: #25d366;
+	color: white;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	height: 0;
+	padding: 35px;
+	text-decoration: none;
+	border-radius: 50%;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+	}
+}
+
+.btn-whatsapp-pulse-border {
+	bottom: 5%;
+	right: 2%;
+	animation-play-state: paused;
+  z-index: 199999;
+}
+
+.btn-whatsapp-pulse-border::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	padding: 25px;
+	border: 5px solid #25d366;
+	opacity: 0.75;
+	animation-name: pulse-border;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse-border {
+	0% {
+		padding: 25px;
+		opacity: 0.75;
+	}
+	75% {
+		padding: 50px;
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
