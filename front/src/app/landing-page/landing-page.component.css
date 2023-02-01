@@ -1068,11 +1068,7 @@ span .material-icons {
   }
   .fa-whatsapp {
     position: relative;
-    right: 0.4em;
-  }
-
-  .a-iconWhatsapp{
-    right: 1px;
+    right: 0.0em;
   }
 
 }
