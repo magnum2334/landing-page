@@ -65,15 +65,23 @@ class ContactUsController extends Controller
     }
     public function smsconfirmation(Request $request){
 
-       $client = new Client( 'ACf58acbf9ae7f291138fed9090510fef2', '89637daed927ed52d44182759d48f61d' );
+       try {
+        $client = new Client( 'ACf58acbf9ae7f291138fed9090510fef2', '3ee951cccf88dd28920970bdd5c43595' );
 
         $client->messages->create(
-            '+573054375375',
+            '+573214921826',
             [
                 'from' => '+16088893380',
-                'body' => $request->message,
+                'body' => $request->title,
             ]
         );
+       } catch (\Throwable $th) {
+        return response()->json([
+            'status' => true,
+            'message'=> "".$th
+        ],200);
+
+       }
     }
     public function sitios_votacion(){
 

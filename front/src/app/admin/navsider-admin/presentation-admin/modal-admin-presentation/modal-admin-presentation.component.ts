@@ -27,9 +27,5 @@ export class ModalAdminPresentationComponent implements OnInit {
   prevStep() {
     this.step--;
   }
-  sms(){
-    this.contactUsService.smsconfirmation().subscribe((res)=>{
-      console.log(res)
-    })
-  }
+
 }

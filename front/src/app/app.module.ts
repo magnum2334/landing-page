@@ -48,6 +48,8 @@ import { PropuestaPrincipalComponent } from './landing-page/propuesta-principal/
 import { CommonModule } from '@angular/common';
 import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carouser-dynamic.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { SmsMasivosComponent } from './components/sms-masivos/sms-masivos.component';
+import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-social/modal-desarrollo-social.component';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     PresentationAdminComponent,
     ModalAdminPresentationComponent,
     ContactComponent,
-    CarouserDynamicComponent
+    CarouserDynamicComponent,
+    SmsMasivosComponent,
+    ModalDesarrolloSocialComponent
   ],
   imports: [
     MatDatepickerModule,
