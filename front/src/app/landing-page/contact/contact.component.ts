@@ -5,6 +5,9 @@ import { debounceTime,Subject } from 'rxjs';
 import { ContactUsService } from '../service/contact-us.service';
 
 
+interface Barrio {
+  nombre_barrio: string;
+}
 interface Lugar {
   lugar: string
 }
@@ -66,6 +69,12 @@ export class ContactComponent implements OnInit {
     },
   ]
 
+  barrios: Barrio[] = [
+    { nombre_barrio: 'Guadalupe'},
+    { nombre_barrio: 'Santa Isabel'},
+    { nombre_barrio: 'La mariana'},
+  ];
+
   sitio : any = {}
   awaitSubmitEmail$ = new Subject<Event>();
 
@@ -74,7 +83,7 @@ export class ContactComponent implements OnInit {
     apellidos: new FormControl('', [Validators.required,]),
     recaptcha: new FormControl ('', [Validators.required,]),
     sitio_votacion: new FormControl ('', [Validators.required,]),
-    email: new FormControl('', [Validators.email]),
+    barrio: new FormControl('', [Validators.email]),
     documento: new FormControl('', [Validators.required]),
     celular: new FormControl('', [Validators.minLength(10)]),
     terminos: new FormControl('', Validators.required),
@@ -105,7 +114,7 @@ export class ContactComponent implements OnInit {
           "sector" : this.form.value.sitio_votacion.sector,
           "sitio" : this.sitio
         },
-        email:this.form.value.email,
+        barrio:this.form.value.barrio.nombre_barrio,
         celular: this.form.value.celular,
         documento: this.form.value.documento,
         terminos:this.form.value.terminos,

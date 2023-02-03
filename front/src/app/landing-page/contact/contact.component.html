@@ -23,9 +23,9 @@
                 </mat-form-field><br>
 
                 <mat-form-field class="m-3" appearance="fill">
-                  <mat-label>Email</mat-label>
-                  <mat-icon matSuffix>email</mat-icon>
-                  <input formControlName="email" matInput>
+                  <mat-label>Documento</mat-label>
+                  <mat-icon matSuffix>chrome_reader_mode</mat-icon>
+                  <input type="number" formControlName="documento" matInput>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width m-3" appearance="fill">
@@ -48,10 +48,15 @@
                 </mat-form-field>
 
                 <mat-form-field class="m-3" appearance="fill">
-                  <mat-label>Documento</mat-label>
-                  <mat-icon matSuffix>chrome_reader_mode</mat-icon>
-                  <input type="number" formControlName="documento" matInput>
+                  <mat-label>Barrio donde vive </mat-label>
+                  <mat-select formControlName="barrio">
+                    <mat-option *ngFor="let barrio of barrios" [value]="barrio.nombre_barrio">
+                      {{barrio.nombre_barrio}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-icon matSuffix>home</mat-icon>
                 </mat-form-field>
+
               </div>
 
               <div class="contenedorRecapt">
