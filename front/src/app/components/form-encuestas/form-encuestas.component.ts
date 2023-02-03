@@ -8,6 +8,7 @@ import { EncuestaService } from './service/encuesta.service';
 import {MatSort} from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalEmailComponent } from '../modal-email/modal-email.component';
+import { SmsMasivosComponent } from '../sms-masivos/sms-masivos.component';
 
 
 export interface Contact {
@@ -93,6 +94,12 @@ export class FormEncuestasComponent implements OnInit {
       height: '400px',
       width: '600px',
 
+    });
+  }
+  openDialog2() {
+    this.dialog.open(SmsMasivosComponent,{
+      height: '400px',
+      width: '600px',
     });
   }
 

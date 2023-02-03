@@ -19,8 +19,8 @@ export class ContactUsService {
   massiveEmails(data: any) {
     return this.http.post(`${environment.baseUrl}massiveEmails`, data);
   }
-  smsconfirmation() {
-    return this.http.get(`${environment.baseUrl}smsconfirmation`);
+  smsconfirmation(data:any) {
+    return this.http.post(`${environment.baseUrl}smsconfirmation`, data);
   }
   resTwitter: any
  /* async twitter() {

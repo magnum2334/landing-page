@@ -9,8 +9,8 @@
 }; */
 
 export const environment = {
-  baseUrl: "http://www.soyjuanpa.com/api/",
-  storageUrl: "http://www.soyjuanpa.com/storage/",
+  baseUrl: "http://localhost:8000/api/",
+  storageUrl: "http://localhost:8000/api/",
   production: true
 };
 

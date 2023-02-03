@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <form [formGroup]="form">
+          <mat-card class="example-card">
+            <mat-card-title class="text-center fs-4  ">Envió de sms masivo  <mat-icon style="position: relative; top:5px;" matSuffix>email</mat-icon></mat-card-title>
+            <mat-card-content>
+              <p>
+                <mat-form-field style="width: 100%; height: auto;"  appearance="fill">
+                  <mat-label>Titulo</mat-label>
+                    <textarea formControlName="title"  matInput></textarea>
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+              </p>
+
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions (click)="onClick()" class="d-flex justify-content-center width: 100%;" >
+              <button [disabled]="!form.valid" mat-button  style="background: slategrey;width: 100%;" >ENVIAR</button>
+
+            </mat-card-actions>
+            <mat-card-footer>
+              <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+            </mat-card-footer>
+          </mat-card>
+        </form>
+      </div>
+    </div>
+  </div>
