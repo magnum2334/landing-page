@@ -65,7 +65,6 @@ span .material-icons {
   font-feature-settings: 'liga';
 }
 
-
 .FABMenu
 {
   position:absolute;
@@ -149,7 +148,7 @@ span .material-icons {
 
 .iconWhatsapp{
   color: #00bb2d;
-  font-size: 50px;
+  font-size: 42px;
 }
 .a-iconWhatsapp{
   position: fixed;
@@ -237,6 +236,106 @@ span .material-icons {
   background-color: transparent;
 }
 
+/* Button Whatsapp */
+.btn-whatsapp-pulse {
+	background: #25d366;
+	color: white;
+	position: fixed;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	height: 0;
+	padding: 28px;
+	text-decoration: none;
+	border-radius: 50%;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+	}
+}
+
+.btn-whatsapp-pulse-border {
+	bottom: 3%;
+	right: 1.4%;
+	animation-play-state: paused;
+  z-index: 199999;
+}
+
+.btn-whatsapp-pulse-border::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	padding: 25px;
+	border: 5px solid #25d366;
+	opacity: 0.75;
+	animation-name: pulse-border;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse-border {
+	0% {
+		padding: 20px;
+		opacity: 0.75;
+	}
+	75% {
+		padding: 34px;
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Button Registraduria*/
+.btn-registraduria-pulse {
+	background: transparent;
+	color: white;
+	position: fixed;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	height: 0;
+	padding: 30px;
+	text-decoration: none;
+	border-radius: 50%;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+.btn-registraduria-pulse-border {
+	bottom: 20%;
+	right: 1.1%;
+	animation-play-state: paused;
+  z-index: 199999;
+}
+
+#registraduria{
+  bottom: 96px;
+}
+
+#img-registraduria{
+  height: 84px;
+  margin-left: -10px;
+}
+
+
 /** Dimention Tablet lg **/
 @media only screen and (max-width: 1000px) and (min-width: 950px){
   *{
@@ -245,6 +344,11 @@ span .material-icons {
   .fa-whatsapp {
     position: relative;
     right: 0.4em;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -283,6 +387,7 @@ span .material-icons {
     right: 0.4em;
   }
 
+
 }
 
 @media only screen and (max-width: 950px) and (min-width: 925px){
@@ -292,6 +397,19 @@ span .material-icons {
   .fa-whatsapp {
     position: relative;
     right: 0.4em;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -341,6 +459,19 @@ span .material-icons {
     right: 0.4em;
   }
 
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
+  }
+
   .FABMenu{
     width: 62%;
   }
@@ -377,12 +508,26 @@ span .material-icons {
     right: 0.4em;
   }
 
+
 }
 
 /** Dimention Tablet md **/
 @media only screen and (max-width: 910px) and (min-width: 800px){
   *{
     max-width: 100%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -440,12 +585,26 @@ span .material-icons {
     position: relative;
     right: 0.4em;
   }
+
 }
 
 /** Dimention Tablet sm **/
 @media only screen and (max-width: 800px) and (min-width: 700px){
   *{
     max-width: 100%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -503,6 +662,7 @@ span .material-icons {
     position: relative;
     right: 0.4em;
   }
+
 }
 
 /** Dimention Phone lg **/
@@ -510,6 +670,19 @@ span .material-icons {
 
   *{
     max-width: 100%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -569,6 +742,7 @@ span .material-icons {
     right: 0.4em;
   }
 
+
 }
 
 /** Dimention Phone md lg **/
@@ -576,6 +750,19 @@ span .material-icons {
 
   *{
     max-width: 100%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -635,6 +822,7 @@ span .material-icons {
     right: 0.4em;
   }
 
+
 }
 
 /** Dimention Phone md lg **/
@@ -642,6 +830,19 @@ span .material-icons {
 
   *{
     max-width: 100%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -700,12 +901,26 @@ span .material-icons {
     position: relative;
     right: 0.4em;
   }
+
 }
 
 @media only screen and (max-width: 550px) and (min-width: 500px) {
 
   *{
     max-width: 100%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .FABMenu{
@@ -764,6 +979,7 @@ span .material-icons {
     position: relative;
     right: 0.4em;
   }
+
 }
 
 @media only screen and (max-width: 500px) and (min-width: 450px) {
@@ -775,6 +991,19 @@ span .material-icons {
   .FABMenu{
     top: 100px;
     width: 80%;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .hamburger{
@@ -829,6 +1058,7 @@ span .material-icons {
     right: 0.4em;
   }
 
+
 }
 
 @media only screen and (max-width: 450px) and (min-width: 430px) {
@@ -840,6 +1070,19 @@ span .material-icons {
   .FABMenu{
     top: 100px;
     width: 80%;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .hamburger{
@@ -888,6 +1131,7 @@ span .material-icons {
     position: relative;
     right: 0.4em;
   }
+
   .fourth_item
   {
     left:64%;
@@ -904,6 +1148,19 @@ span .material-icons {
   .FABMenu{
     top: 100px;
     width: 80%;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .hamburger{
@@ -958,6 +1215,7 @@ span .material-icons {
     right: 0.4em;
   }
 
+
 }
 
 @media only screen and (max-width: 415px) and (min-width: 385px) {
@@ -969,6 +1227,19 @@ span .material-icons {
   .FABMenu{
     top: 100px;
     width: 80%;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .hamburger{
@@ -1036,6 +1307,19 @@ span .material-icons {
   .FABMenu{
     top: 100px;
     width: 80%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
   }
 
   .hamburger{
@@ -1108,6 +1392,20 @@ span .material-icons {
     width: 80%;
   }
 
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
+  }
+
+
   .hamburger{
     margin: 0%;
     position: absolute;
@@ -1173,6 +1471,21 @@ span .material-icons {
     position: relative;
     right: 0.4em;
   }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
+  }
+
+
   *{
     max-width: 100%;
   }
@@ -1243,9 +1556,27 @@ span .material-icons {
     max-width: 100%;
   }
 
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
+  }
+
   .FABMenu{
     top: 100px;
     width: 80%;
+  }
+
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
   .hamburger{
@@ -1309,6 +1640,24 @@ span .material-icons {
     max-width: 100%;
   }
 
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
+
+  .btn-whatsapp-pulse-border {
+    right: 2.4%;
+  }
+
+  .btn-registraduria-pulse{
+    background-color: transparent;
+  }
+
+  #img-registraduria{
+    position: fixed;
+    margin-left: -10px;
+  }
+
   .FABMenu{
     top: 100px;
     width: 80%;
@@ -1369,66 +1718,3 @@ span .material-icons {
 
 }
 
-.btn-whatsapp-pulse {
-	background: #25d366;
-	color: white;
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	font-size: 40px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 0;
-	height: 0;
-	padding: 35px;
-	text-decoration: none;
-	border-radius: 50%;
-	animation-name: pulse;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-	}
-	80% {
-		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
-	}
-}
-
-.btn-whatsapp-pulse-border {
-	bottom: 5%;
-	right: 2%;
-	animation-play-state: paused;
-  z-index: 199999;
-}
-
-.btn-whatsapp-pulse-border::before {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	padding: 25px;
-	border: 5px solid #25d366;
-	opacity: 0.75;
-	animation-name: pulse-border;
-	animation-duration: 1.5s;
-	animation-timing-function: ease-out;
-	animation-iteration-count: infinite;
-}
-
-@keyframes pulse-border {
-	0% {
-		padding: 25px;
-		opacity: 0.75;
-	}
-	75% {
-		padding: 50px;
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}

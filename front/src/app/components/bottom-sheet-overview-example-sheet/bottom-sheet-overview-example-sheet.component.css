@@ -3,6 +3,10 @@
   font-weight: 500;
 }
 
+mat-nav-list{
+  z-index: 9999999;
+}
+
 strong{
   font-weight: 700;
   color: #000000;
@@ -18,3 +22,191 @@ strong{
   position: relative;
   top: 7px;
 }
+
+@media only screen and (max-width: 1280px)  {
+  #txt-hidden{
+    display: none;
+  }
+
+  #txt-share{
+    position: relative;
+    right: 45px;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 107px;
+  }
+}
+
+@media only screen and (max-width: 960px)  {
+  #txt-hidden{
+    display: block;
+    position: relative;
+    left: 117px;
+  }
+
+  #txt-share{
+    position: relative;
+    left: 20%;
+  }
+}
+
+@media only screen and (max-width: 790px)  {
+  #txt-hidden{
+    display: block;
+    position: relative;
+    left: 117px;
+  }
+
+  #txt-share{
+    position: relative;
+    left: 0%;
+  }
+
+  #txt-link{
+    left: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 593px)  {
+  #txt-hidden{
+    display: none;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 220px;
+  }
+
+}
+
+@media only screen and (max-width: 555px)  {
+  #txt-hidden{
+    display: none;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 491px)  {
+  #txt-hidden{
+    display: none;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 120px;
+  }
+
+}
+
+@media only screen and (max-width: 467px)  {
+  #txt-hidden{
+    display: none;
+  }
+
+  #txt-share{
+    margin-left: -47px;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 120px;
+  }
+
+}
+
+@media only screen and (max-width: 432px)  {
+
+  #txt-share{
+    font-size: 15px;
+    font-weight:300;
+    margin-left: -47px;
+  }
+
+}
+
+
+@media only screen and (max-width: 409px)  {
+
+  #txt-share{
+    font-size: 13px;
+    font-weight:300;
+    margin-left: -47px;
+  }
+
+  #txt-share i {
+    font-size: 25px;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 90px;
+  }
+
+}
+
+@media only screen and (max-width: 362px)  {
+
+  #txt-share{
+    font-size: 12px;
+    font-weight:300;
+    margin-left: -47px;
+  }
+
+  #txt-share i {
+    font-size: 22px;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 80px;
+  }
+
+}
+
+@media only screen and (max-width: 338px)  {
+
+  #txt-share{
+    font-size: 12px;
+    font-weight:300;
+    margin-left: -47px;
+  }
+
+  #txt-share i {
+    font-size: 18px;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 80px;
+  }
+
+}
+
+@media only screen and (max-width: 332px)  {
+
+  #txt-share{
+    font-size: 10px;
+    font-weight:300;
+    margin-left: -47px;
+  }
+
+  #txt-share i {
+    font-size: 17px;
+  }
+
+  #txt-publicity{
+    position: relative;
+    right: 70px;
+  }
+
+}
+
+
