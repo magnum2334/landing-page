@@ -96,25 +96,22 @@ export class ContactComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService) { }
 
   ngOnInit(): void {
-
     this.onChangesClick()
-    //this.contactUsService.sitios_votacion().subscribe((res:any)=>{})
   }
+
   onChangesClick() {
     this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {
       this.loading = false;
 
-      console.log("form docum : ", this.form.value.documento);
-
       let data = {
         nombres:this.form.value.nombres,
         apellidos:this.form.value.apellidos,
-        recaptcha:this.form.value.recaptcha,
+        //recaptcha:this.form.value.recaptcha,
         sitio_votacion: {
           "sector" : this.form.value.sitio_votacion.sector,
           "sitio" : this.sitio
         },
-        barrio:this.form.value.barrio.nombre_barrio,
+        barrio:this.form.value.barrio,
         celular: this.form.value.celular,
         documento: this.form.value.documento,
         terminos:this.form.value.terminos,
