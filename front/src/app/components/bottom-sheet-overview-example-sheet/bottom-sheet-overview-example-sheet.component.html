@@ -1,0 +1,34 @@
+<mat-nav-list>
+
+  <a mat-list-item>
+    <div class="share-div">
+      <span ><strong>Siguenos y haz parte de nuestro equipo</strong> &nbsp; </span>
+      <i class="bi bi-share-fill fa-2x"></i>
+    </div>
+  </a>
+
+  <a (click)="clickBoardMessage()" [cdkCopyToClipboard]="page" mat-list-item>
+    <span matListItemTitle>Soyjuanpa.com &nbsp;</span>
+    <img src="../../../favicon.ico" width="22" height="22">
+    <span matLine>Comparte nuestra pagina!</span>
+  </a>
+
+  <a target="_blank" href="https://www.facebook.com/juanpablocanop" mat-list-item>
+    <span matListItemTitle>Juan Pablo Cano P &nbsp;</span>
+    <i class="bi bi-facebook"></i>
+    <span matLine>Siguenos en Facebook!</span>
+  </a>
+
+  <a target="_blank" href="https://www.instagram.com/juanpablocanop/?hl=es-la" mat-list-item>
+    <span matListItemTitle>@juanpablocanop &nbsp;</span>
+    <i class="bi bi-instagram"></i>
+    <span matLine>Siguenos en Instragram!</span>
+  </a>
+
+  <a target="_blank" href="https://www.facebook.com/juanpablocanop" mat-list-item>
+    <span matListItemTitle>Soy Juanpa &nbsp;</span>
+    <i class="bi bi-youtube"></i>
+    <span matLine>Suscribete a mi Canal!</span>
+  </a>
+
+</mat-nav-list>

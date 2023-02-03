@@ -1,0 +1,20 @@
+*{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+strong{
+  font-weight: 700;
+  color: #000000;
+}
+
+.share-div{
+  position: relative;
+  left: 52px;
+  bottom: 11px;
+}
+
+.share-div i{
+  position: relative;
+  top: 7px;
+}
