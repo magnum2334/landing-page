@@ -50,13 +50,9 @@ import { PropuestaPrincipalComponent } from './landing-page/propuesta-principal/
 import { CommonModule } from '@angular/common';
 import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carouser-dynamic.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
-<<<<<<< HEAD
 import { SmsMasivosComponent } from './components/sms-masivos/sms-masivos.component';
 import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-social/modal-desarrollo-social.component';
-
-=======
 import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sheet-overview-example-sheet/bottom-sheet-overview-example-sheet.component';
->>>>>>> 44a4e9e72fcd9f8ab0eee7dd8d7dfcec9996642d
 
 @NgModule({
   declarations: [
@@ -74,12 +70,9 @@ import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sh
     ModalAdminPresentationComponent,
     ContactComponent,
     CarouserDynamicComponent,
-<<<<<<< HEAD
     SmsMasivosComponent,
-    ModalDesarrolloSocialComponent
-=======
+    ModalDesarrolloSocialComponent,
     BottomSheetOverviewExampleSheetComponent,
->>>>>>> 44a4e9e72fcd9f8ab0eee7dd8d7dfcec9996642d
   ],
   imports: [
     MatDatepickerModule,
@@ -121,7 +114,6 @@ import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sh
     BackButtonDisableModule.forRoot({
       preserveScrollPosition: true
     })
-
   ],
   providers: [],
   bootstrap: [AppComponent],
