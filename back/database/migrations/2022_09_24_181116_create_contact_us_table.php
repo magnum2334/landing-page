@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombres');
             $table->string('apellidos');
-            $table->string('email')->nullable();
+            $table->string('barrio')->nullable();
             $table->string('celular')->nullable();
             $table->json('sitio_votacion');
             $table->string('terminos')->nullable();

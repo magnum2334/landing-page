@@ -20,7 +20,7 @@ class ContactUsController extends Controller
             $ContactUs = ContactUs::create([
                 'nombres' => $request->nombres,
                 'apellidos' => $request->apellidos,
-                'email' => $request->email,
+                'barrio' => $request->barrio,
                 'sitio_votacion' => json_encode($request->sitio_votacion),
                 'celular' => $request->celular,
                 'documento' => $request->documento,
@@ -42,7 +42,7 @@ class ContactUsController extends Controller
     }
 
     public function selectContacts(){
-        $contacts = ContactUs::select('nombres', 'apellidos','email')->get();
+        $contacts = ContactUs::select('nombres', 'apellidos')->get();
         return response()->json(compact('contacts'),200);
 
     }
