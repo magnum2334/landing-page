@@ -176,7 +176,7 @@
   top: 40px;
   -webkit-box-shadow: -37px 0px 40px 54px rgb(255, 255, 255);
   -moz-box-shadow: -37px 0px 40px 54px rgb(255, 255, 255);
-  box-shadow: -37px 0px 40px 54px rgb(255, 255, 255);
+  box-shadow: -37px 0px 40px 40px rgb(255, 255, 255);
 }
 
 .iconWhatsapp{
@@ -355,13 +355,13 @@ h1 span {
   background-color: hsl(34, 97%, 64%);
   color: #333;
   display: block;
-  font-weight: 900;
+  font-weight: 700;
   overflow: hidden;
   position: absolute;
   padding-left: 0.5rem;
-  top: 0.4rem;
-  left: 270px;
-  animation: openclose 2.1s ease-out infinite;
+  top: 0.7rem;
+  left: 250px;
+  animation: openclose 4.1s ease-out infinite;
 }
 
 .word1, .word2, .word3 {

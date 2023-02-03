@@ -10,6 +10,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
+import {ClipboardModule} from '@angular/cdk/clipboard';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSignaturePadModule } from '@almothafar/angular-signature-pad';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PageErrorComponent } from './page-error/page-error.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { NavsiderAdminComponent } from './admin/navsider-admin/navsider-admin.component';
@@ -48,9 +50,13 @@ import { PropuestaPrincipalComponent } from './landing-page/propuesta-principal/
 import { CommonModule } from '@angular/common';
 import { CarouserDynamicComponent } from './landing-page/carouser-dynamic/carouser-dynamic.component';
 import { NgxCaptchaModule } from 'ngx-captcha';
+<<<<<<< HEAD
 import { SmsMasivosComponent } from './components/sms-masivos/sms-masivos.component';
 import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-social/modal-desarrollo-social.component';
 
+=======
+import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sheet-overview-example-sheet/bottom-sheet-overview-example-sheet.component';
+>>>>>>> 44a4e9e72fcd9f8ab0eee7dd8d7dfcec9996642d
 
 @NgModule({
   declarations: [
@@ -68,20 +74,26 @@ import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-so
     ModalAdminPresentationComponent,
     ContactComponent,
     CarouserDynamicComponent,
+<<<<<<< HEAD
     SmsMasivosComponent,
     ModalDesarrolloSocialComponent
+=======
+    BottomSheetOverviewExampleSheetComponent,
+>>>>>>> 44a4e9e72fcd9f8ab0eee7dd8d7dfcec9996642d
   ],
   imports: [
     MatDatepickerModule,
     MatExpansionModule,
     MatTooltipModule,
     MatTableModule,
+    ClipboardModule,
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     MatStepperModule,
     MatSliderModule,
     NgxCaptchaModule,
+    MatBottomSheetModule,
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -122,6 +134,7 @@ import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-so
     ReactiveFormsModule,
     HttpClientModule,
     MatSelectModule,
+    MatBottomSheetModule,
     AngularSignaturePadModule,
     BrowserAnimationsModule,
     MatCardModule,
