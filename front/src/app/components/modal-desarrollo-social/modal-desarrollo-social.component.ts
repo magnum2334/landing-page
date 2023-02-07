@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-modal-desarrollo-social',
   templateUrl: './modal-desarrollo-social.component.html',
-  styleUrls: ['./modal-desarrollo-social.component.sass']
+  styleUrls: ['./modal-desarrollo-social.component.css']
 })
 export class ModalDesarrolloSocialComponent implements OnInit {
 

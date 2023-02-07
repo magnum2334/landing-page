@@ -23,6 +23,8 @@ interface SitioVotacion {
 })
 export class ContactComponent implements OnInit {
 
+  lider: any
+  cedulaRe:any
   sitios_votacion_data: SitioVotacion[] = [
     {
       sector: 'Comuna 1',

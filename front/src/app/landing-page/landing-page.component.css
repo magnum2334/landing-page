@@ -284,6 +284,18 @@ span .material-icons {
 	animation-timing-function: ease-out;
 	animation-iteration-count: infinite;
 }
+.btn-registraduria-pulse-border::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	padding: 25px;
+	border: 5px solid #030303;
+	opacity: 0.75;
+	animation-name: pulse-border;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
 
 @keyframes pulse-border {
 	0% {
@@ -301,8 +313,7 @@ span .material-icons {
 
 /* Button Registraduria*/
 .btn-registraduria-pulse {
-	background: transparent;
-	color: white;
+  background: #030303;
 	position: fixed;
 	font-size: 40px;
 	display: flex;
@@ -310,7 +321,7 @@ span .material-icons {
 	align-items: center;
 	width: 0;
 	height: 0;
-	padding: 30px;
+	padding: 28px;
 	text-decoration: none;
 	border-radius: 50%;
 	animation-name: pulse;
@@ -320,11 +331,12 @@ span .material-icons {
 }
 
 .btn-registraduria-pulse-border {
-	bottom: 20%;
-	right: 1.1%;
+	bottom: 14%;
+	right: 1.2%;
 	animation-play-state: paused;
-  z-index: 199999;
+  z-index: 4000;
 }
+
 
 #registraduria{
   bottom: 96px;
@@ -400,7 +412,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   .btn-whatsapp-pulse-border {
@@ -518,7 +530,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: back;
   }
 
   .btn-whatsapp-pulse-border {
@@ -595,7 +607,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   .btn-whatsapp-pulse-border {
@@ -673,7 +685,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   .btn-whatsapp-pulse-border {
@@ -753,7 +765,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   .btn-whatsapp-pulse-border {
@@ -833,7 +845,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   .btn-whatsapp-pulse-border {
@@ -853,7 +865,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-51%;
+    top: -42%;
     left: 9%;
   }
 
@@ -873,8 +885,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -46%;
+    position: absolute;
+    top: -37%;
     left: 17%;
   }
 
@@ -911,7 +923,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   .btn-whatsapp-pulse-border {
@@ -929,10 +941,12 @@ span .material-icons {
   }
 
   .hamburger{
+
     margin: 0%;
     position: absolute;
-    top:-54%;
+    top: -38%;
     left: 6%;
+
   }
 
   .FABMenu input
@@ -951,8 +965,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -49%;
+    position: absolute;
+    top: -33%;
     left: 17%;
   }
 
@@ -998,7 +1012,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   #img-registraduria{
@@ -1009,7 +1023,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-51%;
+    top: -41%;
     left: 6%;
   }
 
@@ -1029,8 +1043,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -46%;
+    position: absolute;
+    top: -36%;
     left: 17%;
   }
 
@@ -1077,7 +1091,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   #img-registraduria{
@@ -1088,7 +1102,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-54%;
+    top: -43%;
     left: 6%;
   }
 
@@ -1108,8 +1122,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -50%;
+    position: absolute;
+    top: -39%;
     left: 17%;
   }
 
@@ -1155,7 +1169,7 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
 
   #img-registraduria{
@@ -1166,7 +1180,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-50%;
+    top: -40%;
     left: 6%;
   }
 
@@ -1186,8 +1200,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -45%;
+    position: absolute;
+    top: -35%;
     left: 17%;
   }
 
@@ -1234,9 +1248,8 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
-    background-color: transparent;
+    background-color: black;
   }
-
   #img-registraduria{
     position: fixed;
     margin-left: -10px;
@@ -1245,7 +1258,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-50%;
+    top: -43%;
     left: 6%;
   }
 
@@ -1265,8 +1278,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -45%;
+    position: absolute;
+    top: -39%;
     left: 17%;
   }
 
@@ -1309,9 +1322,7 @@ span .material-icons {
     width: 80%;
   }
 
-  .btn-registraduria-pulse{
-    background-color: transparent;
-  }
+
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
@@ -1325,7 +1336,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-50%;
+    top: -42%;
     left: 6%;
   }
 
@@ -1345,8 +1356,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top:-45%;
+    position: absolute;
+    top: -39%;
     left: 17%;
   }
 
@@ -1392,9 +1403,7 @@ span .material-icons {
     width: 80%;
   }
 
-  .btn-registraduria-pulse{
-    background-color: transparent;
-  }
+
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
@@ -1409,7 +1418,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-54%;
+    top: -42%;
     left: 6%;
   }
 
@@ -1429,8 +1438,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top:-50%;
+    position: absolute;
+    top: -38%;
     left: 17%;
   }
 
@@ -1472,9 +1481,7 @@ span .material-icons {
     right: 0.4em;
   }
 
-  .btn-registraduria-pulse{
-    background-color: transparent;
-  }
+
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
@@ -1498,7 +1505,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-47%;
+    top: -38%;
     left: 6%;
   }
 
@@ -1518,9 +1525,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top:-42%;
-    left: 17%;
+    position: absolute;
+    top: -34%;
+    left: 19%;
   }
 
   .first_item
@@ -1552,13 +1559,14 @@ span .material-icons {
 
 @media only screen and (max-width: 350px) and (min-width: 310px) {
 
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
+  }
   *{
     max-width: 100%;
   }
 
-  .btn-registraduria-pulse{
-    background-color: transparent;
-  }
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
@@ -1582,8 +1590,8 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-53%;
-    left: 6%;
+    top: -40%;
+    left: 5%;
   }
 
   .FABMenu input
@@ -1601,10 +1609,12 @@ span .material-icons {
   }
 
   .action_items_bar{
+
     margin: 0%;
-    position:absolute;
-    top:-49%;
+    position: absolute;
+    top: -36%;
     left: 17%;
+
   }
 
   .first_item
@@ -1633,7 +1643,18 @@ span .material-icons {
   }
 
 }
+@media only screen and (max-width: 1000px) and (min-width: 310px) {
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
+  }
 
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
+  }
+
+}
 @media only screen and (max-width: 310px) and (min-width: 200px) {
 
   *{
@@ -1649,8 +1670,9 @@ span .material-icons {
     right: 2.4%;
   }
 
-  .btn-registraduria-pulse{
-    background-color: transparent;
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
   }
 
   #img-registraduria{
@@ -1666,8 +1688,8 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top:-53%;
-    left: 6%;
+    top: -38%;
+    left: 0%;
   }
 
   .FABMenu input
@@ -1686,8 +1708,8 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top:-49%;
+    position: absolute;
+    top: -33%;
     left: 17%;
   }
 

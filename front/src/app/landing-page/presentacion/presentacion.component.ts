@@ -45,8 +45,8 @@ export class PresentacionComponent implements OnInit {
         break;
     }
     this.dialog.open(ModalDesarrolloSocialComponent, {
-      height: '400px',
-      width: '600px',
+      height: '100%',
+      width: '100%',
       data: { name: strin }
     });
   }
