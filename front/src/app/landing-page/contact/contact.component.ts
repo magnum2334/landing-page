@@ -112,7 +112,7 @@ export class ContactComponent implements OnInit {
         let data = {
         nombres:this.form.value.nombres,
         apellidos:this.form.value.apellidos,
-        //recaptcha:this.form.value.recaptcha,
+        recaptcha:this.form.value.recaptcha,
         sitio_votacion: {
           "id_comuna": this.form.value.id_comuna,
           "sector" : this.form.value.sitio_votacion.sector,
