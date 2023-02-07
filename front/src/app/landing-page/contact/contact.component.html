@@ -58,14 +58,14 @@
                 </mat-option>
               </mat-select>
               <mat-icon matSuffix>home</mat-icon>
-            </mat-form-field>
+            </mat-form-field><br>
             <label id="example-radio-group-label">¿Eres lider?</label><br>
-              <mat-radio-group formControlName="terminos" [(ngModel)]="lider">
+              <mat-radio-group formControlName="lider" >
                 <mat-radio-button class="mx-2 example-margin" value="after">SI</mat-radio-button>
                 <mat-radio-button class="example-margin" value="before">NO</mat-radio-button>
               </mat-radio-group><br>
               <label id="example-radio-group-label">¿tu cedula es de dosquebradas?</label><br>
-              <mat-radio-group formControlName="terminos" [(ngModel)]="cedulaRe">
+              <mat-radio-group formControlName="ciudadano_dosque" >
                 <mat-radio-button class="mx-2 example-margin" value="after">SI</mat-radio-button>
                 <mat-radio-button class="example-margin" value="before">NO</mat-radio-button>
               </mat-radio-group>
