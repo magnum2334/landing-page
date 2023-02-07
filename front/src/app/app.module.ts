@@ -53,7 +53,7 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 import { SmsMasivosComponent } from './components/sms-masivos/sms-masivos.component';
 import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-social/modal-desarrollo-social.component';
 import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sheet-overview-example-sheet/bottom-sheet-overview-example-sheet.component';
-
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     PropuestaPrincipalComponent,
@@ -75,6 +75,7 @@ import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sh
     BottomSheetOverviewExampleSheetComponent,
   ],
   imports: [
+    MatRadioModule,
     MatDatepickerModule,
     MatExpansionModule,
     MatTooltipModule,
