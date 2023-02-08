@@ -1500,6 +1500,7 @@ span .material-icons {
 
 }
 
+/* Dimention Phone sm */
 @media only screen and (max-width: 375px) and (min-width: 350px) {
 
   .btn-registraduria-pulse{
@@ -1540,7 +1541,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top: -14%;
+    top: -32%;
     left: 6%;
   }
 
@@ -1548,7 +1549,7 @@ span .material-icons {
   {
     margin: 0%;
     position:absolute;
-    top:-14%;
+    top:-32%;
     left:6%;
     width:80px;
     height:80px;
@@ -1561,7 +1562,7 @@ span .material-icons {
   .action_items_bar{
     margin: 0%;
     position: absolute;
-    top: -8%;
+    top: -27%;
     left: 19%;
   }
 
@@ -1592,6 +1593,7 @@ span .material-icons {
 
 }
 
+/* Dimention Phone 1x-sm */
 @media only screen and (max-width: 350px) and (min-width: 310px) {
 
   *{
@@ -1689,6 +1691,7 @@ span .material-icons {
 
 }
 
+/* Dimention Phone 2x-sm */
 @media only screen and (max-width: 310px) and (min-width: 200px) {
 
   *{
