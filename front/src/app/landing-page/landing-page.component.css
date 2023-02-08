@@ -1540,7 +1540,7 @@ span .material-icons {
   .hamburger{
     margin: 0%;
     position: absolute;
-    top: -38%;
+    top: -14%;
     left: 6%;
   }
 
@@ -1548,7 +1548,7 @@ span .material-icons {
   {
     margin: 0%;
     position:absolute;
-    top:-47%;
+    top:-14%;
     left:6%;
     width:80px;
     height:80px;
@@ -1561,7 +1561,7 @@ span .material-icons {
   .action_items_bar{
     margin: 0%;
     position: absolute;
-    top: -34%;
+    top: -8%;
     left: 19%;
   }
 
@@ -1576,9 +1576,8 @@ span .material-icons {
 
   .third_item
   {
-    display: none;
-    /* bottom: 2px;
-    left:47%; */
+    bottom: 2px;
+    left:47%;
   }
 
   .fourth_item
