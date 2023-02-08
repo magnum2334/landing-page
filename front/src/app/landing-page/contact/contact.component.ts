@@ -114,7 +114,7 @@ export class ContactComponent implements OnInit {
         apellidos:this.form.value.apellidos,
         recaptcha:this.form.value.recaptcha,
         sitio_votacion: {
-          "id_comuna": this.form.value.id_comuna,
+          "id_comuna": this.form.value.sitio_votacion.id_comuna,
           "sector" : this.form.value.sitio_votacion.sector,
           "sitio" : this.sitio
         },
@@ -124,7 +124,6 @@ export class ContactComponent implements OnInit {
         lider:this.form.value.lider,
         ciudadano_dosque:this.form.value.ciudadano_dosque,
       }
-
       if(this.form.value.recaptcha){
         this.contactUsService.saveContact(data).subscribe((res:any)=>{
         if(res['status']){
