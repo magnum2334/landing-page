@@ -1248,8 +1248,10 @@ span .material-icons {
   }
 
   .btn-registraduria-pulse{
+    right: 10px;
     background-color: black;
   }
+
   #img-registraduria{
     position: fixed;
     margin-left: -10px;
@@ -1322,7 +1324,10 @@ span .material-icons {
     width: 80%;
   }
 
-
+  .btn-registraduria-pulse{
+    right: 10px;
+    background-color: black;
+  }
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
@@ -1403,7 +1408,10 @@ span .material-icons {
     width: 80%;
   }
 
-
+  .btn-registraduria-pulse{
+    right: 10px;
+    background-color: black;
+  }
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
@@ -1481,6 +1489,10 @@ span .material-icons {
     right: 0.4em;
   }
 
+  .btn-registraduria-pulse{
+    right: 10px;
+    background-color: black;
+  }
 
 
   .btn-whatsapp-pulse-border {
@@ -1567,6 +1579,10 @@ span .material-icons {
     max-width: 100%;
   }
 
+  .btn-registraduria-pulse{
+    right: 10px;
+    background-color: black;
+  }
 
   .btn-whatsapp-pulse-border {
     right: 2.4%;
