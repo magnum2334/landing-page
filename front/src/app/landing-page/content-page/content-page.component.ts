@@ -29,6 +29,8 @@ import { ContactUsService } from '../service/contact-us.service';
 })
 export class ContentPageComponent implements OnInit {
 
+  panelOpenState = false;
+
   awaitSubmitEmail$ = new Subject<Event>();
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
