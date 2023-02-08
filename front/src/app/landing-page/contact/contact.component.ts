@@ -92,8 +92,8 @@ export class ContactComponent implements OnInit {
     barrio: new FormControl('', [Validators.required]),
     documento: new FormControl('', [Validators.required]),
     celular: new FormControl('', [Validators.minLength(10)]),
-    lider: new FormControl('', Validators.required),
-    ciudadano_dosque: new FormControl('', Validators.required),
+    lider: new FormControl(''),
+    ciudadano_dosque: new FormControl(''),
   });
 
   loading: Boolean = false
