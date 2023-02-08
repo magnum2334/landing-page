@@ -1310,6 +1310,11 @@ span .material-icons {
     right: 0.4em;
   }
 
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
+  }
+
 }
 
 /** Dimention Phone md lg **/
@@ -1395,8 +1400,14 @@ span .material-icons {
     right: 0.4em;
   }
 
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
+  }
+
 }
 
+/* Dimention Phone md md*/
 @media only screen and (max-width: 380px) and (min-width: 375px) {
 
   *{
@@ -1411,6 +1422,16 @@ span .material-icons {
   .btn-registraduria-pulse{
     right: 10px;
     background-color: black;
+  }
+
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
+  }
+
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
   .btn-whatsapp-pulse-border {
@@ -1468,30 +1489,32 @@ span .material-icons {
 
   .fourth_item
   {
-    left:65%;
+    display: none;
+    /* left:65%; */
   }
 
   span .material-icons:hover{
     color: #ffff;
     transform: scale(1);
   }
-  .fa-whatsapp {
-    position: relative;
-    right: 0.0em;
-  }
 
 }
 
 @media only screen and (max-width: 375px) and (min-width: 350px) {
 
-  .fa-whatsapp {
-    position: relative;
-    right: 0.4em;
-  }
-
   .btn-registraduria-pulse{
     right: 10px;
     background-color: black;
+  }
+
+  .fa-solid {
+    position: relative;
+    right: 0.6em;
+  }
+
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
 
@@ -1553,8 +1576,9 @@ span .material-icons {
 
   .third_item
   {
-    bottom: 2px;
-    left:47%;
+    display: none;
+    /* bottom: 2px;
+    left:47%; */
   }
 
   .fourth_item
@@ -1571,12 +1595,18 @@ span .material-icons {
 
 @media only screen and (max-width: 350px) and (min-width: 310px) {
 
+  *{
+    max-width: 100%;
+  }
+
   .fa-solid {
     position: relative;
     right: 0.6em;
   }
-  *{
-    max-width: 100%;
+
+  .fa-whatsapp {
+    position: relative;
+    right: 0.4em;
   }
 
   .btn-registraduria-pulse{
@@ -1659,18 +1689,7 @@ span .material-icons {
   }
 
 }
-@media only screen and (max-width: 1000px) and (min-width: 310px) {
-  .fa-solid {
-    position: relative;
-    right: 0.6em;
-  }
 
-  .fa-whatsapp {
-    position: relative;
-    right: 0.4em;
-  }
-
-}
 @media only screen and (max-width: 310px) and (min-width: 200px) {
 
   *{
