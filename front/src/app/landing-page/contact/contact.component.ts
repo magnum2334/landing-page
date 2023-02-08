@@ -13,6 +13,7 @@ interface Lugar {
 }
 
 interface SitioVotacion {
+  id_comuna: any
   sector: string
   sitio: Lugar[]
 }
@@ -27,6 +28,7 @@ export class ContactComponent implements OnInit {
   cedulaRe:any
   sitios_votacion_data: SitioVotacion[] = [
     {
+      id_comuna:1,
       sector: 'Comuna 1',
       sitio: [
         {lugar: 'Barrios Ótun'},
@@ -44,6 +46,7 @@ export class ContactComponent implements OnInit {
       ],
     },
     {
+      id_comuna:2,
       sector: 'Comuna 2',
       sitio: [
         {lugar: 'El Paraiso'},
@@ -62,6 +65,7 @@ export class ContactComponent implements OnInit {
       ],
     },
     {
+      id_comuna:3,
       sector: 'Comuna 3',
       sitio: [
         {lugar: 'Cristo rey' },
@@ -83,12 +87,13 @@ export class ContactComponent implements OnInit {
   form: FormGroup = new FormGroup({
     nombres: new FormControl('', [Validators.required,]),
     apellidos: new FormControl('', [Validators.required,]),
-    recaptcha: new FormControl ('', [Validators.required,]),
+    recaptcha: new FormControl ('', [Validators.required]),
     sitio_votacion: new FormControl ('', [Validators.required,]),
-    barrio: new FormControl('', [Validators.email]),
+    barrio: new FormControl('', [Validators.required]),
     documento: new FormControl('', [Validators.required]),
     celular: new FormControl('', [Validators.minLength(10)]),
-    terminos: new FormControl('', Validators.required),
+    lider: new FormControl('', Validators.required),
+    ciudadano_dosque: new FormControl('', Validators.required),
   });
 
   loading: Boolean = false
@@ -104,38 +109,39 @@ export class ContactComponent implements OnInit {
   onChangesClick() {
     this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {
       this.loading = false;
-
-      let data = {
+        let data = {
         nombres:this.form.value.nombres,
         apellidos:this.form.value.apellidos,
-        //recaptcha:this.form.value.recaptcha,
+        recaptcha:this.form.value.recaptcha,
         sitio_votacion: {
+          "id_comuna": this.form.value.sitio_votacion.id_comuna,
           "sector" : this.form.value.sitio_votacion.sector,
           "sitio" : this.sitio
         },
         barrio:this.form.value.barrio,
         celular: this.form.value.celular,
         documento: this.form.value.documento,
-        terminos:this.form.value.terminos,
+        lider:this.form.value.lider,
+        ciudadano_dosque:this.form.value.ciudadano_dosque,
       }
-
       if(this.form.value.recaptcha){
-        console.log(data['documento']);
         this.contactUsService.saveContact(data).subscribe((res:any)=>{
-          if(res['status']){
-            this._snackBar.open(`${res['ok']}✉`, "Cerrar", {
-              duration: 3000,
-              panelClass: "font"
-            });
-          }
-        },
-        err =>
-        this._snackBar.open("Verifica los datos por favor", "Cerrar", {
-          duration: 3000,
-          panelClass: "font",
-        })
-        )
-      }
+        if(res['status']){
+          this._snackBar.open(`${res['ok']}✉`, "Cerrar", {
+            duration: 3000,
+            panelClass: "font"
+          });
+          this.form.reset()
+        }
+
+      },
+      err =>
+      this._snackBar.open("Verifica los datos por favor", "Cerrar", {
+        duration: 3000,
+        panelClass: "font",
+      })
+      )
+    }
     })
 
   }

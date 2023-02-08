@@ -15,6 +15,7 @@ class ContactUs extends Model
         'sitio_votacion',
         'celular',
         'documento',
-        'terminos'
+        'lider' ,
+        'ciudadano_dosque' ,
     ];
 }

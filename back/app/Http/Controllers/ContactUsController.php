@@ -24,7 +24,8 @@ class ContactUsController extends Controller
                 'sitio_votacion' => json_encode($request->sitio_votacion),
                 'celular' => $request->celular,
                 'documento' => $request->documento,
-                'terminos' => $request->terminos,
+                'lider' => $request->lider,
+                'ciudadano_dosque' => $request->ciudadano_dosque,
             ]);
 
             return response()->json([

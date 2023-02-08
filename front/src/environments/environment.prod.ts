@@ -1,5 +1,5 @@
 export const environment = {
-  baseUrl: "http://soyjuanpa.com/api/",
-  storageUrl: "http://soyjuanpa.com/storage/",
+  baseUrl: "https://back.soyjuanpa.com/api/",
+  storageUrl: "https://back.soyjuanpa.com/storage/",
   production: true
 };
