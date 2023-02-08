@@ -8,6 +8,10 @@
   margin-top: -261px;
 }
 
+.radio-btn-hidden{
+  display: none;
+}
+
 #terminos{
   margin-left: 17px;
   margin-bottom: 18px;
@@ -415,6 +419,20 @@ mat-icon{
     background-image: url('../../../assets/img/Campaña/campaña2.jpg');
   }
 
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 40px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 20px;
+  }
+
   .contenedorRecapt{
     margin-left: 40px;
   }
@@ -445,6 +463,20 @@ mat-icon{
     background-image: url('../../../assets/img/Campaña/campaña2.jpg');
   }
 
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 83px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 72px;
+  }
+
   .contenedorRecapt{
     margin-left: 20px;
   }
@@ -469,6 +501,20 @@ mat-icon{
 
   *{
     max-width: 90%;
+  }
+
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 40px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 20px;
   }
 
   .contenedorRecapt{
@@ -502,10 +548,24 @@ mat-icon{
 
 }
 
-@media screen and (max-width: 390px) and (min-width: 225px){
+@media screen and (max-width: 390px) and (min-width: 370px){
 
   *{
     max-width: 90%;
+  }
+
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 50px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 40px;
   }
 
   #contenedor{
@@ -540,6 +600,246 @@ mat-icon{
     position: absolute;
     top: 98px;
     left: 26px;
+  }
+
+  #terminos{
+    margin-left: -5px;
+  }
+
+}
+
+@media screen and (max-width: 370px) and (min-width: 345px){
+
+  *{
+    max-width: 90%;
+  }
+
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 40px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 20px;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: -17px;
+    max-width: 108%;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #imgsoyjuanapa{
+    position: relative;
+    left: 20px;
+  }
+
+  #form{
+    position: relative;
+    left: 30px;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 26px;
+  }
+
+  #terminos{
+    margin-left: -5px;
+  }
+
+}
+
+@media screen and (max-width: 345px) and (min-width: 325px){
+
+  *{
+    max-width: 90%;
+  }
+
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 27px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 20px;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: -17px;
+    max-width: 108%;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #imgsoyjuanapa{
+    position: relative;
+    left: 20px;
+  }
+
+  #form{
+    position: relative;
+    left: 30px;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 26px;
+  }
+
+  #terminos{
+    margin-left: -5px;
+  }
+
+}
+
+@media screen and (max-width: 325px) and (min-width: 289px){
+
+  *{
+    max-width: 90%;
+  }
+
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 27px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 20px;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: -17px;
+    max-width: 108%;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #imgsoyjuanapa{
+    position: relative;
+    left: 20px;
+  }
+
+  #form{
+    position: relative;
+    left: 30px;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 26px;
+  }
+
+  #terminos{
+    margin-left: -5px;
+  }
+
+}
+
+@media screen and (max-width: 289px) and (min-width: 100px){
+
+  *{
+    max-width: 90%;
+  }
+
+  .radio-btn-hidden{
+    display: flex;
+  }
+
+  #eres-lider{
+    position: relative;
+    left: 10px;
+  }
+
+  #cedula-dosquebradas{
+    position: relative;
+    left: 20px;
+  }
+
+  #contenedor{
+    background-image: url('../../../assets/img/Campaña/campaña2.jpg');
+  }
+
+  .contenedorRecapt{
+    margin-left: -17px;
+    max-width: 108%;
+  }
+
+  #imglogo{
+    display: none;
+  }
+
+  #imgsoyjuanapa{
+    position: relative;
+    left: 20px;
+  }
+
+  #form{
+    position: relative;
+    left: 20px;
+  }
+
+  #contentImg{
+    display: none;
+  }
+
+  .card{
+    max-width: 85%;
+    position: absolute;
+    top: 98px;
+    left: 16px;
   }
 
   #terminos{

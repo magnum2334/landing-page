@@ -59,17 +59,26 @@
               </mat-select>
               <mat-icon matSuffix>home</mat-icon>
             </mat-form-field><br>
-            <label id="example-radio-group-label">¿Eres lider?</label><br>
+
+            <div id="eres-lider" class="radio-btn-hidden">
+              <label id="example-radio-group-label">¿Eres lider?</label><br>
               <mat-radio-group formControlName="lider" >
                 <mat-radio-button class="mx-2 example-margin" value="true">SI</mat-radio-button>
                 <mat-radio-button class="example-margin" value="false">NO</mat-radio-button>
-              </mat-radio-group><br>
-              <label id="example-radio-group-label">¿tu cedula es de dosquebradas?</label><br>
-              <mat-radio-group formControlName="ciudadano_dosque" >
-                <mat-radio-button class="mx-2 example-margin" value="true">SI</mat-radio-button>
-                <mat-radio-button class="example-margin" value="false">NO</mat-radio-button>
               </mat-radio-group>
+            </div>
 
+            <br>
+
+            <div id="cedula-dosquebradas" class="radio-btn-hidden">
+              <div class="columns">
+                <label id="example-radio-group-label">¿tu cedula es de dosquebradas?</label><br>
+                <mat-radio-group formControlName="ciudadano_dosque" >
+                  <mat-radio-button class="mx-2 example-margin" value="true">SI</mat-radio-button>
+                  <mat-radio-button class="example-margin" value="false">NO</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
           </div>
 
 
@@ -77,6 +86,7 @@
             <ngx-recaptcha2 class="g-recaptcha" #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
             </ngx-recaptcha2>
           </div>
+          <br>
           <div class="d-flex justify-content-center">
             <button (click)="submit($event)" mat-stroked-button [style.width]="'250px'" [style.height]="'45px'"
               [style.background]="'white'" color="primary">
