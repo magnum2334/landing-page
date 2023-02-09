@@ -1,44 +1,18 @@
-
-.navbar-expand-lg .navbar-nav {
-  flex-direction: row;
-  margin-right: 137px;
-}
-
-.position{
-  position: relative;
-  top:0px;
-  left:13px;
-}
-
-.nav-link:hover{
-  transform: scale(1.5)
-}
-
 strong {
   position: relative;
   right: 5px;
   font-family: monospace;
 }
 
-.navbar{
-  color:black;
-  position: auto;
-  padding: 0;
-  border-width: 0px;
-  -webkit-box-shadow: 0px 0px;
-  box-shadow: 0px 0px;
-  background-color: #00000000;
-  background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
-  background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-  background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-}
-
 h1
 {
   font-family: 'Poppins', sans-serif;
   font-weight:100;
-
 }
+
+
+/*Navbar*/
+
 span .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
@@ -76,11 +50,12 @@ span .material-icons {
   width:600px;
   height:200px;
 }
+
 .FABMenu input
 {
-  position:absolute;
-  top: 0%;
-  left:50%;
+  position: fixed;
+  top: 2%;
+  left: 46.8%;
   width:80px;
   height:80px;
   z-index:20;
@@ -88,11 +63,12 @@ span .material-icons {
   opacity:0;
   cursor:pointer;
 }
+
 .hamburger
 {
-  position:absolute;
-  top:0%;
-  left:50%;
+  position: fixed;
+  top: 2%;
+  left: 46.8%;
   width: 80px;
   height:80px;
   background-color: #f46d5f;
@@ -100,6 +76,25 @@ span .material-icons {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   z-index:10;
   cursor:pointer;
+}
+
+.action_items_bar
+{
+  position:fixed;
+  top:3.5%;
+  left:35.8%;
+  width:380px;
+  height:60px;
+  background-color: #f46d5f;
+  border-radius:60px;
+  box-shadow: 0px 5px 20px #F19181;
+  z-index:5;
+
+/*   animation-name: expand-the-bar;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; */
+  transform:scaleX(0);
+  transition: all .3s ease-in-out;
 }
 
 .dots span
@@ -157,24 +152,6 @@ span .material-icons {
   z-index: 99999;
 }
 
-.action_items_bar
-{
-  position:absolute;
-  top:4.5%;
-  left:25%;
-  width:380px;
-  height:60px;
-  background-color: #f46d5f;
-  border-radius:60px;
-  box-shadow: 0px 5px 20px #F19181;
-  z-index:5;
-
-/*   animation-name: expand-the-bar;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out; */
-  transform:scaleX(0);
-  transition: all .3s ease-in-out;
-}
 .FABMenu input:checked ~ .action_items_bar
 {
   transform:scaleX(1);
@@ -369,17 +346,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-24%;
-    left: 51%;
+    position: fixed;
+    top: 1%;
+    left: 46%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top: -24%;
-    left:51%;
+    position: fixed;
+    top: 1%;
+    left: 46%;
     width:80px;
     height:80px;
     z-index:20;
@@ -390,15 +367,14 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -20%;
-    left:27%;
+    position: fixed;
+    top: 2%;
+    left: 31%;
   }
   .fa-whatsapp {
     position: relative;
     right: 0.4em;
   }
-
 
 }
 
@@ -430,17 +406,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-24%;
-    left: 53%;
+    position: fixed;
+    top: 1%;
+    left: 46.3%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top: -24%;
-    left:53%;
+    position: fixed;
+    top: 1%;
+    left: 46.3%;
     width:80px;
     height:80px;
     z-index:20;
@@ -451,9 +427,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -20%;
-    left:27%;
+    position: fixed;
+    top: 2%;
+    left: 30%;
   }
   .fa-whatsapp {
     position: relative;
@@ -490,17 +466,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-24%;
-    left: 53%;
+    position: fixed;
+    top: 1%;
+    left: 47%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top: -24%;
-    left:53%;
+    position: fixed;
+    top: 1%;
+    left: 47%;
     width:80px;
     height:80px;
     z-index:20;
@@ -511,9 +487,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -20%;
-    left:27%;
+    position: fixed;
+    top: 2%;
+    left: 30.9%;
   }
   .fa-whatsapp {
     position: relative;
@@ -548,17 +524,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-25%;
-    left: 22%;
+    position: fixed;
+    top: 0.6%;
+    left: 31%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-25%;
-    left: 22%;
+    position: fixed;
+    top: 0.6%;
+    left: 31%;
     width:80px;
     height:80px;
     z-index:20;
@@ -569,9 +545,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -20%;
-    left: 24%;
+    position: fixed;
+    top: 2%;
+    left: 30.9%;
   }
 
   .first_item
@@ -625,17 +601,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-26%;
-    left: 19%;
+    position: fixed;
+    top: 0.6%;
+    left: 25%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top: -26%;
-    left:19%;
+    position: fixed;
+    top: 0.6%;
+    left: 25%;
     width:80px;
     height:80px;
     z-index:20;
@@ -646,9 +622,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -21%;
-    left:22%;
+    position: fixed;
+    top: 2%;
+    left: 25.9%;
   }
 
   .first_item
@@ -704,17 +680,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-104px;
-    left: 20%;
+    position: fixed;
+    top: 0.6%;
+    left: 25%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-104px;
-    left:20%;
+    position: fixed;
+    top: 0.6%;
+    left: 25%;
     width:80px;
     height:80px;
     z-index:20;
@@ -725,9 +701,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -47%;
-    left:24%;
+    position: fixed;
+    top: 2%;
+    left: 25.9%;
   }
 
   .first_item
@@ -784,17 +760,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top:-49%;
-    left: 15%;
+    position: fixed;
+    top: 0.6%;
+    left: 18%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-49%;
-    left:15%;
+    position: fixed;
+    top: 0.6%;
+    left: 18%;
     width:80px;
     height:80px;
     z-index:20;
@@ -805,9 +781,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position:absolute;
-    top: -45%;
-    left: 20%;
+    position: fixed;
+    top: 2%;
+    left: 18.9%;
   }
 
   .first_item
@@ -864,17 +840,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top: -42%;
-    left: 9%;
+    position: fixed;
+    top: 0.6%;
+    left: 18%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-51%;
-    left:9%;
+    position: fixed;
+    top: 0.6%;
+    left: 18%;
     width:80px;
     height:80px;
     z-index:20;
@@ -885,9 +861,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position: absolute;
-    top: -37%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 18.9%;
   }
 
   .first_item
@@ -941,20 +917,18 @@ span .material-icons {
   }
 
   .hamburger{
-
     margin: 0%;
-    position: absolute;
-    top: -38%;
-    left: 6%;
-
+    position: fixed;
+    top: 0.6%;
+    left: 18%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-54%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 18%;
     width:80px;
     height:80px;
     z-index:20;
@@ -965,9 +939,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position: absolute;
-    top: -33%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 18.9%;
   }
 
   .first_item
@@ -1022,17 +996,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top: -41%;
-    left: 6%;
+    position: fixed;
+    top: 1%;
+    left: 9%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-51%;
-    left:6%;
+    position: fixed;
+    top: 1%;
+    left: 9%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1043,9 +1017,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position: absolute;
-    top: -36%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 11%;
   }
 
   .first_item
@@ -1101,17 +1075,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top: -43%;
-    left: 6%;
+    position: fixed;
+    top: 1%;
+    left: 5%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-54%;
-    left:6%;
+    position: fixed;
+    top: 1%;
+    left: 5%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1122,9 +1096,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position: absolute;
-    top: -39%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 9%;
   }
 
   .first_item
@@ -1179,17 +1153,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top: -40%;
-    left: 6%;
+    position: fixed;
+    top: 1%;
+    left: 5%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-50%;
-    left:6%;
+    position: fixed;
+    top: 1%;
+    left: 5%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1200,9 +1174,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position: absolute;
-    top: -35%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 9%;
   }
 
   .first_item
@@ -1259,17 +1233,17 @@ span .material-icons {
 
   .hamburger{
     margin: 0%;
-    position: absolute;
-    top: -43%;
-    left: 6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-50%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1280,9 +1254,9 @@ span .material-icons {
 
   .action_items_bar{
     margin: 0%;
-    position: absolute;
-    top: -39%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 6%;
   }
 
   .first_item
@@ -1325,8 +1299,9 @@ span .material-icons {
   }
 
   .FABMenu{
+    max-width: 90%;
     top: 100px;
-    width: 80%;
+    width: 60%;
   }
 
   .btn-registraduria-pulse{
@@ -1344,18 +1319,19 @@ span .material-icons {
   }
 
   .hamburger{
+    max-width: 90%;
     margin: 0%;
-    position: absolute;
-    top: -42%;
-    left: 6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-50%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1365,10 +1341,11 @@ span .material-icons {
   }
 
   .action_items_bar{
+    max-width: 80%;
     margin: 0%;
-    position: absolute;
-    top: -39%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 13%;
   }
 
   .first_item
@@ -1445,18 +1422,19 @@ span .material-icons {
 
 
   .hamburger{
+    max-width: 90%;
     margin: 0%;
-    position: absolute;
-    top: -42%;
-    left: 6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-54%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1466,10 +1444,11 @@ span .material-icons {
   }
 
   .action_items_bar{
+    max-width: 80%;
     margin: 0%;
-    position: absolute;
-    top: -38%;
-    left: 17%;
+    position: fixed;
+    top: 2%;
+    left: 13%;
   }
 
   .first_item
@@ -1489,8 +1468,7 @@ span .material-icons {
 
   .fourth_item
   {
-    display: none;
-    /* left:65%; */
+    left:65%;
   }
 
   span .material-icons:hover{
@@ -1539,18 +1517,19 @@ span .material-icons {
   }
 
   .hamburger{
+    max-width: 90%;
     margin: 0%;
-    position: absolute;
-    top: -32%;
-    left: 6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-32%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1560,10 +1539,11 @@ span .material-icons {
   }
 
   .action_items_bar{
+    max-width: 80%;
     margin: 0%;
-    position: absolute;
-    top: -27%;
-    left: 19%;
+    position: fixed;
+    top: 2%;
+    left: 13%;
   }
 
   .first_item
@@ -1635,18 +1615,19 @@ span .material-icons {
   }
 
   .hamburger{
+    max-width: 90%;
     margin: 0%;
-    position: absolute;
-    top: -40%;
-    left: 5%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-53%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1656,12 +1637,11 @@ span .material-icons {
   }
 
   .action_items_bar{
-
+    max-width: 80%;
     margin: 0%;
-    position: absolute;
-    top: -36%;
-    left: 17%;
-
+    position: fixed;
+    top: 2%;
+    left: 13%;
   }
 
   .first_item
@@ -1717,24 +1697,20 @@ span .material-icons {
     margin-left: -10px;
   }
 
-  .FABMenu{
-    top: 100px;
-    width: 80%;
-  }
-
   .hamburger{
+    max-width: 90%;
     margin: 0%;
-    position: absolute;
-    top: -38%;
-    left: 0%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
   }
 
   .FABMenu input
   {
     margin: 0%;
-    position:absolute;
-    top:-53%;
-    left:6%;
+    position: fixed;
+    top: 0.6%;
+    left: 4%;
     width:80px;
     height:80px;
     z-index:20;
@@ -1744,9 +1720,10 @@ span .material-icons {
   }
 
   .action_items_bar{
+    max-width: 80%;
     margin: 0%;
-    position: absolute;
-    top: -33%;
+    position: fixed;
+    top: 2%;
     left: 17%;
   }
 
