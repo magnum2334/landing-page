@@ -4,6 +4,11 @@
   top: 0px;
 }
 
+#imgsoyjuanapa{
+  margin-top: -93px;
+  margin-bottom: -92px;
+}
+
 #colmn1{
   margin-top: -261px;
 }
@@ -409,6 +414,7 @@ mat-icon{
   }
 }
 
+/* Phones */
 @media screen and (max-width: 440px) and (min-width: 419px){
 
   *{
@@ -450,6 +456,11 @@ mat-icon{
     position: absolute;
     top: 98px;
     left: 21px;
+  }
+
+  #imgsoyjuanapa{
+    margin-top: -55px;
+    margin-bottom: -52px;
   }
 }
 
@@ -495,6 +506,12 @@ mat-icon{
     top: 98px;
     left: 21px;
   }
+
+  #imgsoyjuanapa{
+    margin-top: -48px;
+    margin-bottom: -38px;
+  }
+
 }
 
 @media screen and (max-width: 397px) and (min-width: 390px){
@@ -544,6 +561,12 @@ mat-icon{
 
   #terminos{
     margin-left: 0px;
+  }
+
+  #imgsoyjuanapa{
+    margin-top: -40px;
+    margin-bottom: -37px;
+    margin-left: 13px;
   }
 
 }
@@ -606,6 +629,11 @@ mat-icon{
     margin-left: -5px;
   }
 
+  #imgsoyjuanapa{
+    margin-top: -29px;
+    margin-bottom: -39px;
+  }
+
 }
 
 @media screen and (max-width: 370px) and (min-width: 345px){
@@ -664,6 +692,11 @@ mat-icon{
 
   #terminos{
     margin-left: -5px;
+  }
+
+  #imgsoyjuanapa{
+    margin-top: -28px;
+    margin-bottom: -33px;
   }
 
 }
@@ -726,6 +759,11 @@ mat-icon{
     margin-left: -5px;
   }
 
+  #imgsoyjuanapa{
+    margin-top: -33px;
+    margin-bottom: -43px;
+  }
+
 }
 
 @media screen and (max-width: 325px) and (min-width: 289px){
@@ -786,6 +824,13 @@ mat-icon{
     margin-left: -5px;
   }
 
+  #imgsoyjuanapa{
+    margin-top: -31px;
+    width: 100%;
+    margin-left: -5px;
+    margin-bottom: -25px;
+  }
+
 }
 
 @media screen and (max-width: 289px) and (min-width: 100px){
@@ -844,6 +889,13 @@ mat-icon{
 
   #terminos{
     margin-left: -5px;
+  }
+
+  #imgsoyjuanapa{
+    margin-top: -31px;
+    width: 100%;
+    margin-left: -5px;
+    margin-bottom: -25px;
   }
 
 }
