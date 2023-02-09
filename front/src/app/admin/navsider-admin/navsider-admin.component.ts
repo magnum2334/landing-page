@@ -35,10 +35,9 @@ export class NavsiderAdminComponent  implements OnInit {
 
   ngOnInit(): void {
 
-
-
     this.loginService.me(this.token?.replace(/['"]+/g, '')).subscribe((response) =>{
      if (!response) {
+      localStorage.clear()
       this.router.navigate(['']);
      }
     })

@@ -1,3 +1,6 @@
+import { BarriosComponent } from './components/barrios/barrios.component';
+import { FirmasComponent } from './components/firmas/firmas.component';
+import { CentroDatosComponent } from './components/centro-datos/centro-datos.component';
 import { Component, NgModule, ViewChildren } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavsiderAdminComponent } from './admin/navsider-admin/navsider-admin.component';
@@ -58,8 +61,16 @@ const routes: Routes = [
         component: FormEncuestasComponent
       },
       {
-        path: 'presentacion',
-        component: PresentationAdminComponent
+        path: 'centro-datos/barrios',
+        component: BarriosComponent
+      },
+      {
+        path: 'centro-datos',
+        component: CentroDatosComponent,
+      },
+      {
+        path: 'firmas',
+        component: FirmasComponent
       },
 
     ]

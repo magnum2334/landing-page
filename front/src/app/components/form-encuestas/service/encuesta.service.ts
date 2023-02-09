@@ -11,7 +11,7 @@ export class EncuestaService {
   constructor(
     private http:HttpClient) { }
 
-
+  comuna:any
   insertEncuesta(encuesta: any) {
     return this.http.post(`${environment.baseUrl}encuesta/create`, encuesta);
   }
@@ -19,4 +19,16 @@ export class EncuestaService {
   getusers() {
     return this.http.get(`${environment.baseUrl}allusers`);
   }
+
+  barrios(){
+    return this.http.get(`${environment.baseUrl}barrios`);
+  }
+
+  setComuna(comuna:any){
+  this.comuna = comuna;
+  }
+  getComuna(){
+    return this.comuna
+  }
+
 }

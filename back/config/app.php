@@ -164,6 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Atymic\Twitter\ServiceProvider\LaravelServiceProvider::class,
+
         /*
          * Package Service Providers...
          */

@@ -13,10 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sitios_votacion', function (Blueprint $table) {
+        Schema::create('barrios', function (Blueprint $table) {
             $table->id();
-            $table->string('sitio');
-            $table->string('sector');
+            $table->string('name');
+            $table->integer('comuna_id');
+
+            $table->foreign('comuna_id')->references('id')->on('comunas')->onDelete('cascade');
         });
     }
 
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('barrios');
     }
 };

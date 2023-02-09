@@ -23,5 +23,6 @@ Route::controller(ContactUsController::class)->group(function () {
     Route::get('twitter', 'twitter');
     Route::post('smsconfirmation', 'smsconfirmation');
     Route::get('sitios_votacion', 'sitios_votacion');
+    Route::get('barrios', 'barrios');
 });
 

@@ -13,8 +13,14 @@ use Exception;
 
 class ContactUsController extends Controller
 {
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:api', ['except' => ['login','register']]);
+    // }
     public function store(Request $request)
     {
+
 
         try {
             $ContactUs = ContactUs::create([
@@ -88,6 +94,12 @@ class ContactUsController extends Controller
 
         $sitios_votacion = DB::table('sitios_votacion')->get();
         return response()->json(compact('sitios_votacion'),200);
+
+    }
+    public function barrios(){
+
+        $barrios = DB::table('barrios')->get();
+        return response()->json(compact('barrios'),200);
 
     }
 }

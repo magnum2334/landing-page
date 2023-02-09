@@ -54,6 +54,11 @@ import { SmsMasivosComponent } from './components/sms-masivos/sms-masivos.compon
 import { ModalDesarrolloSocialComponent } from './components/modal-desarrollo-social/modal-desarrollo-social.component';
 import { BottomSheetOverviewExampleSheetComponent } from './components/bottom-sheet-overview-example-sheet/bottom-sheet-overview-example-sheet.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { FirmasComponent } from './components/firmas/firmas.component';
+import { CentroDatosComponent } from './components/centro-datos/centro-datos.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { BarriosComponent } from './components/barrios/barrios.component';
+import {MatChipsModule} from '@angular/material/chips';
 @NgModule({
   declarations: [
     PropuestaPrincipalComponent,
@@ -73,8 +78,13 @@ import {MatRadioModule} from '@angular/material/radio';
     SmsMasivosComponent,
     ModalDesarrolloSocialComponent,
     BottomSheetOverviewExampleSheetComponent,
+    FirmasComponent,
+    CentroDatosComponent,
+    BarriosComponent,
   ],
   imports: [
+    MatChipsModule,
+    MatBadgeModule,
     MatRadioModule,
     MatDatepickerModule,
     MatExpansionModule,
