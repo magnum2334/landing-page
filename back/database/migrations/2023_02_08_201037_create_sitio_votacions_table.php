@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('sitio_votacions', function (Blueprint $table) {
             $table->id();
-            $table->integer('barrio_id');
 
-            $table->foreign('barrio_id')->references('id')->on('barrios')->onDelete('cascade');
+            $table->string('puesto');
+            $table->string('direccion');
+            $table->integer('mesas');
+            $table->integer('comuna_id');
+
+            $table->foreign('comuna_id')->references('id')->on('comunas')->onDelete('cascade');
         });
     }
 

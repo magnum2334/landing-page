@@ -1,12 +1,14 @@
+import { async } from '@angular/core/testing';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { debounceTime,Subject } from 'rxjs';
+import { debounceTime, Observable, Subject, filter } from 'rxjs';
+import { EncuestaService } from 'src/app/components/form-encuestas/service/encuesta.service';
 import { ContactUsService } from '../service/contact-us.service';
-
-
+import {map, startWith} from 'rxjs/operators';
 interface Barrio {
-  nombre_barrio: string;
+  name: string;
+  comuna_id:string;
 }
 interface Lugar {
   lugar: string
@@ -75,11 +77,7 @@ export class ContactComponent implements OnInit {
     },
   ]
 
-  barrios: Barrio[] = [
-    { nombre_barrio: 'Guadalupe'},
-    { nombre_barrio: 'Santa Isabel'},
-    { nombre_barrio: 'La mariana'},
-  ];
+  barrios: any
 
   sitio : any = {}
   awaitSubmitEmail$ = new Subject<Event>();
@@ -89,25 +87,42 @@ export class ContactComponent implements OnInit {
     apellidos: new FormControl('', [Validators.required,]),
     recaptcha: new FormControl ('', [Validators.required]),
     sitio_votacion: new FormControl ('', [Validators.required,]),
-    barrio: new FormControl('', [Validators.required]),
     documento: new FormControl('', [Validators.required]),
     celular: new FormControl('', [Validators.minLength(10)]),
     lider: new FormControl(''),
     ciudadano_dosque: new FormControl(''),
+    barrio: new FormControl('', [Validators.required]),
   });
+  myControl = new FormControl('');
+  myControlTwo = new FormControl('');
+  options: string[] = [];
 
   loading: Boolean = false
 
   siteKey: string = "6Leeu34jAAAAAM-0Tix1awG_2owritIAWC77_OPA"
+  sisas: any;
 
-  constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService) { }
-
-  ngOnInit(): void {
+  constructor(private _snackBar: MatSnackBar, private contactUsService: ContactUsService, private encuestaService:EncuestaService) { }
+  filteredOptions!: Observable<string[]>;
+   ngOnInit()  {
     this.onChangesClick()
   }
+   async onChangesClick() {
 
-  onChangesClick() {
-    this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {
+    await this.encuestaService.barrios().subscribe((res:any)=>{
+      this.barrios  = res
+    })
+    await this.encuestaService.sitiosVotacion().subscribe((res:any)=>{
+      res['sitios_votacion'].filter((sitio:any)=>{ this.options.push(sitio.puesto)  })
+    })
+
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
+
+
+    await this.awaitSubmitEmail$.pipe(debounceTime(1000)).subscribe((response) => {
       this.loading = false;
         let data = {
         nombres:this.form.value.nombres,
@@ -153,6 +168,11 @@ export class ContactComponent implements OnInit {
   submit(event: Event) {
     this.awaitSubmitEmail$.next(event);
     this.loading = true;
+  }
+   _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter((option:any) => option.toLowerCase().includes(filterValue));
   }
 
 }

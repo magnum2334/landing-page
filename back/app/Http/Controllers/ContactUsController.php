@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Mail;
 use App\Models\ContactUs;
 use App\Jobs\emailMassive;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 use Twilio\Rest\Client;
-use Exception;
+
 
 class ContactUsController extends Controller
 {
@@ -92,13 +90,15 @@ class ContactUsController extends Controller
     }
     public function sitios_votacion(){
 
-        $sitios_votacion = DB::table('sitios_votacion')->get();
+        $sitios_votacion = DB::table('sitio_votacions')->select('puesto')->get();
+
         return response()->json(compact('sitios_votacion'),200);
 
     }
     public function barrios(){
 
         $barrios = DB::table('barrios')->get();
+
         return response()->json(compact('barrios'),200);
 
     }

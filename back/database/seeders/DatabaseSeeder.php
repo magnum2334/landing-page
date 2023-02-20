@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\Barrio;
+use App\Models\sitio_votacion;
 use App\Models\Comuna;
 use Illuminate\Support\Facades\DB;
 
@@ -55,6 +56,15 @@ class DatabaseSeeder extends Seeder
             [
                 "id" => 12,
             ],
+            [
+                "id" => 13,
+            ],
+            [
+                "id" => 14,
+            ],
+            [
+                "id" => 15,
+            ],
 
         ];
         DB::table('comunas')->insert($data);
@@ -72,6 +82,22 @@ class DatabaseSeeder extends Seeder
          Barrio::insert($data);
         }
 
+
+        $cvs =  Reader::createFromPath('database/seeders/Divipole-DOSQUEBRADAS.csv', 'r');
+
+        $cvs->setheaderOffset(0);
+        $records = $cvs->getRecords();
+
+        foreach ($records as $r ) {
+            if($r['municipio'] == 'DOSQUEBRADAS' && $r['Puesto Bloqueado'] != 'Puesto Bloqueado'){
+                $data = [
+                    'puesto' => $r['puesto'],
+                    'direccion' => $r['dirección'],
+                    'mesas' => $r['mesas'],
+                    'comuna_id' => $r['comuna'],
+                ];
+            sitio_votacion::insert($data);
+        }   }
 
         // $data = [
         //     [

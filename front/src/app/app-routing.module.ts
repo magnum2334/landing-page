@@ -1,3 +1,4 @@
+import { SitiosVotacionComponent } from './components/sitios-votacion/sitios-votacion.component';
 import { BarriosComponent } from './components/barrios/barrios.component';
 import { FirmasComponent } from './components/firmas/firmas.component';
 import { CentroDatosComponent } from './components/centro-datos/centro-datos.component';
@@ -63,6 +64,10 @@ const routes: Routes = [
       {
         path: 'centro-datos/barrios',
         component: BarriosComponent
+      },
+      {
+        path: 'centro-datos/sitios-votacion',
+        component: SitiosVotacionComponent
       },
       {
         path: 'centro-datos',

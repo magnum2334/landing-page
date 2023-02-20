@@ -59,6 +59,8 @@ import { CentroDatosComponent } from './components/centro-datos/centro-datos.com
 import {MatBadgeModule} from '@angular/material/badge';
 import { BarriosComponent } from './components/barrios/barrios.component';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { SitiosVotacionComponent } from './components/sitios-votacion/sitios-votacion.component';
 @NgModule({
   declarations: [
     PropuestaPrincipalComponent,
@@ -81,8 +83,10 @@ import {MatChipsModule} from '@angular/material/chips';
     FirmasComponent,
     CentroDatosComponent,
     BarriosComponent,
+    SitiosVotacionComponent,
   ],
   imports: [
+    MatAutocompleteModule,
     MatChipsModule,
     MatBadgeModule,
     MatRadioModule,

@@ -17,5 +17,9 @@ export class CentroDatosComponent implements OnInit {
     this.router.navigate(['admin/centro-datos/barrios']);
     this.encuestaService.setComuna(str);
   }
+  opencomunaSV(str:any ) {
+    this.router.navigate(['admin/centro-datos/sitios-votacion']);
+    this.encuestaService.setComuna(str);
+  }
 
 }

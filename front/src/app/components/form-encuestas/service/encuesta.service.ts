@@ -23,6 +23,9 @@ export class EncuestaService {
   barrios(){
     return this.http.get(`${environment.baseUrl}barrios`);
   }
+  sitiosVotacion(){
+    return this.http.get(`${environment.baseUrl}sitios_votacion`);
+  }
 
   setComuna(comuna:any){
   this.comuna = comuna;

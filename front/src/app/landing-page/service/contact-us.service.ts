@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpHeaders } from '@angular/common/http';
+import { EncuestaService } from 'src/app/components/form-encuestas/service/encuesta.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactUsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,) { }
 
   saveContact(encuesta: any) {
     return this.http.post(`${environment.baseUrl}save-contact`, encuesta);
@@ -22,6 +23,7 @@ export class ContactUsService {
   smsconfirmation(data:any) {
     return this.http.post(`${environment.baseUrl}smsconfirmation`, data);
   }
+
   resTwitter: any
  /* async twitter() {
     var myHeaders = new Headers();
