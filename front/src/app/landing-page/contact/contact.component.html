@@ -40,7 +40,7 @@
             </mat-form-field><br>
 
             <mat-form-field class="m-3" appearance="fill">
-              <mat-label>Sitio votación </mat-label>
+              <mat-label>Barrios</mat-label>
               <mat-select formControlName="sitio_votacion">
                 <mat-optgroup *ngFor="let sitio of sitios_votacion_data" [label]="sitio.sector">
                   <mat-option (click)="sitiosChange(lugar)" *ngFor="let lugar of sitio.sitio" [value]="sitio">
@@ -51,8 +51,8 @@
               <mat-icon matSuffix>domain</mat-icon>
             </mat-form-field>
             <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Number</mat-label>
-              <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl"
+              <mat-label>Sitios de votacion</mat-label>
+              <input type="text" placeholder="escribe tu sitio" aria-label="Number" matInput [formControl]="myControl"
                 [matAutocomplete]="auto">
               <mat-icon matSuffix>domain</mat-icon>
               <mat-autocomplete #auto="matAutocomplete">
