@@ -138,24 +138,24 @@ export class ContactComponent implements OnInit {
         lider:this.form.value.lider,
         ciudadano_dosque:this.form.value.ciudadano_dosque,
       }
-      if(this.form.value.recaptcha){
+      if(this.form.value){
         this.contactUsService.saveContact(data).subscribe((res:any)=>{
-        if(res['status']){
-          this._snackBar.open(`${res['ok']}✉`, "Cerrar", {
-            duration: 3000,
-            panelClass: "font"
-          });
-          this.form.reset()
-        }
+          if(res['status']){
+            this._snackBar.open(`${res['ok']}✉`, "Cerrar", {
+              duration: 3000,
+              panelClass: "font"
+            });
+            this.form.reset()
+          }
 
-      },
-      err =>
-      this._snackBar.open("Verifica los datos por favor", "Cerrar", {
-        duration: 3000,
-        panelClass: "font",
-      })
-      )
-    }
+          },
+        err =>
+        this._snackBar.open("Verifica los datos por favor", "Cerrar", {
+          duration: 3000,
+          panelClass: "font",
+        })
+        )
+      }
     })
 
   }

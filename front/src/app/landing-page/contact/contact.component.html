@@ -39,7 +39,7 @@
               <mat-hint>{{numero.value.length}} / 10</mat-hint>
             </mat-form-field><br>
 
-            <mat-form-field class="m-3" appearance="fill">
+            <mat-form-field class=" example-full-width m-3" appearance="fill">
               <mat-label>Barrios</mat-label>
               <mat-select formControlName="sitio_votacion">
                 <mat-optgroup *ngFor="let sitio of sitios_votacion_data" [label]="sitio.sector">
@@ -50,7 +50,7 @@
               </mat-select>
               <mat-icon matSuffix>domain</mat-icon>
             </mat-form-field>
-            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-form-field class="example-full-width m-3" appearance="fill">
               <mat-label>Sitios de votacion</mat-label>
               <input type="text" placeholder="escribe tu sitio" aria-label="Number" matInput [formControl]="myControl"
                 [matAutocomplete]="auto">
@@ -71,6 +71,7 @@
               </mat-radio-group>
               <br>
             </div>
+
 
             <div id="cedula-dosquebradas" class="radio-btn-hidden">
               <div class="columns">
