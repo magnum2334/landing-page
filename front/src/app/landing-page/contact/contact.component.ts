@@ -93,8 +93,7 @@ export class ContactComponent implements OnInit {
     ciudadano_dosque: new FormControl(''),
     barrio: new FormControl('', [Validators.required]),
   });
-  myControl = new FormControl('');
-  myControlTwo = new FormControl('');
+  myControl = new FormControl('', [Validators.required]);
   options: string[] = [];
 
   loading: Boolean = false
