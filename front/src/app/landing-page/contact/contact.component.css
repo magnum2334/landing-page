@@ -431,12 +431,12 @@ mat-icon{
 
   #eres-lider{
     position: relative;
-    left: 40px;
+    left: 83px;
   }
 
   #cedula-dosquebradas{
     position: relative;
-    left: 20px;
+    left: 50px;
   }
 
   .contenedorRecapt{
@@ -479,13 +479,17 @@ mat-icon{
   }
 
   #eres-lider{
+    margin-top: 10px;
+    margin-bottom: 8px;
     position: relative;
     left: 83px;
   }
 
   #cedula-dosquebradas{
+    margin-bottom: 8px;
+    margin-top : 9px;
     position: relative;
-    left: 72px;
+    left: 42px;
   }
 
   .contenedorRecapt{
@@ -525,13 +529,16 @@ mat-icon{
   }
 
   #eres-lider{
+    margin-top: 6px;
+    margin-bottom: 8px;
     position: relative;
     left: 40px;
   }
 
   #cedula-dosquebradas{
+    margin-bottom: 8px;
     position: relative;
-    left: 20px;
+    left: 26px;
   }
 
   .contenedorRecapt{
@@ -583,12 +590,14 @@ mat-icon{
 
   #eres-lider{
     position: relative;
-    left: 50px;
+    left: 36px;
   }
 
   #cedula-dosquebradas{
+    margin-top: 7px;
+    margin-bottom: 9px;
     position: relative;
-    left: 40px;
+    left: 17px;
   }
 
   #contenedor{
@@ -648,12 +657,15 @@ mat-icon{
 
   #eres-lider{
     position: relative;
-    left: 40px;
+    left: 32px;
+    margin-top: 3px;
+    margin-bottom: 6px;
   }
 
   #cedula-dosquebradas{
     position: relative;
     left: 20px;
+    margin-bottom: 11px;
   }
 
   #contenedor{
@@ -778,12 +790,14 @@ mat-icon{
 
   #eres-lider{
     position: relative;
-    left: 27px;
+    left: 18px;
+    margin-bottom: 6px;
   }
 
   #cedula-dosquebradas{
     position: relative;
-    left: 20px;
+    left: 13px;
+    margin-bottom: 7px
   }
 
   #contenedor{

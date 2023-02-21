@@ -26,6 +26,7 @@ interface SitioVotacion {
 })
 export class ContactComponent implements OnInit {
 
+  mostrarOtroRadioButton = false;
   lider: any
   cedulaRe:any
   sitios_votacion_data: SitioVotacion[] = [
