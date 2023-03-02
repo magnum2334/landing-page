@@ -66,14 +66,18 @@
             <div id="eres-lider" class="radio-btn-hidden">
               <label id="example-radio-group-label">¿Eres lider?</label><br>
               <mat-radio-group formControlName="lider">
-                <mat-radio-button class="mx-2 example-margin" value="true">SI</mat-radio-button>
-                <mat-radio-button class="example-margin" value="false">NO</mat-radio-button>
+                <mat-radio-button (click)="mostrarOtroRadioButton = true" class="mx-2 example-margin" value="true">SI</mat-radio-button>
+                <mat-radio-button (click)="mostrarOtroRadioButton = false" class="example-margin" value="false">NO</mat-radio-button>
               </mat-radio-group>
               <br>
             </div>
 
+<<<<<<< HEAD
 
             <div id="cedula-dosquebradas" class="radio-btn-hidden">
+=======
+            <div id="cedula-dosquebradas" class="radio-btn-hidden" *ngIf="mostrarOtroRadioButton">
+>>>>>>> 1a647f903c0d887df2b91e171cff29fd91edcb5b
               <div class="columns">
                 <label id="example-radio-group-label">¿tu cedula se registro en dosquebradas?</label><br>
                 <mat-radio-group formControlName="ciudadano_dosque">
